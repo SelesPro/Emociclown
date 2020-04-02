@@ -32,7 +32,9 @@ ul {
 
 .primary-button a {
   display: inline-block;
-  background-color: #fa5252;
+  /* ----------------------------AQIO CAMBIO DE COLOR DE BOTONES */
+  /* background-color: #fa5252; */
+  background-color: #FF00FF;
   color: #fff;
   letter-spacing: 1px;
   font-size: 11px;
@@ -118,7 +120,7 @@ ul {
 }
 .nav__link:hover {
   /* background: #fa5252;-------------AQUI ROJO */
-  background: #fa5252;
+  background: #6B27FF;
 }
 @media (max-width: 640px) {
   .nav {
@@ -143,14 +145,14 @@ ul {
           align-items: center;
   z-index: 2;
   /* background: #455871;---------------------AQUI COLOR NAV INICIO*/
-  background: #ff8c00;
+  background: #00CCCD;
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .burger:hover {
-  /* background: #3e4e62;------------AQUI */
-  background: #fa5252;
+  /* background: #3e4e62;------------AQUI MENU*/
+  background: #6B27FF;
 }
 .burger__patty {
   position: relative;
@@ -284,7 +286,7 @@ ul {
 
 .b-yellow {
   margin-top: -1px;
-  background-image: url(../img/fourth-bg.png);
+  background-image: url(../img/taller.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -301,11 +303,14 @@ ul {
 */
 
 .home-content {
-	height: 90vh;
-	background-color: rgba(45, 58, 75, 0.5);
-	padding: 0px 60px;
+  height: 90vh; 
+  /* background-color: rgba(45, 58, 75, 0.5); ---- AQUI COLOR RECUADRO INICIO */
+  background-color: rgba(0, 204 ,205, 0.3);
+  filter: saturate(150%);
+  padding: 0px 30px;
 	position: relative;
-	margin: 10vh auto 0 auto;
+  margin: 10vh auto 0 auto;
+ 
 }
 
 .home-content h1 {
@@ -324,12 +329,12 @@ ul {
 }
 
 .home-content .home-box-content {
-  margin-top: 45px;
-  /* background-color: #455871; AQUI COLOR DE RECUADRO----- */
-  background-color: #ff8c00bd;
+  margin-top: 33px;
+  /* background-color: #455871; AQUI COLOR DE RECUADRO de texto INICIO----- */
+  background-color: rgb(107, 39, 255, 0.8);
 	position: relative;
-	right: -90px;
-	padding: 30px;
+	right: 1px;
+	padding: 40px;
 	display: inline-block;
 }
 
@@ -353,13 +358,13 @@ ul {
 
 .home-content .left-text h4 em {
   /* AQUI COLOR DE TEXTO EM DE INTRO------------------------ */
- color: #ff0000; 
-	font-style: black;
+  color:  rgb(1, 2, 16); 
+  font-style: black;
 }
 
 .home-content .left-text p {
 	color: #fff;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .home-content .right-image {
@@ -445,9 +450,9 @@ ul {
   position: relative;
   margin: 0 auto;
 }
-
+/* ---------------------------------------AQUI PADDING TEXTOS PRINCIPALES */
 .projects-content .heading {
-  padding-top: 30%;
+  padding-top: 20%;
 }
 
 .project-item {
@@ -558,7 +563,9 @@ ul {
 
 .contact-content button {
   display: inline-block;
-  background-color: #fa5252;
+    /* -------------------------AQUI CAMBIO DE COLOR DE BOTON DE SUBMIT */
+  /* background-color: #fa5252; */
+  background-color: #6B27FF;
   color: #fff;
   letter-spacing: 1px;
   font-size: 11px;
@@ -713,7 +720,7 @@ ul {
     padding: 0px 30px;
   }
   .contact-content .heading {
-    padding-top: 15%;
+    padding-top: 1%;
   }
 }
 
@@ -1126,7 +1133,9 @@ body.lb-disable-scrolling {
   width: 10px;
   height: 10px;
   margin: 30px 5px;
-  background: #fff;
+    /* ------------------------------------AQUI DOTS BOTONES DE PASO */
+
+  background: rgb(255, 255, 255);
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
@@ -1136,7 +1145,7 @@ body.lb-disable-scrolling {
 .owl-theme .owl-dots .active span {
   width: 10px;
   height: 10px;
-  background: #fa5252;
+  background: #FF00FF;
   display: block;
   -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
@@ -1148,8 +1157,8 @@ body.lb-disable-scrolling {
 }
 
 .home-heading #logo{
-  width: 65%;
-  margin-left: 15%;
-  margin-top: 10%;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 12%;
 
 }
