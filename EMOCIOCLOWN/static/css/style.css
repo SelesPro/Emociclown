@@ -441,7 +441,7 @@ pre {
 
 .container {
   /* ----------------------DANIEL AQUI ANCHO DE TALLERES 100% ORIGINAL */
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -8849,7 +8849,7 @@ h1, h2, h3, h4, h5,
       position: absolute;
       top: -25px;
       /* -------------------DANIEL AQUI MARGEN DE CIUDAD EN TALLER (MADRID) 10px original*/
-      left: 10px;
+      left: 40px;
       padding: .4em .7em;
       /* ---------------------daniel aqui cambio de color FONDO de ciudad EN TALLER (MADRID)
       background: #d39f97; */
