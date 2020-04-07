@@ -441,7 +441,7 @@ pre {
 
 .container {
   /* ----------------------DANIEL AQUI ANCHO DE TALLERES 100% ORIGINAL */
-  width: 70%;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -6600,7 +6600,7 @@ button.bg-dark:focus {
 
 .pl-3,
 .px-3 {
-  padding-left: 1rem !important; }
+  padding-left: 0.1rem !important; }
 
 .p-4 {
   padding: 1.5rem !important; }
@@ -8025,7 +8025,10 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.9);
   font-weight: 400;
-  font-family: "Cormorant Garamond", Georgia, serif; }
+    /* -----------------------DANIEL CAMBIO DE TIPOGRAFIA EN H4 
+    font-family: "Cormorant Garamond", Georgia, serif; }*/
+    font-family: "Poppins", Arial, sans-serif; }
+  
 
 .text-primary {
   color: #e2c0bb !important; }
@@ -8246,7 +8249,7 @@ h1, h2, h3, h4, h5,
     top: 0;
     right: 0;
      /* ----------------------------daniel AQUI CAMBIO DE TAMAÑO FONDO DEGRADADO DE INICIO, original 100% */
-    width:150%;
+    width:100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-position: center center; }
@@ -8269,9 +8272,12 @@ h1, h2, h3, h4, h5,
     z-index: 1;
     color: #fff; }
     .hero div.vr span {
-      font-family: "Cormorant Garamond", Georgia, serif;
+/*       -----------------------DANIEL AQUI CAMBIO DE FUNTE---
+      font-family: "Cormorant Garamond", Georgia, serif; */
+      font-family: "Poppins", Arial, sans-serif;
       position: relative;
-      font-size: 100px;
+      /* ------------------------DANIEL TAMAÑO DE TEXTO INICIO NOSOTROS Y MONICA ORIGINAL font-size:100%;  */
+      font-size: 70px;
       font-weight: 300;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
