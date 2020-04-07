@@ -2072,12 +2072,12 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #fff;
   background-color: #007bff;}
-/*   ------------------DANIEL QUITO BORDE BOTONES
+/*   CAMBIO ------------------DANIEL QUITO BORDE BOTONES
   border-color: #007bff; } */
   .btn-primary:hover {
     color: #fff;
     background-color: #0069d9;}
-  /*   -------------DANIEL QUITO BORDE BOTONES
+  /*   CAMBIO -------------DANIEL QUITO BORDE BOTONES
     border-color: #0062cc; } */
   .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
@@ -6459,7 +6459,7 @@ button.bg-dark:focus {
 
 .mr-2,
 .mx-2 {
-  margin-right: 0.1rem !important; }
+  margin-right: 0.1rem !important; } /* CAMBIO */
 
 .mb-2,
 .my-2 {
@@ -6600,7 +6600,7 @@ button.bg-dark:focus {
 
 .pl-3,
 .px-3 {
-  padding-left: 0.1rem !important; }
+  padding-left: 0.1rem !important; } /*CAMBIO*/
 
 .p-4 {
   padding: 1.5rem !important; }
@@ -8277,7 +8277,7 @@ h1, h2, h3, h4, h5,
       font-family: "Poppins", Arial, sans-serif;
       position: relative;
       /* ------------------------DANIEL TAMAÑO DE TEXTO INICIO NOSOTROS Y MONICA ORIGINAL font-size:100%;  */
-      font-size: 70px;
+      font-size: 70px; /* CAMBIO*/
       font-weight: 300;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -8484,7 +8484,7 @@ h1, h2, h3, h4, h5,
         width: 60px;
         height: 60px;
         background: #fff !important;
-        -moz-transition: all 0.7 ease;
+        -moz-transition: all 0.7 ease; /* CAMBIO en el original el valor es 0.7s*/
         -o-transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
         -ms-transition: all 0.7s ease;
@@ -8507,7 +8507,7 @@ h1, h2, h3, h4, h5,
           .owl-carousel.home-slider .owl-nav .owl-prev:hover span:before, .owl-carousel.home-slider .owl-nav .owl-prev:focus span:before {
             font-size: 20px;
             margin-top: 7px;
-            color: #e2bbd7; }
+            color: #e2bbd7; } /* CAMBIO en el original  #e2c0bb*/ 
       .owl-carousel.home-slider .owl-nav .owl-next {
         top: 0 !important;
         right: 0 !important; }
@@ -8628,7 +8628,7 @@ h1, h2, h3, h4, h5,
   background: #f8f9fa !important; }
 
 .bg-primary {
-  background: #e2bbe2; }
+  background: #e2bbe2; } /* CAMBIO en original #e2c0bb */
 
 .bg-darken {
   background: #232931; }
@@ -8639,7 +8639,7 @@ h1, h2, h3, h4, h5,
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   /* -------------------------------DANIEL AQUI CAMBIO DE RADIO DE BOTONES ORIGINAL 3xp */
-  border-radius: 20px;
+  border-radius: 20px; /* CAMBIO en original 3px */
   -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
   box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09); }
@@ -8852,7 +8852,7 @@ h1, h2, h3, h4, h5,
       left: 10px;
       padding: .4em .7em;
       /* ---------------------daniel aqui cambio de color FONDO de ciudad EN TALLER (MADRID)
-      background: #d39f97; */
+      background: #d39f97; */ /* CAMBIO */
       background: #00CCCD;
       font-weight: 400;
       font-size: 14px;
@@ -8872,18 +8872,18 @@ h1, h2, h3, h4, h5,
       box-shadow: 0px 20px 43px -8px rgba(0, 0, 0, 0.11); }
       .project .text h4.price span.old-price {
         /* --------------------------------DANIEL AQUI CAMBIO DE TEXTO PARA TALLERES */
-        font-size: 20px;
-        Ttext-decoration: line-through;
+        font-size: 20px; /* CAMBIO en original 14px*/
+        Ttext-decoration: line-through; /* CAMBIO */
         /* -------------------DANIEL AQUI COLOR DE TEXTO CIUDAD (MADRID) */
-        color: rgb(255, 255, 255); }
+        color: rgb(255, 255, 255); } /* CAMBIO en original  rgba(0, 0, 0, 0.3)*/
     .project .text span {
       font-weight: 500;
 /*       ---------------------DANIEL AQUI TAMAÑO DE TEXTO PARA FECHA TALLER Y LETTER ENTRE LETRAS
       font-size: 12px; */
-      font-size: 16px;
+      font-size: 16px; /* CAMBIO en original 12px*/
       text-transform: uppercase;
-      Lletter-spacing: 2px;
-      color: rgb(0, 0, 0); }
+      Lletter-spacing: 2px; /* CAMBIO no está comentado pero al tener doble L no funciona*/ 
+      color: rgb(0, 0, 0); } /* CAMBIO en original gb(0, 0, 0.2)*/
     .project .text h3 {
       font-size: 20px;
       font-weight: 600;
@@ -8918,7 +8918,7 @@ h1, h2, h3, h4, h5,
   .project:hover .text .price, .project:focus .text .price {
   /*   -----------------------------DANIEL AQUI CAMBIO DE COLOR HOVER DE FONDO
     background: #e2c0bb; } */
-    background: #34A3D7; } 
+    background: #34A3D7; } /* CAMBIO*/ 
     .project:hover .icon, .project:focus .icon {
     opacity: 1; }
   .project:hover img, .project:focus img {
@@ -9145,7 +9145,7 @@ textarea.form-control {
 
 .ftco-section {
   /* ----------------------------DANIEL AQUI PADDING SUPERIOR DE TALLERES ORIGINAL 7em */
-  padding: 4em 0;
+  padding: 4em 0; /* CAMBIO en original 7em 0*/
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -9326,105 +9326,137 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
+/* GALERIA PENDIENTE DE IMPLEMENTAR 
 
-.testimony-section {
+.gallery-section {
   position: relative;
-  background: #b2bbc9;
-  overflow: hidden; }
-  .testimony-section .svg-blob {
-    position: absolute;
-    top: -10em;
-    right: 0;
-    left: 0;
-    right: 0;
-    margin-left: -10em; }
-  .testimony-section .svg-blob-2 {
-    position: absolute;
-    bottom: -10em;
-    right: 0;
-    margin-right: -10em; }
-  .testimony-section .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    content: '';
-    opacity: .7;
-    background: #232931; }
-  .testimony-section .owl-carousel {
-    margin: 0; }
-  .testimony-section .owl-carousel .owl-stage-outer {
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative; }
-  .testimony-section .owl-nav {
-    position: absolute;
-    bottom: 60px !important;
-    left: 0;
-    right: 0;
-    margin: 0 auto; }
-    @media (max-width: 991.98px) {
-      .testimony-section .owl-nav {
-        display: none; } }
-    .testimony-section .owl-nav .owl-prev,
-    .testimony-section .owl-nav .owl-next {
+  background: #545961;
+  overflow: hidden; 
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+*/
+
+  /* OPINIONES */ 
+
+  .testimony-section {
+    position: relative;
+    background: #b2bbc9;
+    overflow: hidden; }
+    .testimony-section .svg-blob {
       position: absolute;
-      width: 60px;
-      height: 60px;
-      background: #fff !important;
-      -moz-transition: all 0.7s ease;
-      -o-transition: all 0.7s ease;
-      -webkit-transition: all 0.7s ease;
-      -ms-transition: all 0.7s ease;
-      transition: all 0.7s ease;
-      opacity: 1; }
-      .testimony-section .owl-nav .owl-prev span:before,
-      .testimony-section .owl-nav .owl-next span:before {
-        font-size: 20px;
-        margin-top: 7px;
-        color: #000000; }
-    .testimony-section .owl-nav .owl-prev {
-      top: 0 !important;
-      right: 0 !important; }
-      @media (min-width: 992px) {
-        .testimony-section .owl-nav .owl-prev {
-          right: 61px !important; } }
-      .testimony-section .owl-nav .owl-prev:hover, .testimony-section .owl-nav .owl-prev:focus {
-        background: #000000 !important;
-        outline: none !important; }
-        .testimony-section .owl-nav .owl-prev:hover span:before, .testimony-section .owl-nav .owl-prev:focus span:before {
+      top: -10em;
+      right: 0;
+      left: 0;
+      right: 0;
+      margin-left: -10em; }
+    .testimony-section .svg-blob-2 {
+      position: absolute;
+      bottom: -10em;
+      right: 0;
+      margin-right: -10em; }
+    .testimony-section .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: '';
+      opacity: .7;
+      background: #232931; }
+    .testimony-section .owl-carousel {
+      margin: 0; }
+    .testimony-section .owl-carousel .owl-stage-outer {
+      padding-top: 0;
+      padding-bottom: 0;
+      position: relative; }
+    .testimony-section .owl-nav {
+      position: absolute;
+      bottom: 60px !important;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+      @media (max-width: 991.98px) {
+        .testimony-section .owl-nav {
+          display: none; } }
+      .testimony-section .owl-nav .owl-prev,
+      .testimony-section .owl-nav .owl-next {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: #fff !important;
+        -moz-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+        -ms-transition: all 0.7s ease;
+        transition: all 0.7s ease;
+        opacity: 1; }
+        .testimony-section .owl-nav .owl-prev span:before,
+        .testimony-section .owl-nav .owl-next span:before {
           font-size: 20px;
           margin-top: 7px;
-          color: #fff; }
-    .testimony-section .owl-nav .owl-next {
-      top: 0 !important;
-      right: 0 !important; }
-      @media (min-width: 992px) {
-        .testimony-section .owl-nav .owl-next {
-          right: 0 !important; } }
-      .testimony-section .owl-nav .owl-next:hover, .testimony-section .owl-nav .owl-next:focus {
-        background: #000000 !important;
-        outline: none !important; }
-        .testimony-section .owl-nav .owl-next:hover span:before, .testimony-section .owl-nav .owl-next:focus span:before {
-          font-size: 24px;
-          margin-top: 7px;
-          color: #fff; }
-  .testimony-section .owl-dots {
-    text-align: center; }
-    .testimony-section .owl-dots .owl-dot {
-      width: 10px;
-      height: 10px;
-      margin: 5px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.3); }
-      .testimony-section .owl-dots .owl-dot.active {
-        background: #fff; }
+          color: #000000; }
+      .testimony-section .owl-nav .owl-prev {
+        top: 0 !important;
+        right: 0 !important; }
+        @media (min-width: 992px) {
+          .testimony-section .owl-nav .owl-prev {
+            right: 61px !important; } }
+        .testimony-section .owl-nav .owl-prev:hover, .testimony-section .owl-nav .owl-prev:focus {
+          background: #000000 !important;
+          outline: none !important; }
+          .testimony-section .owl-nav .owl-prev:hover span:before, .testimony-section .owl-nav .owl-prev:focus span:before {
+            font-size: 20px;
+            margin-top: 7px;
+            color: #fff; }
+      .testimony-section .owl-nav .owl-next {
+        top: 0 !important;
+        right: 0 !important; }
+        @media (min-width: 992px) {
+          .testimony-section .owl-nav .owl-next {
+            right: 0 !important; } }
+        .testimony-section .owl-nav .owl-next:hover, .testimony-section .owl-nav .owl-next:focus {
+          background: #000000 !important;
+          outline: none !important; }
+          .testimony-section .owl-nav .owl-next:hover span:before, .testimony-section .owl-nav .owl-next:focus span:before {
+            font-size: 24px;
+            margin-top: 7px;
+            color: #fff; }
+    .testimony-section .owl-dots {
+      text-align: center; }
+      .testimony-section .owl-dots .owl-dot {
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3); }
+        .testimony-section .owl-dots .owl-dot.active {
+          background: #fff; }
+  
+  .testimony-wrap {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7); }
+/* CAMBIO PENDIENTES DE IMPLEMENTAR  -----
+.testimony-wrap i {
+  position: absolute;
+  bottom: 300px;
+  right: 300PX;
+  width: 40px;
+  height: 0px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%; 
+  color: #fff;
+  font-size: 25px; }
 
-.testimony-wrap {
-  display: block;
-  position: relative;
-  color: rgba(255, 255, 255, 0.7); }
+--------------------------*/
+/* HABRÍA Q ELIMINAR ESTA CLASE*/
   .testimony-wrap .user-img {
     width: 130px;
     height: 130px;
@@ -9444,7 +9476,9 @@ textarea.form-control {
       -ms-border-radius: 50%;
       border-radius: 50%; }
       .testimony-wrap .user-img .quote i {
-        color: #fff; }
+        color: #fff; } 
+  /*HASTA AQUI*/
+
   .testimony-wrap .text {
     padding-top: 6em;
     margin-top: -65px;
@@ -9992,8 +10026,12 @@ textarea.form-control {
   text-decoration: none;
   font-size: 24px;
   background: #3e4e62;
-  /*background: rgba(29, 91, 3, 0);*/
-  
+ 
+  /* CAMBIO PENDIENTE DE IMPLEMENTAR -----------
+   
+    background: rgba(29, 91, 3, 0);
+    ------------*/
+
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
