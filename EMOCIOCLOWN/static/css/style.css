@@ -441,7 +441,7 @@ pre {
 
 .container {
   /* ----------------------DANIEL AQUI ANCHO DE TALLERES 100% ORIGINAL */
-  width: 80%;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -8248,7 +8248,7 @@ h1, h2, h3, h4, h5,
     transform: translate(25em, -25em);
     top: 0;
     right: 0;
-     /* ----------------------------daniel AQUI CAMBIO DE TAMAÑO FONDO DEGRADADO DE INICIO, original 100% */
+     /* ---------------------------DANIEL AQUI CAMBIO DE TAMAÑO FONDO DEGRADADO DE INICIO, original 100% */
     width:100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -8277,7 +8277,7 @@ h1, h2, h3, h4, h5,
       font-family: "Poppins", Arial, sans-serif;
       position: relative;
       /* ------------------------DANIEL TAMAÑO DE TEXTO INICIO NOSOTROS Y MONICA ORIGINAL font-size:100%;  */
-      font-size: 70px; /* CAMBIO*/
+      font-size: 100px; /* CAMBIO*/
       font-weight: 300;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -8848,10 +8848,10 @@ h1, h2, h3, h4, h5,
     .project .text h4.price {
       position: absolute;
       top: -25px;
-      /* -------------------DANIEL AQUI MARGEN DE CIUDAD EN TALLER (MADRID) 10px original*/
-      left: 40px;
+      /* -------------------DANIEL AQUI MARGEN DE CIUDAD EN TALLER (MADRID) 10px original 40*/
+      left: 10px;
       padding: .4em .7em;
-      /* ---------------------daniel aqui cambio de color FONDO de ciudad EN TALLER (MADRID)
+      /* --------------------DANIEL aqui cambio de color FONDO de ciudad EN TALLER (MADRID)
       background: #d39f97; */ /* CAMBIO */
       background: #00CCCD;
       font-weight: 400;
@@ -8872,17 +8872,16 @@ h1, h2, h3, h4, h5,
       box-shadow: 0px 20px 43px -8px rgba(0, 0, 0, 0.11); }
       .project .text h4.price span.old-price {
         /* --------------------------------DANIEL AQUI CAMBIO DE TEXTO PARA TALLERES */
-        font-size: 20px; /* CAMBIO en original 14px*/
-        Ttext-decoration: line-through; /* CAMBIO */
+        font-size: 14px; /* CAMBIO en original 14px*/
+        text-decoration: line-through; /* CAMBIO */
         /* -------------------DANIEL AQUI COLOR DE TEXTO CIUDAD (MADRID) */
         color: rgb(255, 255, 255); } /* CAMBIO en original  rgba(0, 0, 0, 0.3)*/
     .project .text span {
       font-weight: 500;
-/*       ---------------------DANIEL AQUI TAMAÑO DE TEXTO PARA FECHA TALLER Y LETTER ENTRE LETRAS
-      font-size: 12px; */
-      font-size: 16px; /* CAMBIO en original 12px*/
+/*       ---------------------DANIEL AQUI TAMAÑO DE TEXTO PARA FECHA TALLER Y LETTER ENTRE LETRAS font-size: 12px; */
+      font-size: 12px; /* CAMBIO en original 12px*/
       text-transform: uppercase;
-      Lletter-spacing: 2px; /* CAMBIO no está comentado pero al tener doble L no funciona*/ 
+      letter-spacing: 2px; /* CAMBIO no está comentado pero al tener doble L no funciona*/ 
       color: rgb(0, 0, 0); } /* CAMBIO en original gb(0, 0, 0.2)*/
     .project .text h3 {
       font-size: 20px;
@@ -8916,8 +8915,7 @@ h1, h2, h3, h4, h5,
       color: #fff;
       font-size: 20px; }
   .project:hover .text .price, .project:focus .text .price {
-  /*   -----------------------------DANIEL AQUI CAMBIO DE COLOR HOVER DE FONDO
-    background: #e2c0bb; } */
+  /*   -----------------------------DANIEL AQUI CAMBIO DE COLOR HOVER DE FONDO background: #e2c0bb; } */
     background: #34A3D7; } /* CAMBIO*/ 
     .project:hover .icon, .project:focus .icon {
     opacity: 1; }
@@ -9145,7 +9143,7 @@ textarea.form-control {
 
 .ftco-section {
   /* ----------------------------DANIEL AQUI PADDING SUPERIOR DE TALLERES ORIGINAL 7em */
-  padding: 4em 0; /* CAMBIO en original 7em 0*/
+  padding: 7em 0; /* CAMBIO en original 7em 0*/
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
