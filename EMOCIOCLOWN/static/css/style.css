@@ -8014,10 +8014,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #e2c0bb; }
+  color: #ffffff; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #e2c0bb;
+    color: #ffffff;
     outline: none !important; }
 
 h1, h2, h3, h4, h5,
@@ -9324,7 +9324,8 @@ textarea.form-control {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center; }
-/* GALERIA PENDIENTE DE IMPLEMENTAR 
+
+  /* GALERIA */
 
 .gallery-section {
   position: relative;
@@ -9337,7 +9338,7 @@ textarea.form-control {
   height: 100%;
 }
 
-*/
+
 
   /* OPINIONES */ 
 
@@ -9439,7 +9440,7 @@ textarea.form-control {
     display: block;
     position: relative;
     color: rgba(255, 255, 255, 0.7); }
-/* CAMBIO PENDIENTES DE IMPLEMENTAR  -----
+/* CAMBIOS*/
 .testimony-wrap i {
   position: absolute;
   bottom: 300px;
@@ -9452,30 +9453,6 @@ textarea.form-control {
   border-radius: 50%; 
   color: #fff;
   font-size: 25px; }
-
---------------------------*/
-/* HABRÍA Q ELIMINAR ESTA CLASE*/
-  .testimony-wrap .user-img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    position: relative;
-    margin: 0 auto;
-    background-position: top center; }
-    .testimony-wrap .user-img .quote {
-      position: absolute;
-      bottom: -10px;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      background: #e2c0bb;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%; }
-      .testimony-wrap .user-img .quote i {
-        color: #fff; } 
-  /*HASTA AQUI*/
 
   .testimony-wrap .text {
     padding-top: 6em;
@@ -10022,7 +9999,8 @@ textarea.form-control {
   top: 0;
   left: 0;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 35px;
+  color: white;
   background: #3e4e62;
  
   /* CAMBIO PENDIENTE DE IMPLEMENTAR -----------
@@ -10037,6 +10015,7 @@ textarea.form-control {
   /* background: #fa5252;-------------AQUI ROJO */
   background: #fa5252;
 }
+
 @media (max-width: 640px) {
   .nav {
     width: 70px;
