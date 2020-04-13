@@ -9384,7 +9384,7 @@ textarea.form-control {
   text-decoration: none;
   font-size: 35px;
   color: white;
-  background: #3e4e62;
+  background: #6B27FF;    /* color original de la barra menu nav  #3e4e62--------  Hanna ------/*
  
   /* CAMBIO PENDIENTE DE IMPLEMENTAR -----------
    
@@ -9395,7 +9395,7 @@ textarea.form-control {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .nav__link:hover {
-  /* background: #fa5252;-------------AQUI ROJO */
+  /* background: #fa5252 (color original);-------------AQUI fucsia HANNA */
   background: #FF00FF;
 }
 
@@ -9421,15 +9421,15 @@ textarea.form-control {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
-  /* background: #455871;---------------------AQUI COLOR NAV INICIO*/
-  background: #ff8c00;
+  /* background: #455871;------------botón flecha---------AQUI COLOR NAV INICIO*/
+  background: #34A3D7;
   cursor: pointer;
   -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .burger:hover {
-  /* background: #3e4e62;------------AQUI */
-  background: #fa5252;
+  /* background: #3e4e62;----------botón flecha--AQUI */
+  background: #00cccd;
 }
 .burger__patty {
   position: relative;
