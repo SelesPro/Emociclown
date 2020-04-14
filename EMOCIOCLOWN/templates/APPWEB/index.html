@@ -24,14 +24,15 @@
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	
+	<!-- PRUEBA FAVICON -- OK -->
+	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 	
-
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
 	<nav class="nav">
 		<div class="burger" title= Click >
-		  <div class="burger__patty" ></div>
+		  <div class="burger__patty"></div>
 		</div>
 		<ul class="nav__list">
 		  <li class="nav__item">
@@ -43,8 +44,7 @@
 		  <li class="nav__item">
 			<a href="#actividad" class="nav__link c-red"><i class="flaticon-halloween-october-31-calendar-page-sketch" title= Actividades></i></a>
 		  </li>
-	  
-		  <li class="nav__item">
+  		  <li class="nav__item">
 			<a href="#campamento" class="nav__link c-red"><i class="flaticon-favorites-star-sketch" title= Campamento></i></a>
 		  </li>
 		  <li class="nav__item">
@@ -478,7 +478,7 @@
   
 <!-- GALERIA -->
 	
-<section class="ftco-section gallery-section" id="galeria">
+<section class="ftco-section gallery-section">
 	<div class="container">
 	  <div class="row justify-content-center pb-3">
 		<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -491,24 +491,24 @@
 		  <div id="demo" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 				<div class="carousel-item active">
-				  <img src="{% static 'img/group3.jpg' %}" alt="Los Angeles" width="1100" height="500">
+				  <img src="{% static 'images/group3.jpg' %}" alt="Los Angeles" width="1100" height="500">
 				  <div class="carousel-caption">
-					<h3>Los Angeles</h3>
-					<p>We had such a great time in LA!</p>
+					<h3>Alcorcón</h3>
+					<p>Momentos en Alcorcón!</p>
 				  </div>   
 				</div>
 				<div class="carousel-item">
-				  <img src="{% static 'img/hand1.jpg' %}" alt="Chicago" width="1100" height="500">
+				  <img src="{% static 'images/hand1.jpg' %}" alt="Chicago" width="1100" height="500">
 				  <div class="carousel-caption">
-					<h3>Chicago</h3>
-					<p>Thank you, Chicago!</p>
+					<h3>Lavapiés</h3>
+					<p>Gracias, Lavapiés!</p>
 				  </div>   
 				</div>
 				<div class="carousel-item">
-				  <img src="{% static 'img/hand2.jpg' %}" alt="New York" width="1100" height="500">
+				  <img src="{% static 'images/hand2.jpg' %}" alt="New York" width="1100" height="500">
 				  <div class="carousel-caption">
-					<h3>New York</h3>
-					<p>We love the Big Apple!</p>
+					<h3>Barcelona</h3>
+					<p>Grandes!</p>
 				  </div>   
 				</div>
 			  </div>
