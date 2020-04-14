@@ -8727,7 +8727,7 @@ textarea.form-control {
 
   .testimony-section {
     position: relative;
-    background: #b2bbc9;
+    background: #b2bbc9; 
     overflow: hidden; }
     .testimony-section .svg-blob {
       position: absolute;
