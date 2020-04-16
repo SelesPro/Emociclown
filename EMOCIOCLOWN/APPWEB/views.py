@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from .models import *
 
 # Create your views here.
     
@@ -15,7 +16,7 @@ class Index(TemplateView):
         context['opinion'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
-        context['contacto'] = Contacto.objects.all()
+        context['contacto'] = Contactar.objects.all()
         return context    
 
 
