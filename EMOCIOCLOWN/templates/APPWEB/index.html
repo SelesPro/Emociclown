@@ -106,57 +106,22 @@
 	  </div>
 	</div>
 		<div class="row" >
+			{% for Evento in eventos %}
 			<div class="col-md-6 col-lg-4 ftco-animate">
 				<div class="project">
-					<div class="img">
-						<!-- <div class="vr"><span>Sale</span></div> -->
-						<a href="#"><img src="{% static 'images/circo.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+					<div class="img">					
+						<a href="#"><img src="{{Evento.imagen}}" class="img-fluid" alt="Colorlib Template" ></a>
 					</div>
 					<div class="text">
-						<!-- <h4 class="price"><span class="old-price mr-2">Lorem Ipsum</span></h4> -->
-						<span><h3>Risas</h3></span>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+						<span><h3>{{Evento.titulo}}</h3></span>
+						<p>{{Evento.descripcion}}</p>
 					</div>
-					<a href="{% static 'images/hotel-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+					<a href="{% static 'img/hotel-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
 						<span class="icon-expand"></span>
 					</a>
 				</div>
 			</div>
-			<div class="col-md-6 col-lg-4 ftco-animate">
-				<div class="project">
-					<div class="img">
-						<!-- <div class="vr"><span>Sale</span></div> -->
-						<a href="#"><img src="{% static 'images/globo.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
-					</div>
-					<div class="text">
-						<!-- <h4 class="price"><span class="old-price mr-2">Lorem Ipsum</span></h4> -->
-						<span><h3>Sensaciones</h3></span>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-					</div>
-					<a href="{% static 'images/hotel-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-6 col-lg-4 ftco-animate">
-				<div class="project">
-					<div class="img">
-						<!-- <div class="vr"><span>Sale</span></div> -->
-						<a href="#"><img src="{% static 'images/concierto.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
-					</div>
-					<div class="text">
-						<!-- <h4 class="price"><span class="old-price mr-2">Lorem Ipsum</span></h4> -->
-						<span><h3>Emociones</h3></span>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-							Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-					</div>
-					<a href="{% static 'images/hotel-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span>
-					</a>
-				</div>
-			</div>
+			{% endfor %}
 
 		</div>
 		<div class="row mt-5">
@@ -176,23 +141,23 @@
 		  </div>
 	</div>
 </section>
-<!-- -----------------------HANNA FIN EVENTOS ACTIVIDADES-->
+<!-- ------------------------FIN EVENTOS ACTIVIDADES-------------------------------------------------------------------------->
 
 <!-----------------------CAMPAMENTO---------------Hanna----------------------------------------------------------------------->
 	
     <section class="ftco-section bg-light" id="campamento">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-			<!-- <span class="subheading">Blog</span> -->
+          <div class="col-md-7 heading-section text-center ftco-animate">			
 			<h2 class="mb-4">CAMPAMENTO</h2>		  
 			<!-- <p>Activadad en el Colegio Santa Maria</p> -->
 		  </div>
         </div>
         <div class="row d-flex">
-          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
+			{% for Campamento in campamentos %}
+			<div class="col-md-6 col-lg-4 d-flex ftco-animate">				
           	<div class="blog-entry justify-content-end">
-              <a href="#" class="block-20" style="background-image: url({% static 'images/image_1.jpg' %});">
+				<a href="#"><img src="{{Campamento.imagen}}" class="img-fluid" alt="Colorlib Template" ></a>
               </a>
               <div class="text float-right d-block">
               	<div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -204,65 +169,16 @@
               			<span class="mos">april</span>
               		</div>
               	</div>
-				  <h3 class="heading"><a href="single.html">Colegio Buen Consejo</a></h3> 
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor 
-					  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				  <h3 class="heading"><a href="single.html">{{Campamento.nombre}}</a></h3> 
+				  <p>{{Campamento.descripcion}}</p>
 				  <div class="d-flex align-items-center mt-4 meta">
 					  <p class="mb-0"><a href="#" class="btn btn-primary">leer más <span class="ion-ios-arrow-round-forward"></span></a></p>
-	<!-- 				  <p class="ml-auto mb-0">
-						  <a href="#" class="mr-2">Admin</a>
-						  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-					  </p> -->
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="single.html" class="block-20" style="background-image: url({% static 'images/image_2.jpg' %});">
-              </a>
-              <div class="text float-right d-block">
-              	<div class="d-flex align-items-center pt-2 mb-4 topp">
-              		<div class="one mr-2">
-              			<span class="day">12</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">april</span>
-              		</div>
-              	</div>
-				  <h3 class="heading"><a href="#">Campamento Summer</a></h3> 
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor 
-					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-				  <div class="d-flex align-items-center mt-4 meta">
-					  <p class="mb-0"><a href="#" class="btn btn-primary">leer más <span class="ion-ios-arrow-round-forward"></span></a></p>
-				  </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="#" class="block-20" style="background-image: url({% static 'images/image_3.jpg' %});">
-              </a>
-              <div class="text float-right d-block">
-              	<div class="d-flex align-items-center pt-2 mb-4 topp">
-              		<div class="one mr-2">
-              			<span class="day">12</span>
-              		</div>
-              		<div class="two">
-              			<span class="yr">2019</span>
-              			<span class="mos">april</span>
-              		</div>
-              	</div>
-				  <h3 class="heading"><a href="#">Campamento sprintFive</a></h3> 
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor 
-					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-				  <div class="d-flex align-items-center mt-4 meta">
-					  <p class="mb-0"><a href="#" class="btn btn-primary">leer más <span class="ion-ios-arrow-round-forward"></span></a></p>
-				  </div>
-              </div>
-            </div>
-          </div>
+			</div>
+			{% endfor %}
+		  </div>  
+ 	  
         </div>
       </div>
     </section>
