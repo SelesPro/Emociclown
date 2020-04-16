@@ -69,81 +69,26 @@
           		</div>
 			</div>
 					<div class="row">
+						{% for taller in talleres %}
 						<div class="col-md-6 col-lg-3 ftco-animate">
 							<div class="project">
 								<div class="img taller">
 									<!-- <div class="vr"><span>Sale</span></div> -->
-									<a href="#destination.html"><img src="{% static 'images/destination-1.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
+									<a href="#destination.html"><img src="{{taller.imagen}}" class="img-fluid" alt="Colorlib Template" width="100" height="100"></a>
 								</div>
 								<div class="text">
 									<h4 class="price"><span class="old-price mr-2">MADRID</span></h4>
 									<span>FECHA DE EVENTO</span>
-									<h3><a href="#">TITULO DE EVENTO</a></h3>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto a perferendis ex alias veniam enim, sapiente dolore aperiam consectetur ipsa excepturi dicta sint ad quam fugit. At id sit mollitia!</p>
-									<p class="mb-0"><a href="#contact-section" class="btn btn-primary">Contáctanos</a></p>
+									<h3><a href="#"> {{taller.titulo}}</a></h3>
+									<p>{{taller.descripcion}}</p>
+									<p class="mb-0"><a href="{{taller.Wasap}}" class="btn btn-primary">Contáctanos</a></p> <!----- DUDAS enlace bbdd------>
 								</div>
-								<a href="images/galileoMadrid.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
+								<a href="#" class="icon image-popup d-flex justify-content-center align-items-center"><!----- DUDAS bigote imagen------>		
 									<span class="icon-expand"></span>
 								</a>
 							</div>
 						</div>
-
-						<div class="col-md-6 col-lg-3 ftco-animate">
-							<div class="project">
-								<div class="img">
-									<!-- <div class="vr"><span>Sale</span></div> -->
-									<a href="destination.html"><img src="{% static 'images/destination-1.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
-								</div>
-								<div class="text">
-									<h4 class="price"><span class="old-price mr-2">FUENLABRADA</span></h4>
-									<span>FECHA DE EVENTO</span>
-									<h3><a href="#">TITULO DE EVENTO</a></h3>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto a perferendis ex alias veniam enim, sapiente dolore aperiam consectetur ipsa excepturi dicta sint ad quam fugit. At id sit mollitia!</p>
-									<p class="mb-0"><a href="#contact-section" class="btn btn-primary">Contáctanos</a></p>
-								</div>
-								<a href="images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-									<span class="icon-expand"></span>
-								</a>
-							</div>
-						</div>
-
-						<div class="col-md-6 col-lg-3 ftco-animate">
-							<div class="project">
-								<div class="img">
-									<!-- <div class="vr"><span>Sale</span></div> -->
-									<a href="destination.html"><img src="{% static 'images/destination-1.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
-								</div>
-								<div class="text">
-									<h4 class="price"><span class="old-price mr-2">LA LATINA</span></h4>
-									<span>FECHA DE EVENTO</span>
-									<h3><a href="#">TITULO DE EVENTO</a></h3>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto a perferendis ex alias veniam enim, sapiente dolore aperiam consectetur ipsa excepturi dicta sint ad quam fugit. At id sit mollitia!</p>
-									<p class="mb-0"><a href="#contact-section" class="btn btn-primary">Contáctanos</a></p>
-								</div>
-								<a href="images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-									<span class="icon-expand"></span>
-								</a>
-							</div>
-						</div>
-				
-						<div class="col-md-6 col-lg-3 ftco-animate">
-							<div class="project">
-								<div class="img">
-									<!-- <div class="vr"><span>Sale</span></div> -->
-									<a href="destination.html"><img src="{% static 'images/destination-1.jpg' %}" class="img-fluid" alt="Colorlib Template"></a>
-								</div>
-								<div class="text">
-									<h4 class="price"><span class="old-price mr-2">ALGUNO</span></h4>
-									<span>FECHA DE EVENTO</span>
-									<h3><a href="#">TITULO DE EVENTO</a></h3>
-									<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto a perferendis ex alias veniam enim, sapiente dolore aperiam consectetur ipsa excepturi dicta sint ad quam fugit. At id sit mollitia!</p>
-									<p class="mb-0"><a href="#contact-section" class="btn btn-primary">Contáctanos</a></p>
-								</div>
-								<a href="images/destination-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-									<span class="icon-expand"></span>
-								</a>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
     	</div>
 	</section>

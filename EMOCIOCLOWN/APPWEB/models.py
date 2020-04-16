@@ -2,10 +2,18 @@
 from django.db import models
 
 
+class InfoPersonal(models.Model):
+    titulo = models.CharField(max_length = 20, null = False)
+    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    imagen = models.ImageField(upload_to='static/img')  #especificar el peso de la imágen
+
+    def __str__(self):
+        return self.titulo
+
 class Taller(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
-    wasap = models.IntegerField(default= 9, null= False)  #linkar grupo wasap
+    wasap = models.CharField(max_length = 12, null = False)  #linkar grupo wasap
     imagen = models.ImageField(upload_to='static/img')  #especificar el peso de la imágen
     
     def __str__(self):
@@ -62,7 +70,7 @@ class Blog(models.Model):
 
 class Datos_contacto(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
-    telefono = models.IntegerField(default= 9, null= False)
+    telefono = models.CharField(max_length = 12, null = False)
     email = models.EmailField(max_length = 50, null = False)    
  
     def __str__(self):
@@ -70,7 +78,7 @@ class Datos_contacto(models.Model):
 
 class Contactar(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
-    telefono = models.IntegerField(default= 9, null= False)
+    telefono = models.CharField(max_length = 12, null = False)
     email = models.EmailField(max_length = 50, null = False)
     asunto = models.CharField(max_length = 20, null = False)
     mensaje = models.TextField(blank = False, null = False)
