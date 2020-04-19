@@ -59,29 +59,29 @@
 	    </div>
     </section>
 	
- <section class="ftco-section " id="talleres">
+ <section class="ftco-section" id="talleres">
     	<div class="container">
     		<div class="row justify-content-center pb-5">
           		<div class="col-md-12 heading-section text-center ftco-animate">
           		<!-- <span class="subheading">Best Destination</span> -->
-            	<h2 class="mb-4">TITULO alternativo para TALLERES</h2>
+            	<h2 class="mb-4">TALLERES</h2>
            		 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi odit quae, possimus earum dolores placeat. Id, minus voluptatem nihil recusandae similique, aliquid nesciunt commodi beatae corporis eos cupiditate nisi. Soluta.</p>
           		</div>
 			</div>
 					<div class="row">
 						{% for taller in talleres %}
-						<div class="col-md-6 col-lg-3 ftco-animate">
+						<div class="col-md-6 col-lg-4 ftco-animate">
 							<div class="project">
-								<div class="img taller">
+								<div class="img fijo-taller">
 									<!-- <div class="vr"><span>Sale</span></div> -->
-									<a href="#destination.html"><img src="{{taller.imagen}}" class="img-fluid" alt="Colorlib Template" height="10"></a> 
+									<a href="#destination.html"><img src="{{taller.imagen}}" class="img-fluid" alt="Colorlib Template" ></a> <!--width="100%" height="100%"  DANIEL IMAGEN INTENTO-->
 								</div>
 								<div class="text">
 									<h4 class="price"><span class="old-price mr-2">MADRID</span></h4>
 									<span>FECHA DE EVENTO</span>
 									<h3><a href="#"> {{taller.titulo}}</a></h3>
 									<p>{{taller.descripcion}}</p>
-									<p class="mb-0"><a href="{{taller.Wasap}}" class="btn btn-primary">Contáctanos</a></p> <!----- DUDAS enlace bbdd------>
+									<p class="mb-0"><a href="{{taller.Wasap}}" class="btn btn-primary">Contáctanos</a></p> <!-- DUDAS enlace bbdd -->
 								</div>
 								<a href="#" class="icon image-popup d-flex justify-content-center align-items-center">	
 									<span class="icon-expand"></span>
