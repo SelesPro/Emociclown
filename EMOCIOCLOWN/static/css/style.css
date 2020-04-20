@@ -7655,7 +7655,7 @@ h1, h2, h3, h4, h5,
     z-index: 1;
     color: #fff; }
     .hero div.vr span {
-/*       -----------------------DANIEL AQUI CAMBIO DE FUNTE---
+/*       -----------------------DANIEL AQUI CAMBIO DE FUENTE---
       font-family: "Cormorant Garamond", Georgia, serif; */
       font-family: "Poppins", Arial, sans-serif;
       position: relative;
@@ -8526,8 +8526,8 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  /* ----------------------------DANIEL AQUI PADDING SUPERIOR DE TALLERES ORIGINAL 7em */
-  padding: 7em 0; /* CAMBIO en original 7em 0*/
+  /* ----------------------------DANIEL AQUI MARGEN SUPERIOR DE TITULOS ORIGINAL 7em */
+  padding: 4em 0; /* CAMBIO en original 7em 0*/
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
