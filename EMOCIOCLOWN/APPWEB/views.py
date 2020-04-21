@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView
 from .models import *
 
 # Create your views here.
@@ -9,7 +9,7 @@ class Index(TemplateView):
 
     def get_context_data(self,**kwargs):
         context=super(Index, self).get_context_data(**kwargs)
-        context['infoinicio'] = InfoPersonal.objects.all()
+        context['infoinicio'] = Info.objects.all()
         context['talleres'] = Taller.objects.all()
         context['eventos'] = Evento.objects.all()
         context['campamentos'] = Campamento.objects.all()
@@ -18,5 +18,6 @@ class Index(TemplateView):
         context['blog'] = Blog.objects.all()
         context['contacto'] = Contactar.objects.all()
         return context    
+
 
 
