@@ -106,12 +106,11 @@
   <section class="ftco-section" id="actividad">
 	<div class="container" >
 		<div class="row justify-content-center pb-5">
-	  <div class="col-md-12 heading-section text-center ftco-animate">
-		  <span class="subheading">EVENTOS &</span>
-		<h2 class="mb-4">ACTIVIDADES</h2>
-		<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> -->
-	  </div>
-	</div>
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<span class="subheading">EVENTOS &</span>
+				<h2 class="mb-4">ACTIVIDADES</h2>
+			</div>
+		</div>
 		<div class="row" >
 			{% for Evento in eventos %}
 			<div class="col-md-6 col-lg-4 ftco-animate">
@@ -123,32 +122,31 @@
 						<span><h3>{{Evento.titulo}}</h3></span>
 						<p>{{Evento.descripcion}}</p>
 					</div>
-					<a href="{% static 'img/hotel-1.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span>
-					</a>
+					<a href="{{Evento.imagen}}" class="icon image-popup d-flex justify-content-center align-items-center">
+						<span class="icon-expand"></span> <!--hace que se expanda la imágen-->
+					</a> 
 				</div>
 			</div>
-			{% endfor %}
-
-	
-	
-	
+			{% endfor %}		
 		</div>
-		 <div class="row mt-5">
+
+
+		
+
+		<div class="row mt-5">		
 			<div class="col text-center">
-				<div class="block-27">
+				<div class="block-27">					
 					<ul>
-						<li><a href="#">&lt;</a></li>
 						<li class="active"><span>1</span></li>
+						<li><a href="#">1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
 						<li><a href="#">&gt;</a></li>
-					</ul>
+					</ul>					
 				</div>
-			</div>
-		  </div>
+			</div>			
+		</div>  
+		
 	</div>
 </section>
 <!-- ------------------------FIN EVENTOS ACTIVIDADES-------------------------------------------------------------------------->
@@ -178,14 +176,20 @@
 							<span class="mos">april</span>
 						</div>
 					</div>
-				  <h3 class="heading"><a href="single.html">{{Campamento.nombre}}</a></h3>
+				  <h3 class="heading"><a href="#">{{Campamento.nombre}}</a></h3>
 				  <p>{{Campamento.descripcion}}</p>
-				  <div class="d-flex align-items-center mt-4 meta">
-					  <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-					  <p class="ml-auto mb-0">
+				  <div class="d-flex align-items-center mt-4 meta">				
+					  <p class="mb-0">
+						<a href="{% url 'appweb:campa' %}" class="btn btn-primary">más info 
+						  <span class="ion-ios-arrow-round-forward"></span>
+						</a>					
+					</p>
+
+				<!--  <p class="ml-auto mb-0">
 						  <a href="#" class="mr-2">Admin</a>
 						  <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-					  </p>
+					  </p> -->
+					 
 				  </div>
 				</div>
 			  </div>

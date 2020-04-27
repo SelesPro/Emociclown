@@ -1,0 +1,36 @@
+
+{% load static %}
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head> 
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Información sobre campamentos</strong>
+        </div>
+        <div class="table-stats order-table ov-h">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Fecha inicio</th>
+                        <th>Fecha fin</th>                       
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for l in pro %}
+                        <td>{{ l.nombre }}</td>
+                        <td>{{ l.descripcion }}</td>
+                        <td>{{ l.fecha_inicio }}</td>
+                        <td>{{ l.fecha_fin }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+
