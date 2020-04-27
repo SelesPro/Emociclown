@@ -14,7 +14,7 @@ class Index(TemplateView):
         context['talleres'] = Taller.objects.all()
         context['eventos'] = Evento.objects.all()
         context['campamentos'] = Campamento.objects.all()
-        context['opinion'] = Opiniones.objects.all()
+        context['opiniones'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
         context['contacto'] = Contactar.objects.all()

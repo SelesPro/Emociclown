@@ -63,10 +63,10 @@ class Blog(models.Model):
     resumen = models.TextField(blank = False,null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
     fecha = models.DateField(null=True, blank=True, auto_now_add=True)
-    imagen = models.ImageField(upload_to='static/img')       
+    imagen = models.ImageField(upload_to='blog')       
 
     def __str__(self):
-        return self.titulo
+        return self.titular
 
 class Datos_contacto(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
