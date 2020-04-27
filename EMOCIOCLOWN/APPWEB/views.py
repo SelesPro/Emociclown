@@ -22,7 +22,14 @@ class Index(TemplateView):
         context['contacto'] = Contactar.objects.all()
         return context   
 
+class InfoTaller(ListView):
+    model = Taller
+    template_name = 'APPWEB/taller.html'
 
+    def get_context_data(self,**kwargs):
+        context = super(InfoTaller, self).get_context_data(**kwargs)
+        context['taller'] = Taller.objects.get(pk=self.kwargs.get('pk', None))
+        return context
 class InfoCamp(ListView):
     model = Campamento
     template_name = 'APPWEB/campamento.html'

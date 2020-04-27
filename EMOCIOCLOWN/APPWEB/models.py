@@ -6,6 +6,7 @@ class Info(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
     imagen = models.ImageField(upload_to='personal')  #especificar el peso de la imágen
+    #link = models.URLField(null=True, blank=True, verbose_name="Dirección Web")
 
     def __str__(self):
         return self.titulo
