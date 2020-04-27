@@ -7,8 +7,6 @@ from .models import *
 class Index(TemplateView):
     template_name = 'APPWEB/index.html'
 
-
-
     def get_context_data(self,**kwargs):
         context=super(Index, self).get_context_data(**kwargs)
         #context['monica'] = Info.objects.get(pk=1)
@@ -30,6 +28,7 @@ class InfoTaller(ListView):
         context = super(InfoTaller, self).get_context_data(**kwargs)
         context['taller'] = Taller.objects.get(pk=self.kwargs.get('pk', None))
         return context
+
 class InfoCamp(ListView):
     model = Campamento
     template_name = 'APPWEB/campamento.html'
@@ -39,4 +38,18 @@ class InfoCamp(ListView):
     def get_context_data(self,**kwargs):
         context=super(InfoCamp, self).get_context_data(**kwargs) 
         return context  
-             
+
+class InfoBlog(ListView):
+    model = Blog
+    template_name = 'APPWEB/blog.html'
+    context_object_name = 'blogs'
+    queryset = Blog.objects.all()
+
+class SingleBlog(ListView):
+    model = Blog
+    template_name = 'APPWEB/blog-single.html'
+
+    def get_context_data(self,**kwargs):
+        context = super(SingleBlog, self).get_context_data(**kwargs)
+        context['singleBlog'] = Blog.objects.get(pk=self.kwargs.get('pk', None))
+        return context
