@@ -17,7 +17,7 @@ class Index(TemplateView):
         context['opiniones'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
-        context['contacto'] = Contactar.objects.all()
+        context['contacto'] = Datos_contacto.objects.all()
         return context   
 
 class InfoTaller(ListView):

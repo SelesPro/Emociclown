@@ -367,22 +367,28 @@
             <input type="submit" value="Enviar" class="btn btn-primary py-3 px-5"/>
           </div>
         </form>
-      </div>
-
+	  </div>
+	  
+	  <!-- LADO IZQUIERDO -->
       <div class="col-md-5 d-flex">
+		
         <div class="row d-flex contact-info mb-5">
-          <div class="col-md-12 ftco-animate">
-            <div class="box p-2 px-3 bg-light d-flex">
+		{% for datos in contacto %}	
+          <div class="col-md-12 ftco-animate">	
+            <div class="box p-2 px-3 bg-light d-flex">				
               <div class="icon mr-3">
                 <span class="flaticon-add-user"
                   ><i class="flaticon-email-open-sketched-envelope"></i></span>
               </div>
               <div>
+							
                 <h3 class="mb-3">Dirección</h3>
-                <p>Calle Monegros,56 28915 Leganés, España</p>
+				<p>{{datos.nombre}}</p>
+				
+				<!--Habría q cambiar en el models.py  de la class Datos_contacto nombre por direccion-->
               </div>
             </div>
-          </div>
+		  </div>
           <div class="col-md-12 ftco-animate">
             <div class="box p-2 px-3 bg-light d-flex">
               <div class="icon mr-3">
@@ -391,10 +397,10 @@
               </div>
               <div>
                 <h3 class="mb-3">Móvil</h3>
-                <p><a href="tel://+341234567">+ 34 123 45 67</a></p>
+                <p><a href="tel://+341234567">{{datos.telefono}}</a></p>
               </div>
             </div>
-          </div>
+		  </div>		 
           <div class="col-md-12 ftco-animate">
             <div class="box p-2 px-3 bg-light d-flex">
               <div class="icon mr-3">
@@ -404,13 +410,16 @@
               <div>
                 <h3 class="mb-3">Correo Electrónico</h3>
                 <p>
-                  <a href="mailto:emocioclown@yoursite.com">emocioclown@yoursite.com</a>
+                  <a href="mailto:emocioclown@yoursite.com">{{datos.email}}</a>
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+		  </div>
+		{% endfor %}
+		</div>
+		
+	  </div>
+	  
     </div>
   </div>
 </section>
