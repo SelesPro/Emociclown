@@ -24,9 +24,9 @@
 							<img src="static/img/logo.svg" alt="logo emocioclown" id="logo">
 							<span class="subheading pl-5">Nuestra Historia</span>
 							<p>{{emocioclown.descripcion}}</p> <!--DANIEL DESCRIPCION 2 MONICA -->
-								{# if emocioclown.link #}
-									<p><a href="{{emcioclown.link}}" class="btn btn-primary px-5 py-3 mt-3">Más información<span class="ion-ios-arrow-forward"></span></a></p>	
-								{# endif #} 
+								{% if emocioclown.link %}
+									<p><a href="{{emocioclown.link}}" target="_blank" class="btn btn-primary px-5 py-3 mt-3">Más información<span class="ion-ios-arrow-forward"></span></a></p>	
+								{% endif %} 
 						</div>
 					</div>
 				</div>
