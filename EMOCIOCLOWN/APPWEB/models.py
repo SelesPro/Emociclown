@@ -10,6 +10,10 @@ class Info(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+    class Meta:
+        verbose_name = 'Info'
+        verbose_name_plural = 'Datos personales y empresa'
 
 class Taller(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
@@ -19,6 +23,9 @@ class Taller(models.Model):
     
     def __str__(self):
         return self.titulo
+    class Meta:
+        verbose_name = 'Taller'
+        verbose_name_plural = 'Talleres'
 
 class Evento(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
@@ -49,6 +56,9 @@ class Opiniones(models.Model):
 
     def __str__(self):
         return self.nombre
+    class Meta:
+        verbose_name = 'Opiniones'
+        verbose_name_plural = 'Opiniones'
 
 class Galeria(models.Model):
     titulo = models.CharField(max_length = 50, null = False)
@@ -76,6 +86,10 @@ class Datos_contacto(models.Model):
  
     def __str__(self):
         return self.nombre
+    class Meta:
+        verbose_name = 'Datos_contacto'
+        verbose_name_plural = 'Datos_contacto'
+    
 
 class Contactar(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
@@ -85,6 +99,9 @@ class Contactar(models.Model):
     mensaje = models.TextField(blank = False, null = False)
      
     def __str__(self):
-        return self.nombre 
+        return self.nombre
+    class Meta:
+        verbose_name = 'Contactar'
+        verbose_name_plural = 'Contactar'
 
   

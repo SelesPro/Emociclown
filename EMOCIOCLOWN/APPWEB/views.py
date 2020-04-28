@@ -53,3 +53,7 @@ class SingleBlog(ListView):
         context = super(SingleBlog, self).get_context_data(**kwargs)
         context['singleBlog'] = Blog.objects.get(pk=self.kwargs.get('pk', None))
         return context
+
+# --- PARA HACER USO DE LOS BOTONES QUE NOS LLEVAN AL INICIO-- PRUEBA---
+def home(request):
+    return render(request, "APPWEB/index.html")

@@ -2,17 +2,64 @@
 {% load static %}
 {% block content %}
 
-	<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+
+<section class="hero-wrap hero-wrap-2 talleres" style="background-image:url('{% static 'img/campa2.jpg' %}')" data-stellar-background-ratio="0.5">
+<div class="overlay"></div>
+<div class="container">
+	<div class="row no-gutters slider-text align-items-end justify-content-start">
+		<div class="col-md-9 ftco-animate pb-4">
+			<h1 class="mb-3 bread">{{taller.titulo}}</h1>
+			<p class="breadcrumbs">
+				<span class="mr-2">
+					<a href="index.html">Home <iclass="ion-ios-arrow-forward"></i></a>
+				</span>
+				<span class="mr-2">
+					<a href="blog.html">Talleres <i class="ion-ios-arrow-forward"></i></a>
+				</span>
+				<!-- <span>Blog Single<i class="ion-ios-arrow-forward"></i></span> -->
+			</p>
+		</div>
+	</div>
+</div>
+</section>
+<!-- ------------------- DANIEL CONTENIDO TALLER------------- -->
+<section class="ftco-section">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 room-wrap">
+			<div class="row">
+				<div class="col-md-7 d-flex ftco-animate">
+					<div class="img align-self-stretch"
+						style="background-image:url('{% static taller.imagen.url  %}');">
+					</div>
+				</div>
+				<div class="col-md-5 ftco-animate">
+					<div class="text py-5">
+						<h3><a href="#">Descripción de taller</a></h3>
+						<!-- <p class="pos">from <span class="price">$99.00</span>/night</p> -->
+						<p>{{taller.descripcion}}</p>
+						<!-- <p><a href="#" class="btn btn-secondary">Details</a>
+							<a href="#" class="btn btn-primary">Book now</a>
+						</p> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</section> <!-- .section -->
+
+	<!-- DANIEL RIGINAL ANTES DE CAMBIAR DE TEMPLATE...... OJO
+		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
 		<div class="container">
-		
 			<div class="row no-gutters d-flex">
 				<div class="col-md-6 col-lg-5 d-flex">
 					<div class="img d-flex align-self-stretch align-items-center"
 						style="background-image:url('{% static taller.imagen.url  %}');">
 					</div>
 				</div>
-				<div class="col-md-6 col-lg-7 px-lg-5 py-md-5 bg-darken">
-					
+				<div class="col-md-6 col-lg-7 px-lg-5 py-md-5 bg-darken">	
 					<div class="py-md-5">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate p-5 p-lg-0">
@@ -23,13 +70,11 @@
 										class="btn btn-white py-3 px-4">Contact us</a></p>
 							</div>
 						</div>
-					</div>
-					
+					</div>	
 				</div>
-			</div>
-		
+			</div>		
 		</div>
 	</section>
-
+ -->
 
 {% endblock content %}

@@ -7943,10 +7943,11 @@ h1, h2, h3, h4, h5,
     content: '';
     opacity: 0;
     background: #000000; }
-  .hero-wrap.hero-wrap-2 {
+    .hero-wrap.hero-wrap-2 {
     height: 400px;
     position: relative;
-    background-position: top center; }
+    background-position: top center; } /* DANIEL, EN TALLERES FOTO CEBECERA */
+
     .hero-wrap.hero-wrap-2 .overlay {
       width: 100%;
       opacity: .3;
@@ -9491,11 +9492,14 @@ textarea.form-control {
   width: 70%;
   margin-bottom: 3%;
 }
-/* ------------------------- DANIEL IMAGEN TAMAÑO PRUEBA - no sirve */
-.project .fijo-taller{
-    /* display: block; */
-    height: 60%;
-    /* object-fit: cover; */
+/* ------------------------- DANIEL PRUEBA POSICION IMAGEN TALLER INDIVIDUAL- no sirve */
+
+.hero-wrap.hero-wrap-2.talleres{
+  height: 400px;
+  position: relative;
+  background-position: center;
+  
 }
+
 
 
