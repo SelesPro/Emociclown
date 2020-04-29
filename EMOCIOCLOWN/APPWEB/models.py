@@ -31,7 +31,7 @@ class Taller(models.Model):
 class Evento(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
-    imagen = models.ImageField(upload_to='static/img')
+    imagen = models.ImageField(upload_to='evento')
     aforo = models.IntegerField(default = 3, null= True)
     fecha_inicio = models.DateField(null=True, blank=True) 
     fecha_fin = models.DateField(null=True, blank=True)

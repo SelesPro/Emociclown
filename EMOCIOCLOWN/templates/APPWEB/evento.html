@@ -1,0 +1,53 @@
+{% extends 'APPWEB/plantilla-base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="hero-wrap hero-wrap-2 talleres" style="background-image:url('{% static 'img/bombilla.jpg' %}')" data-stellar-background-ratio="0.5">
+<div class="overlay"></div>
+	<div class="container">
+		<div class="row no-gutters slider-text align-items-end justify-content-start">
+			<div class="col-md-9 ftco-animate pb-4">
+				<h1 class="mb-3 bread">{{evento.titulo}}</h1>						
+<!-- 					<p class="breadcrumbs">
+						<span class="mr-2"> <a href="{% url 'appweb:inicio' %}">Home - <iclass="ion-ios-arrow-forward"></i></a> </span>
+						<span class="mr-2"> <a href="#">evento <i class="ion-ios-arrow-forward"></i></a></span>
+					</p> -->	
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="ftco-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 room-wrap">
+				<div class="row">
+					<div class="col-md-7 d-flex ftco-animate">
+						<div class="img align-self-stretch"
+							style="background-image:url('{% static evento.imagen.url  %}');">
+						</div>
+					</div>
+					<div class="col-md-5 ftco-animate">
+						<div class="text py-5">
+							<!-- <h3><a href="#">Descripción del evento</a></h3> -->
+							<!-- <p class="pos">from <span class="price">$99.00</span>/night</p> -->							
+							<h5>Descripcion:</h5> <p justifyALIGN="justify;"> {{evento.descripcion}}</p>
+							<h5>Aforo:</h5> <p> {{evento.aforo}}</p>
+							<h5>Edad:</h5> <p> {{evento.edad}}</p>
+							<h5>precio:</h5> <p> {{evento.precio}}</p>	
+							<h5>Fecha inicio:</h5> <p> {{evento.fecha_inicio}} </p>
+							<h5>Fecha fin:</h5>    <p > {{evento.fecha_fin}} </p>
+	
+							<!-- <p><a href="#" class="btn btn-secondary">Details</a>
+								<a href="#" class="btn btn-primary">Book now</a>
+							</p> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
+{% endblock content %}

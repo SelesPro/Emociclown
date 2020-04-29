@@ -32,12 +32,21 @@ class InfoTaller(ListView):
 class InfoCamp(ListView):
     model = Campamento
     template_name = 'APPWEB/campamento.html'
-    context_object_name = 'pro'
-    queryset = Campamento.objects.all()
 
     def get_context_data(self,**kwargs):
         context=super(InfoCamp, self).get_context_data(**kwargs) 
+        context['campamento'] = Campamento.objects.get(pk=self.kwargs.get('pk', None))
         return context  
+
+class InfoEvent(ListView):
+    model = Evento
+    template_name = 'APPWEB/evento.html'
+
+    def get_context_data(self,**kwargs):
+        context=super(InfoEvent, self).get_context_data(**kwargs) 
+        context['evento'] = Evento.objects.get(pk=self.kwargs.get('pk', None))
+        return context 
+
 
 class InfoBlog(ListView):
     model = Blog
@@ -54,4 +63,4 @@ class SingleBlog(ListView):
         context['singleBlog'] = Blog.objects.get(pk=self.kwargs.get('pk', None))
         return context
 
-
+             
