@@ -7929,7 +7929,7 @@ h1, h2, h3, h4, h5,
 .hero-wrap {
   width: 100%;
   height: 700px;
-  position: inherit;
+  position: inherit;  /* DANIEL PRUEBA IMAGEN CABECERA CADA TALLER original -->inherit*/
   background-size: cover;
   background-repeat: no-repeat; }
   .hero-wrap .slider-text {
@@ -9494,10 +9494,10 @@ textarea.form-control {
 }
 /* ------------------------- DANIEL PRUEBA POSICION IMAGEN TALLER INDIVIDUAL- no sirve */
 
-.hero-wrap.hero-wrap-2.talleres{
+.hero-wrap.hero-wrap-2.talleres{ /*este es para la parte de abajo*/
   height: 400px;
   position: relative;
-  background-position: center;
+  background-position: top center;
   
 }
 

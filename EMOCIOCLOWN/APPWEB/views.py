@@ -11,7 +11,7 @@ class Index(TemplateView):
         context=super(Index, self).get_context_data(**kwargs)
         context['monica'] = Info.objects.get(pk=1)
         context['emocioclown'] = Info.objects.get(pk=2)
-        context['talleres'] = Taller.objects.all()
+        context['talleres'] = Taller.objects.all()[:4]
         context['eventos'] = Evento.objects.all()
         context['campamentos'] = Campamento.objects.all()
         context['opiniones'] = Opiniones.objects.all()
@@ -54,6 +54,4 @@ class SingleBlog(ListView):
         context['singleBlog'] = Blog.objects.get(pk=self.kwargs.get('pk', None))
         return context
 
-# --- PARA HACER USO DE LOS BOTONES QUE NOS LLEVAN AL INICIO-- PRUEBA---
-def home(request):
-    return render(request, "APPWEB/index.html")
+
