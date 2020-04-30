@@ -9500,6 +9500,24 @@ textarea.form-control {
   background-position: top center;
   
 }
+.block-23 .taller{
+  color: rgb(0, 0, 0);  /* --------DANIEL CAMBIO DE COLOR TEXT  EN FORMA DE CONTACTAR..... TALLER */
+  padding-top:0px;
+  font-size: 18px;}
+  .block-23 ul li .icon{
+  width: 40px;
+  font-size: 22px;
+  color: rgb(255, 10, 137); } /* --------DANIEL CAMBIO DE COLOR ICONOS  EN FORMA DE CONTACTAR..... TALLER */
 
+  .block-23 ul li, .taller { /* --------DANIEL TEXTOS TALLER INDIVIDUALES..... TALLER */
+    display: table;
+    line-height: 1.5;
+    padding-left: 10px;
+    margin-bottom: 1px; }
+
+  a .texto{ 
+    color: #0f73d7;
+   
+  }
 
 

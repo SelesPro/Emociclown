@@ -4,20 +4,11 @@
 
 
 <section class="hero-wrap hero-wrap-2 talleres" style="background-image:url('{% static 'img/campa2taller.jpg' %}')" data-stellar-background-ratio="0.5">
-<!-- <div class="overlay"></div> -->
+<!-- <div class="overlay"></div> CREA UNA CAPA SOBRE LA IMAGEN, BAJA OPACIDAD-->
 <div class="container">
 	<div class="row no-gutters slider-text align-items-end justify-content-start">
 		<div class="col-md-9 ftco-animate pb-4">
 			<h1 class="mb-3 bread">{{taller.titulo}}</h1>
-			<p class="breadcrumbs">
-				<!-- <span class="mr-2">
-					<a href="{% url 'appweb:index' %}">Home <iclass="ion-ios-arrow-forward"></i></a>
-				</span>
-				<span class="mr-2">
-					<a href="#">Talleres <i class="ion-ios-arrow-forward"></i></a>
-				</span> -->
-				<!-- <span>Blog Single<i class="ion-ios-arrow-forward"></i></span> -->
-			</p>
 		</div>
 	</div>
 </div>
@@ -29,18 +20,23 @@
 		<div class="col-md-12 room-wrap">
 			<div class="row">
 				<div class="col-md-7 d-flex ftco-animate">
-					<div class="img align-self-stretch"
-						style="background-image:url('{% static taller.imagen.url  %}');">
-					</div>
+					<div class="img align-self-stretch" style="background-image:url('{% static taller.imagen.url  %}');"></div>
 				</div>
 				<div class="col-md-5 ftco-animate">
 					<div class="text py-5">
-						<h3><a href="#">Descripción de taller</a></h3>
+						<h3><a href="#">Descripción:</a></h3>
 						<!-- <p class="pos">from <span class="price">$99.00</span>/night</p> -->
 						<p>{{taller.descripcion}}</p>
 						<!-- <p><a href="#" class="btn btn-secondary">Details</a>
 							<a href="#" class="btn btn-primary">Book now</a>
 						</p> -->
+						<div class="block-23 mb-3 taller-A">
+							<ul>
+							  <li><a class="texto">Para más información:</a></li>
+							  <li><a href="#contacto wasaaaaa"><span class="icon icon-phone"></span><span class="text taller">{{contactoInfo.telefono}}</span></a></li>
+							  <li><a href="mailto: {{contactoInfo.email}}"><span class="icon icon-envelope"></span><span class="text taller"></span></a></li>
+							</ul>
+						  </div>
 					</div>
 				</div>
 			</div>

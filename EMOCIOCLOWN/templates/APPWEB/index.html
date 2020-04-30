@@ -1,7 +1,8 @@
 {% extends 'APPWEB/plantilla-base.html' %}
 {% load static %}
 {% block content %}
-
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	
 <section id="home-section" class="hero">
 	<img src="{% static 'img/blob-shape-3.svg' %}" class="svg-blob" alt="Colorlib Free Template">
 	<div class="home-slider owl-carousel">
@@ -85,10 +86,10 @@
 						<p>{{taller.descripcion}}</p>
 						<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
 					</div>
-					<a href="{{taller.imagen}}" class="icon image-popup d-flex justify-content-center align-items-center">
+					<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
 						<span class="icon-expand"></span>
 					</a>
-				</div>
+				</div> 
 			</div>
 			{% endfor %}
 		</div>
@@ -193,7 +194,7 @@
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="blog-entry justify-content-end">
 				<!-- <a href="#" class="block-20" style="background-image: url('{{Campamento.imagen}}');"></a> -->
-				<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
+				<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template"></a>
 				<!-- <a href="#"><img src="{{campamento.imagen}}" class="img-fluid" alt="Colorlib Template" ></a>	 -->
 				<div class="text float-right d-block">	
 
@@ -451,5 +452,5 @@
     </div>
   </div>
 </section>
-
+</body>
 {% endblock content %}
