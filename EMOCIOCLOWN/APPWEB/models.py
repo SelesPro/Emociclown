@@ -64,7 +64,7 @@ class Opiniones(models.Model):
 class Galeria(models.Model):
     titulo = models.CharField(max_length = 50, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
-    imagen = models.ImageField(upload_to='static/img')
+    imagen = models.ImageField(upload_to='galeria')
 
     def __str__(self):
         return self.titulo
