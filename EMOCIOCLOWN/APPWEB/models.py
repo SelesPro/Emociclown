@@ -21,6 +21,7 @@ class Taller(models.Model):
     wasap = models.CharField(max_length = 12, null = False, verbose_name="Grupo de whatsapp")  #linkar grupo wasap
     imagen = models.ImageField(upload_to='taller')  #especificar el peso de la imágen
     
+    
     def __str__(self):
         return self.titulo
     class Meta:
