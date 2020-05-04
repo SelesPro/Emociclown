@@ -93,17 +93,5 @@ class Datos_contacto(models.Model):
         verbose_name_plural = 'Datos_contacto'
     
 
-class Contactar(models.Model):
-    nombre = models.CharField(max_length = 20, null = False)
-    telefono = models.CharField(max_length = 12, null = False)
-    email = models.EmailField(max_length = 50, null = False)
-    asunto = models.CharField(max_length = 20, null = False)
-    mensaje = models.TextField(blank = False, null = False)
-     
-    def __str__(self):
-        return self.nombre
-    class Meta:
-        verbose_name = 'Contactar'
-        verbose_name_plural = 'Contactar'
 
   
