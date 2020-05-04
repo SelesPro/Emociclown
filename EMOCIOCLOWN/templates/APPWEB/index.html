@@ -322,9 +322,6 @@
       <div class="col-md-7 heading-section text-center ftco-animate">
         <span class="subheading">Blog</span>
         <h2 class="mb-4">¿Qué os cuento?</h2>
-        <p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        </p>
       </div>
 	</div>
 	
@@ -332,7 +329,7 @@
 		{% for blog in blog %}
 		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 		<div class="blog-entry justify-content-end">
-			<a href="#" class="block-20" style="background-image: url({{MEDIA_URL}}{{blog.imagen}});">
+			<a href="{% url 'appweb:singleBlog' blog.id %}" class="block-20" style="background-image: url({{MEDIA_URL}}{{blog.imagen}});">
 			</a>
 			<div class="text float-right d-block">
 			<div class="d-flex align-items-center pt-2 mb-4 topp">
@@ -352,7 +349,7 @@
 			</p>
 			<div class="d-flex align-items-center mt-4 meta">
 				<p class="mb-0">
-				<a href="{% url 'appweb:singleBlog' blog.id %}" class="btn btn-primary">Leer más <span class="ion-ios-arrow-round-forward"></span></a>
+				<a href="{% url 'appweb:singleBlog' blog.id %}" class="btn btn-primary">Leer más </a>
 				</p>
 			</div>
 			</div>
@@ -379,22 +376,23 @@
 
     <div class="row block-9">
       <div class="col-md-7 order-md-last d-flex">
-        <form action="#" class="bg-light p-4 p-md-5 contact-form">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nombre"/>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Correo Electrónico"/>
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Asunto"/>
-          </div>
-          <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensage"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="submit" value="Enviar" class="btn btn-primary py-3 px-5"/>
-          </div>
+        <form method="POST" class="bg-light p-4 p-md-5 contact-form">
+			{% csrf_token %}  
+			<div class="form-group">
+				{{FormContacto.nombre}}
+			</div>
+			<div class="form-group">
+				{{FormContacto.email}}
+			</div>
+			<div class="form-group">
+				{{FormContacto.asunto}}
+			</div>
+			<div class="form-group">
+				{{FormContacto.mensaje}}
+			</div>
+			<div class="actions">
+				<input type="submit" value="Enviar" class="btn btn-primary py-3 px-5"/>
+			</div>
         </form>
 	  </div>
 	  

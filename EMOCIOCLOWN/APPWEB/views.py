@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views.generic import TemplateView, ListView
 from .models import *
+
+from APPWEB.forms import FormContacto
 
 # Create your views here.
     
@@ -18,7 +20,23 @@ class Index(TemplateView):
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
         context['contacto'] = Datos_contacto.objects.all()
-        return context   
+        context['FormContacto'] = FormContacto
+
+        return context 
+
+    def contactomail(request):
+        if request.method == 'POST':
+            formulario = FormContacto(request.POST)
+            if formulario.is_valid():
+                asunto = 'Asunto de contacto'
+                mensaje = formulario.cleaned_data['mensaje'] 
+                mail = EmailMessage(asunto, mensaje, to=['email@gmail.com'])
+                mail.send()
+            return HttpResponseRedirect('/') 
+        else:
+            formulario = FormContacto() 
+        return render_to_response('contacto_mail.html', {'formulario':formulario}, context_instance=RequestContext(request))
+
 
 class InfoTaller(ListView):
     model = Taller
@@ -61,7 +79,8 @@ class SingleBlog(ListView):
 
     def get_context_data(self,**kwargs):
         context = super(SingleBlog, self).get_context_data(**kwargs)
-        context['singleBlog'] = Blog.objects.get(pk=self.kwargs.get('pk', None))
+        parametro = self.kwargs.get('pk', None)
+        context['singleBlog'] = Blog.objects.filter(id=parametro)
         return context
 
              

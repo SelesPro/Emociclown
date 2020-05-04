@@ -72,14 +72,14 @@ class Galeria(models.Model):
 
 
 class Blog(models.Model):
-    titular = models.CharField(max_length = 50, null = False)
+    titulo = models.CharField(max_length = 50, null = False)
     resumen = models.TextField(blank = False,null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    descripcion = models.TextField(blank = True,null = False)
     fecha = models.DateField(null=True, blank=True)
     imagen = models.ImageField(upload_to='blog')       
 
     def __str__(self):
-        return self.titular
+        return self.titulo
 
 class Datos_contacto(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
