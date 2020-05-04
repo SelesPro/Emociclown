@@ -36,11 +36,7 @@ class Index(FormView):
         send_mail(asunto, mensaje, email, ['laliiosorio@gmail.com'], fail_silently = False)
         
         return super(Index, self).form_valid(form)
- 
-
-
-    
-        
+     
 
 class InfoTaller(ListView):
     model = Taller
@@ -75,6 +71,7 @@ class InfoBlog(ListView):
     model = Blog
     template_name = 'APPWEB/blog.html'
     context_object_name = 'blogs'
+    paginate_by = 3
     queryset = Blog.objects.all()
 
 class SingleBlog(ListView):
