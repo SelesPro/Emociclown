@@ -44,7 +44,7 @@ class InfoTaller(ListView):
 
     def get_context_data(self,**kwargs):
         context = super(InfoTaller, self).get_context_data(**kwargs)
-        context['contactoInfo']= Contactar.objects.all()[0]
+        context['contactoInfo']= Contactar.objects.all()   #[0] para que era? si no funciona 
         context['taller'] = Taller.objects.get(pk=self.kwargs.get('pk', None))
         return context
 
