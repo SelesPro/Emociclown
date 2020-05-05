@@ -110,21 +110,20 @@
 	  <div class="row d-flex">
 		{% for evento in eventos %}
 		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-			<div class="blog-entry justify-content-end">
-				<a href="#"><img src="{{MEDIA_URL}}{{evento.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
+				<div class="project">
+					<a href="#"><img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template"></a>
 				<div class="text float-right d-block">	
-			  <h3 class="heading"><a href="#">{{evento.titulo}}</a></h3>
-			  <p>{{evento.descripcion}}</p>		
+			  		<h3 class="heading"><a href="#">{{evento.titulo}}</a></h3>
+			  		<p>{{evento.descripcion}}</p>		
 			  <div class="d-flex align-items-center mt-4 meta">				
 				  <p class="mb-0">
 					<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">más información 
-					  <span class="ion-ios-arrow-round-forward"></span>
-					</a>					
+					  <span class="ion-ios-arrow-round-forward"></span></a>					
 				</p>		
-			  </div>	
-			  <a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-				<span class="icon-expand"></span> </a>		
-			</div>		
+			  </div>				  		
+			</div>	
+			<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+				<span class="icon-expand"></span> </a>	
 		  </div>	
 		</div>	
 		{% endfor %}
@@ -164,22 +163,23 @@
 		  <div class="row d-flex">
 			{% for campamento in campamentos %}
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template"></a>
+				<div class="project">
+					<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template"></a>
 				<div class="text float-right d-block">	
 				  <h3 class="heading"><a href="#">{{campamento.nombre}}</a></h3>
 				  <p>{{campamento.descripcion}}</p>
 				  <div class="d-flex align-items-center mt-4 meta">				
 					  <p class="mb-0">
 						<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >más información 
-						  <span class="ion-ios-arrow-round-forward"></span>
-						</a>					
+						  <span class="ion-ios-arrow-round-forward"></span>	</a>					
 					</p>		 
 				  </div>
 				  <a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
 					<span class="icon-expand"></span> 
 				</a>				  
 				</div>
+				<a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+					<span class="icon-expand"></span> </a>
 			  </div>
 			</div>
 			{% endfor %}
