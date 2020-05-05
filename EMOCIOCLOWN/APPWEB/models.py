@@ -86,16 +86,18 @@ class Blog(models.Model):
         return self.titulo
 
     class Meta:
+        ordering = ['-fecha']
         verbose_name = 'Blog'
         verbose_name_plural = 'Blog'
 
 class Datos_contacto(models.Model):
-    nombre = models.CharField(max_length = 20, null = False)
+    direccion = models.CharField(max_length = 20, null = False)
     telefono = models.CharField(max_length = 12, null = False)
+    linkWha = models.URLField(null=True, blank=True, verbose_name="Número de whatsapp")  #linkar grupo wasap
     email = models.EmailField(max_length = 50, null = False)    
  
     def __str__(self):
-        return self.nombre
+        return self.direccion
 
     class Meta:
         verbose_name = 'Datos de contacto'

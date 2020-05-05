@@ -8575,9 +8575,9 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #1b1919;
-  padding: 7em 0;
   z-index: 0;
   position: relative; }
+
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }

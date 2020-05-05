@@ -240,9 +240,8 @@
       </div>
       <div class="row ftco-animate justify-content-center">
         <div class="col-md-12">
-          <div id="demo" class="carousel slide" data-ride="carousel">
+          <div id="slide" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
-				
 				{% for imagenes in galerias %}
                 <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
                   <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
@@ -251,13 +250,12 @@
                     <p>{{imagenes.descripcion}}</p>
                   </div>
 				</div>
-				
                 {% endfor %}
               </div>
-              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <a class="carousel-control-prev" href="#slide" data-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
               </a>
-              <a class="carousel-control-next" href="#demo" data-slide="next">
+              <a class="carousel-control-next" href="#slide" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
               </a>
             </div>
@@ -317,14 +315,11 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-3">
       <div class="col-md-7 heading-section text-center ftco-animate">
-        <span class="subheading">Contacto</span>
         <h2 class="mb-4">Contáctame</h2>
-        <p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
       </div>
-    </div>
-
+	</div>
+	
+<!-- LADO DERECHO -->
     <div class="row block-9">
       <div class="col-md-7 order-md-last d-flex">
         <form method="POST" class="bg-light p-4 p-md-5 contact-form">
@@ -347,9 +342,8 @@
         </form>
 	  </div>
 	  
-	  <!-- LADO IZQUIERDO -->
-      <div class="col-md-5 d-flex">
-		
+<!-- LADO IZQUIERDO -->
+      <div class="col-md-5 d-flex">	
         <div class="row d-flex contact-info mb-5">
 		{% for datos in contacto %}	
           <div class="col-md-12 ftco-animate">	
@@ -358,48 +352,41 @@
                 <span class="flaticon-add-user"
                   ><i class="flaticon-email-open-sketched-envelope"></i></span>
               </div>
-              <div>
-							
+              <div>			
                 <h3 class="mb-3">Dirección</h3>
-				<p>{{datos.nombre}}</p>
-				
-				<!--Habría q cambiar en el models.py  de la class Datos_contacto nombre por direccion-->
+				<p>{{datos.direccion}}</p>				
               </div>
             </div>
 		  </div>
           <div class="col-md-12 ftco-animate">
             <div class="box p-2 px-3 bg-light d-flex">
               <div class="icon mr-3">
-                <span class="flaticon-add-user"
-                  ><i class="flaticon-phone-auricular-hand-drawn-outline"></i></span>
+                <span class="flaticon-add-user"><i class="flaticon-phone-auricular-hand-drawn-outline"></i></span>
               </div>
               <div>
                 <h3 class="mb-3">Móvil</h3>
-                <p><a href="tel://+341234567">{{datos.telefono}}</a></p>
+                <p><a href="{{datos.linkWha}}">{{datos.telefono}}</a></p>
               </div>
             </div>
 		  </div>		 
           <div class="col-md-12 ftco-animate">
             <div class="box p-2 px-3 bg-light d-flex">
               <div class="icon mr-3">
-                <span class="flaticon-add-user"><i
-                    class="flaticon-email-new-envelope-closed-back-hand-drawn-outline"></i></span>
+                <span class="flaticon-add-user">
+					<i class="flaticon-email-new-envelope-closed-back-hand-drawn-outline"></i></span>
               </div>
               <div>
-                <h3 class="mb-3">Correo Electrónico</h3>
-                <p>
-                  <a href="mailto:emocioclown@yoursite.com">{{datos.email}}</a>
-                </p>
+					<h3 class="mb-3">Correo Electrónico</h3>
+					<p>{{datos.email}}</p>
               </div>
             </div>
 		  </div>
 		{% endfor %}
-		</div>
-		
+		</div>	
 	  </div>
-	  
     </div>
   </div>
 </section>
+
 </body>
 {% endblock content %}
