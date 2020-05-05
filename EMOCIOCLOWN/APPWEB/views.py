@@ -1,13 +1,20 @@
 from django.shortcuts import render,redirect
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, FormView
 from .models import *
+from .forms import *
+from django.urls import reverse_lazy
+from django.core.mail import send_mail
+from django.db.models import Q
 
-from APPWEB.forms import FormContacto
+
+
 
 # Create your views here.
     
-class Index(TemplateView):
+class Index(FormView):
     template_name = 'APPWEB/index.html'
+    form_class = ContactForm
+    success_url = reverse_lazy('appweb:index') 
 
     def get_context_data(self,**kwargs):
         context=super(Index, self).get_context_data(**kwargs)
@@ -20,23 +27,18 @@ class Index(TemplateView):
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
         context['contacto'] = Datos_contacto.objects.all()
-        context['FormContacto'] = FormContacto
 
         return context 
 
-    def contactomail(request):
-        if request.method == 'POST':
-            formulario = FormContacto(request.POST)
-            if formulario.is_valid():
-                asunto = 'Asunto de contacto'
-                mensaje = formulario.cleaned_data['mensaje'] 
-                mail = EmailMessage(asunto, mensaje, to=['email@gmail.com'])
-                mail.send()
-            return HttpResponseRedirect('/') 
-        else:
-            formulario = FormContacto() 
-        return render_to_response('contacto_mail.html', {'formulario':formulario}, context_instance=RequestContext(request))
-
+    def form_valid(self, form):
+        nombre = form.cleaned_data['nombre']
+        email = form.cleaned_data['email']
+        asunto = form.cleaned_data['asunto']
+        mensaje = "{0} Te ha enviado un mensaje:\n\n {1}".format(nombre, form.cleaned_data['mensaje'])
+        send_mail(asunto, mensaje, email, ['laliiosorio@gmail.com'], fail_silently = False)
+        
+        return super(Index, self).form_valid(form)
+     
 
 class InfoTaller(ListView):
     model = Taller
@@ -71,6 +73,7 @@ class InfoBlog(ListView):
     model = Blog
     template_name = 'APPWEB/blog.html'
     context_object_name = 'blogs'
+    paginate_by = 3
     queryset = Blog.objects.all()
 
 class SingleBlog(ListView):
