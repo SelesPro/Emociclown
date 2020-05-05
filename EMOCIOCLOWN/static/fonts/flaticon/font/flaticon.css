@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 05/05/2020 16:15
+  	Creation date: 05/05/2020 17:21
   	*/
 
 @font-face {
@@ -36,5 +36,6 @@ margin-left: 20px;
 .flaticon-photo-camera:before { content: "\f103"; }
 .flaticon-bonfire:before { content: "\f104"; }
 .flaticon-website-home:before { content: "\f105"; }
-.flaticon-tent:before { content: "\f106"; }
-.flaticon-presentation:before { content: "\f107"; }
+.flaticon-presentation:before { content: "\f106"; }
+.flaticon-bebo-logo:before { content: "\f107"; }
+.flaticon-tent:before { content: "\f108"; }

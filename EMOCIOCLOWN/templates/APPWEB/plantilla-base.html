@@ -41,28 +41,28 @@
 		</div>
 		<ul class="nav__list">
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#home-section" class="nav__link c-blue"><i class="flaticon-home-sketch" title= Inicio></i></a>
+			<a href="{% url 'appweb:index' %}#home-section" class="nav__link c-blue"><i class="flaticon-website-home" title= Inicio></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#talleres" class="nav__link c-yellow scrolly"><i class="flaticon-puzzle-piece-sketch" title= Talleres></i></a>
+			<a href="{% url 'appweb:index' %}#talleres" class="nav__link c-yellow scrolly"><i class="flaticon-presentation" title= Talleres></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#actividad" class="nav__link c-red"><i class="flaticon-halloween-october-31-calendar-page-sketch" title= Actividades></i></a>
+			<a href="{% url 'appweb:index' %}#actividad" class="nav__link c-red"><i class="flaticon-business" title= Actividades></i></a>
 		  </li>
   		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#campamento" class="nav__link c-red"><i class="flaticon-favorites-star-sketch" title= Campamento></i></a>
+			<a href="{% url 'appweb:index' %}#campamento" class="nav__link c-red"><i class="flaticon-tent" title= Campamento></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#opiniones" class="nav__link c-green"><i class="flaticon-left-quote-sketch" title= opiniones></i></a>
+			<a href="{% url 'appweb:index' %}#opiniones" class="nav__link c-green"><i class="flaticon-social" title= opiniones></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#galeria" class="nav__link c-green"><i class="flaticon-photo-camera-sketch" title= Galería></i></a>
+			<a href="{% url 'appweb:index' %}#galeria" class="nav__link c-green"><i class="flaticon-photo-camera" title= Galería></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#blog" class="nav__link c-green"><i class="flaticon-clipboard-sketch" title= Blog></i></a>
+			<a href="{% url 'appweb:index' %}#blog" class="nav__link c-green"><i class="flaticon-bebo-logo" title= Blog></i></a>
 		  </li>
 		  <li class="nav__item">
-			<a href="{% url 'appweb:index' %}#contacto" class="nav__link c-green"><i class="flaticon-connected-person-social-sketch" title= Contacto></i></a>
+			<a href="{% url 'appweb:index' %}#contacto" class="nav__link c-green"><i class="flaticon-interface" title= Contacto></i></a>
 		  </li>
 		</ul>
 	  </nav>
@@ -72,20 +72,25 @@
 
     {% endblock content %}
   
-  
-        <footer class="ftco-footer ftco-section">
-    	<div class="container">
-
+    <footer class="ftco-footer">
+      <div class="container">
         <div class="row">
-          <div class="col-md-12 text-center">
-	
-            <p>
-  Diseñado por <a href="#" target="_blank"> Grupo Beta </a><script>document.write(new Date().getFullYear());</script><i class="icon-heart color-danger" aria-hidden="true"></i>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ">
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+              <span class="ftco-animate float-md-right mt-5"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Emocioclown <i class="icon-heart color-danger" aria-hidden="true"></i> Tema: Ecoland por <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>              
+            </div>
           </div>
         </div>
       </div>
     </footer>
+    
         
       
     

@@ -74,7 +74,15 @@ class InfoBlog(ListView):
     template_name = 'APPWEB/blog.html'
     context_object_name = 'blogs'
     paginate_by = 3
-    queryset = Blog.objects.all()
+    post = Blog.objects.all()
+
+    def busqueda(self):
+        q = request.GET.get('buscar')
+        print(q)
+        posts = Blog.objects.filter(Q(titulo__icontains=q))
+        return render(request, 'APPWEB/blog.html', {'blogs': blogs})
+            
+
 
 class SingleBlog(ListView):
     model = Blog

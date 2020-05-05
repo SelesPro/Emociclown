@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 05/05/2020 16:15
+    Creation date: 05/05/2020 17:21
     */
 
     @font-face {
@@ -43,8 +43,9 @@
 .flaticon-photo-camera:before { content: "\f103"; }
 .flaticon-bonfire:before { content: "\f104"; }
 .flaticon-website-home:before { content: "\f105"; }
-.flaticon-tent:before { content: "\f106"; }
-.flaticon-presentation:before { content: "\f107"; }
+.flaticon-presentation:before { content: "\f106"; }
+.flaticon-bebo-logo:before { content: "\f107"; }
+.flaticon-tent:before { content: "\f108"; }
     
     $font-Flaticon-interface: "\f100";
     $font-Flaticon-business: "\f101";
@@ -52,5 +53,6 @@
     $font-Flaticon-photo-camera: "\f103";
     $font-Flaticon-bonfire: "\f104";
     $font-Flaticon-website-home: "\f105";
-    $font-Flaticon-tent: "\f106";
-    $font-Flaticon-presentation: "\f107";
+    $font-Flaticon-presentation: "\f106";
+    $font-Flaticon-bebo-logo: "\f107";
+    $font-Flaticon-tent: "\f108";
