@@ -58,6 +58,7 @@ class Opiniones(models.Model):
 
     def __str__(self):
         return self.nombre
+
     class Meta:
         verbose_name = 'Opiniones'
         verbose_name_plural = 'Opiniones'
@@ -69,17 +70,24 @@ class Galeria(models.Model):
 
     def __str__(self):
         return self.titulo
+    
+    class Meta:
+        verbose_name = 'Galeria'
+        verbose_name_plural = 'Galeria'
 
 
 class Blog(models.Model):
     titulo = models.CharField(max_length = 50, null = False)
-    resumen = models.TextField(blank = False,null = False)
     descripcion = models.TextField(blank = True,null = False)
     fecha = models.DateField(null=True, blank=True)
     imagen = models.ImageField(upload_to='blog')       
 
     def __str__(self):
         return self.titulo
+
+    class Meta:
+        verbose_name = 'Blog'
+        verbose_name_plural = 'Blog'
 
 class Datos_contacto(models.Model):
     nombre = models.CharField(max_length = 20, null = False)
@@ -88,9 +96,10 @@ class Datos_contacto(models.Model):
  
     def __str__(self):
         return self.nombre
+
     class Meta:
-        verbose_name = 'Datos_contacto'
-        verbose_name_plural = 'Datos_contacto'
+        verbose_name = 'Datos de contacto'
+        verbose_name_plural = 'Datos de contacto'
     
 
 

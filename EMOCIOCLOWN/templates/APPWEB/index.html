@@ -282,8 +282,7 @@
     <div class="container">
       <div class="row justify-content-center pb-3">
         <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-            <span class="subheading">GALERIA</span>
-          <h2 class="mb-4">What Client Says</h2>
+          <h2 class="mb-4">GALERIA</h2>
         </div>
       </div>
       <div class="row ftco-animate justify-content-center">
@@ -320,13 +319,12 @@
   <div class="container">
     <div class="row justify-content-center mb-5 pb-5">
       <div class="col-md-7 heading-section text-center ftco-animate">
-        <span class="subheading">Blog</span>
-        <h2 class="mb-4">¿Qué os cuento?</h2>
+        <h2 class="mb-4">BLOG</h2>
       </div>
 	</div>
 	
     <div class="row d-flex">
-		{% for blog in blog %}
+		{% for blog in blog|slice:":3" %}
 		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 		<div class="blog-entry justify-content-end">
 			<a href="{% url 'appweb:singleBlog' blog.id %}" class="block-20" style="background-image: url({{MEDIA_URL}}{{blog.imagen}});">
@@ -334,18 +332,18 @@
 			<div class="text float-right d-block">
 			<div class="d-flex align-items-center pt-2 mb-4 topp">
 				<div class="one mr-2">
-				<span class="day">{{blog.fecha}}</span>
+					<span class="day">{{blog.fecha|date:"d"}}</span>
 				</div>
 				<div class="two">
-				<span class="yr">2019</span>
-				<span class="mos">abril</span>
+					<span class="mos">{{blog.fecha|date:"F"}}</span>
+					<span class="yr">{{blog.fecha|date:"Y"}}</span>
 				</div>
 			</div>
 			<h3 class="heading">
 				{{blog.titulo}}
 			</h3>
 			<p>
-				{{blog.descripcion}}
+				{{blog.descripcion|truncatechars:100}}
 			</p>
 			<div class="d-flex align-items-center mt-4 meta">
 				<p class="mb-0">

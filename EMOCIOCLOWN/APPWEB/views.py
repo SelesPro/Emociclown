@@ -4,6 +4,8 @@ from .models import *
 from .forms import *
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
+from django.db.models import Q
+
 
 
 
@@ -32,7 +34,7 @@ class Index(FormView):
         nombre = form.cleaned_data['nombre']
         email = form.cleaned_data['email']
         asunto = form.cleaned_data['asunto']
-        mensaje = "{0} has sent you a new message:\n\n{1}".format(nombre, form.cleaned_data['mensaje'])
+        mensaje = "{0} Te ha enviado un mensaje:\n\n {1}".format(nombre, form.cleaned_data['mensaje'])
         send_mail(asunto, mensaje, email, ['laliiosorio@gmail.com'], fail_silently = False)
         
         return super(Index, self).form_valid(form)
