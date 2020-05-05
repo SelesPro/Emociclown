@@ -121,7 +121,9 @@
 					  <span class="ion-ios-arrow-round-forward"></span>
 					</a>					
 				</p>		
-			  </div>			
+			  </div>	
+			  <a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+				<span class="icon-expand"></span> </a>		
 			</div>		
 		  </div>	
 		</div>	
@@ -146,39 +148,7 @@
 		</div> 
 </section>
 
- <!--  
-		<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-			<span class="icon-expand"></span> 
-		</a> 
-	<section class="ftco-section" id="actividad">
-	<div class="container" >
-		<div class="row justify-content-center pb-5">
-			<div class="col-md-12 heading-section text-center ftco-animate">
-				<span class="subheading">EVENTOS &</span>
-				<h2 class="mb-4">ACTIVIDADES</h2>
-			</div>
-		</div>
-		<div class="row" >
-			{% for evento in eventos %}
-			<div class="col-md-6 col-lg-4 ftco-animate">
-				<div class="project">
-					<div class="img">					
-						<a href="#"><img src="{{evento.imagen}}" class="img-fluid" alt="Colorlib Template" ></a>
-					</div>
-					<div class="text">
-						<span><h3>{{evento.titulo}}</h3></span>
-						<p>{{evento.descripcion}}</p>
-					</div>
-					<a href="{{evento.imagen}}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span> 
-					</a> 
-				</div>
-			</div>
-			{% endfor %}		
-		</div> -->
-
-
-
+ 
 
 <!-- ------------------------FIN EVENTOS ACTIVIDADES-------------------------------------------------------------------------->
 
