@@ -11,7 +11,7 @@ import os, sys
 
 from django.core.wsgi import get_wsgi_application
 
-sys.path.append('path/to/EMOCIOCLOWN/')
+sys.path.append('path/to/emocioclown/')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'EMOCIOCLOWN.settings')
 
 application = get_wsgi_application()
