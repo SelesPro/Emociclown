@@ -26,3 +26,19 @@ urlpatterns = [
 
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT) 
 # RUTA VALIDA DENTRO DE APLICACION
+
+
+#PERSONALIZACION COLOR DJANGO-ADMIN-MATERIAL
+
+"""
+admin.site_header = _('admin')
+
+site.site_title = _('Emocioclown')
+site.favicon = staticfiles('favicon.png')
+site.main_bg_color = 'green'
+site.main_hover_color = 'yellow'
+site.profile_picture = staticfiles('profile-background.jpeg')
+site.profile_bg = staticfiles('profile-background.jpeg')
+site.login_logo = staticfiles('profile-background.jpeg')
+site.logout_bg = staticfiles('profile-background.jpeg')
+"""

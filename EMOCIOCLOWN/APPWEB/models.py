@@ -13,7 +13,7 @@ class Info(models.Model):
     
     class Meta:
         verbose_name = 'Info'
-        verbose_name_plural = 'Datos personales y empresa'
+        verbose_name_plural = 'Datos inicio'
 
 class Taller(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
@@ -100,8 +100,8 @@ class Datos_contacto(models.Model):
         return self.direccion
 
     class Meta:
-        verbose_name = 'Datos de contacto'
-        verbose_name_plural = 'Datos de contacto'
+        verbose_name = 'Datos contacto'
+        verbose_name_plural = 'Datos contacto'
     
 
 
