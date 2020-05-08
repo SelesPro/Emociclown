@@ -14,7 +14,7 @@ from django.db.models import Q
 class Index(FormView):
     template_name = 'APPWEB/index.html'
     form_class = ContactForm
-    success_url = reverse_lazy('appweb:index') 
+    success_url = reverse_lazy('appweb:index')
 
     def get_context_data(self,**kwargs):
         context=super(Index, self).get_context_data(**kwargs)
@@ -46,7 +46,7 @@ class InfoTaller(ListView):
 
     def get_context_data(self,**kwargs):
         context = super(InfoTaller, self).get_context_data(**kwargs)
-        context['contactoInfo']= Contactar.objects.all()   #[0] para que era? si no funciona 
+        context['contactoInfo']= Datos_contacto.objects.all()[0]
         context['taller'] = Taller.objects.get(pk=self.kwargs.get('pk', None))
         return context
 

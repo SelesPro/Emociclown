@@ -13,7 +13,6 @@
 	</div>
 </div>
 </section>
-<!-- ------------------- DANIEL CONTENIDO TALLER------------- -->
 <section class="ftco-section">
 <div class="container">
 	<div class="row">
@@ -25,16 +24,12 @@
 				<div class="col-md-5 ftco-animate">
 					<div class="text py-5">
 						<h3><a href="#">Descripción:</a></h3>
-						<!-- <p class="pos">from <span class="price">$99.00</span>/night</p> -->
 						<p>{{taller.descripcion}}</p>
-						<!-- <p><a href="#" class="btn btn-secondary">Details</a>
-							<a href="#" class="btn btn-primary">Book now</a>
-						</p> -->
 						<div class="block-23 mb-3 taller-A">
 							<ul>
 							  <li><a class="texto">Para más información:</a></li>
-							  <li><a href="{{taller.wasap}}"><span class="icon icon-whatsapp"></span><span class="text taller">Unirse al grupo de WhatsApp</span></a></li> <!-- {{contactoInfo.telefono}}-->
-							  <li><a href="mailto: {{contactoInfo.email}} emociclown@email.com"><span class="icon icon-envelope"></span><span class="text taller">Envíanos un correo</span></a></li>
+							  <li><a href="{{taller.wasap}}"  target="_blank" ><span class="icon icon-whatsapp"></span><span class="text taller">Unirse al grupo de WhatsApp</span></a></li> <!-- {{contactoInfo.telefono}}-->
+							  <li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}} </span></a></li>
 							</ul>
 						  </div>
 					</div>
@@ -44,33 +39,7 @@
 	</div>
 </div>
 
-</section> <!-- .section -->
+</section> 
 
-	<!-- DANIEL RIGINAL ANTES DE CAMBIAR DE TEMPLATE...... OJO
-		<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-		<div class="container">
-			<div class="row no-gutters d-flex">
-				<div class="col-md-6 col-lg-5 d-flex">
-					<div class="img d-flex align-self-stretch align-items-center"
-						style="background-image:url('{% static taller.imagen.url  %}');">
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-7 px-lg-5 py-md-5 bg-darken">	
-					<div class="py-md-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate p-5 p-lg-0">
-								<span class="subheading">Get in touch with us</span>
-								<h2 class="mb-4">{{taller.titulo}}</h2>
-								<p> {{taller.descripcion}} </p>
-								<p><a href="#" class="btn btn-primary py-3 px-4">Book now</a> <a href="#"
-										class="btn btn-white py-3 px-4">Contact us</a></p>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>		
-		</div>
-	</section>
- -->
 
 {% endblock content %}
