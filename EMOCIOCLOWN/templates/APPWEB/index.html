@@ -50,8 +50,7 @@
 						<div class="text">
 							<h1 class="mb-4 mt-3">Mónica Villacreses</span></h1>
 							<span class="subheading pl-5">Su historia</span>
-							<p>{{monica.descripcion}}</p> <!--DANIEL DESCRIPCION 1 MONICA -->
-							<!-- <p><a href="#talleres" class="btn btn-primary px-5 py-3 mt-3">Nuestros Talleres <span class="ion-ios-arrow-forward"></span></a></p> BOTON -->
+							<p>{{monica.descripcion}}</p> 
 						</div>
 					</div>
 				</div>
@@ -60,65 +59,40 @@
 	</div>
 </section>
 
+<!-- ----------------------  TALLERES -->
+
 <section class="ftco-section" id="talleres">
 	<div class="container">
 		<div class="row">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<!-- <span class="subheading">Best Destination</span> -->
 					<h2 class="mb-4">TALLERES</h2>
-					<p>El objetivo de la educación emocional es el desarrollo de competencias emocionales: conciencia emocional,
-					regulación emocional, autogestión, inteligencia interpersonal, habilidades de vida y bienestar.</p>
+					<p>El objetivo de la educación emocional es el desarrollo de competencias emocionales: conciencia
+						emocional,
+						regulación emocional, autogestión, inteligencia interpersonal, habilidades de vida y bienestar.
+					</p>
 				</div>
 			</div>
+			<div>
 			<div class="row d-flex">
 				{% for taller in talleres %}
 				<div class="col-md-6 col-lg d-flex ftco-animate">
 					<div class="project">
 						<div class="img d-flex">
-							<a href="#"><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
+							<a href=""><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
 						</div>
 						<div class="text">
-							<h3><a href="#"> {{taller.titulo}}</a></h3>
+							<h3><a href=""> {{taller.titulo}}</a></h3>
 							<p>{{taller.descripcion|truncatechars:70}}</p>
-							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
+							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p>
 						</div>
-						<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+						<a href="{% static taller.imagen.url %}"
+							class="icon image-popup d-flex justify-content-center align-items-center">
 							<span class="icon-expand"></span>
 						</a>
-					</div> 
+					</div>
 				</div>
 				{% endfor %}
-			</div>
-			<div>
-				<div class="row mt-5">
-            		<div class="col text-center">
-            	  	<div class="block-27">
-            	  	  {% if is_paginated %}
-            	     	 <ul>
-            	      	  {% if page_obj.has_previous %}
-            	       	   <li><a href="?page={{ page_obj.previous_page_number }}">&lt;</a></li>
-            	       	 {% else %}
-            	       	   <li class="disabled"><span>&laquo;</span></li>
-            	       	 {% endif %}
-            	       	 {% for i in paginator.page_range %}
-            	       	  {% if page_obj.number == i %}
-            	        	    <li class="active"><span>{{ i }}</span></li>
-            	         	 {% else %}
-            	        	    <li><a href="?page={{ i }}">{{ i }}</a></li>
-            	        	  {% endif %}
-            	       	 {% endfor %}
-            	       	 {% if page_obj.has_next %}
-            	        	  <li><a href="?page={{ page_obj.next_page_number }}">&gt;</a></li>
-            	       	 {% else %}
-            	       	   <li class="disabled"><span>&raquo;</span></li>
-            	       	 {% endif %}
-            	    	  </ul>
-            	  	  {% endif %}
-            		  </div>
-          		  </div>
-				  </div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -258,38 +232,38 @@
   
 <!-- GALERIA -->
 	
-<section id ="galeria" class="ftco-section gallery-section">
-    <div class="container">
-      <div class="row justify-content-center pb-3">
-        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-          <h2 class="mb-4">GALERIA</h2>
-        </div>
-      </div>
-      <div class="row ftco-animate justify-content-center">
-        <div class="col-md-12">
-          <div id="slide" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-				{% for imagenes in galerias %}
-                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-                  <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
-                  <div class="carousel-caption">
-                    <h3>{{imagenes.titulo}}</h3>
-                    <p>{{imagenes.descripcion}}</p>
-                  </div>
+<section id="galeria" class="ftco-section gallery-section">
+	<div class="container">
+		<div class="row justify-content-center pb-3">
+			<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+				<h2 class="mb-4">GALERIA</h2>
+			</div>
+		</div>
+		<div class="row ftco-animate justify-content-center">
+			<div class="col-md-12">
+				<div id="slide" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						{% for imagenes in galerias %}
+						<div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+							<img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
+							<div class="carousel-caption">
+								<h3>{{imagenes.titulo}}</h3>
+								<p>{{imagenes.descripcion}}</p>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+					<a class="carousel-control-prev" href="#slide" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#slide" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
 				</div>
-                {% endfor %}
-            </div>
-             	<a class="carousel-control-prev" href="#slide" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-             </a>
-             <a class="carousel-control-next" href="#slide" data-slide="next">
-             <span class="carousel-control-next-icon"></span>
-              </a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</div>
+</section>
 
 <!-- BLOG -->
 

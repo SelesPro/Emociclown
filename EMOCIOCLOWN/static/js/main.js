@@ -88,7 +88,7 @@
 	    loop:true,
 	    autoplay: true,
 		margin:0,
-		autoplayTimeout: 10000,
+		autoplayTimeout: 8000,
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',
 	    nav:false,
