@@ -109,29 +109,43 @@
 		</div>
 	  <div class="row d-flex">
 		{% for evento in eventos %}
+
 		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="project">
 					<a href="#"><img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template"></a>
-				<div class="text float-right d-block">	
-			  		<h3 class="heading"><a href="#">{{evento.titulo}}</a></h3>
-			  		<p>{{evento.descripcion}}</p>		
-			  <div class="d-flex align-items-center mt-4 meta">				
-				  <p class="mb-0">
-					<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">más información 
-					  <span class="ion-ios-arrow-round-forward"></span></a>					
-				</p>		
-			  </div>				  		
-			</div>	
-			<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-				<span class="icon-expand"></span> </a>	
-		  </div>	
-		</div>	
+						<div class="text float-right d-block">	
+							<h3 class="heading"><a href="#">{{evento.titulo}}</a></h3>
+							<p>{{evento.descripcion}}</p>		
+								<div class="d-flex align-items-center mt-4 meta">				
+									<p class="mb-0">
+										<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">más información 
+										<span class="ion-ios-arrow-round-forward"></span></a>					
+									</p>		
+			  					</div>				  		
+						</div>	
+							<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+								<span class="icon-expand"></span> </a>	
+		  		</div>	
+		</div> 
 		{% endfor %}
 	  </div>
-	</div>
+	</div>	
+	<!---------paginación ---------------- -->
+<!-- 	{% for evento in eventos %}		
+		<nav aria-label="Page navigation example" >
+			<ul class="pagination pg-blue justify-content-center" id="miPag">				
+			  <li class="page-item disabled"><a class="page-link" tabindex="-1">Previous</a></li>
+			  <li class="page-item"><a href="{% url 'appweb:evento' evento.id %}" class="page-link">1</a></li>			  
+			  <li class="page-item"><a href="#" class="page-link">2</a></li>
+			  <li class="page-item"><a class="page-link">Next</a></li>
+			</ul>
+		  </nav>   
+		  {% endfor %}   -->  
+<!--fin paginación -------------- -->
+	</div> 
 </section>
 
-<section>
+<!-- <section>
 	<div class="row mt-5">		
 			<div class="col text-center">
 				<div class="block-27">					
@@ -145,7 +159,7 @@
 				</div>
 			</div>			
 		</div> 
-</section>
+</section> -->
 
  
 
@@ -165,9 +179,10 @@
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="project">
 					<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template"></a>
-				<div class="text float-right d-block">	
+				<div class="text float-right d-block">
+					
 				  <h3 class="heading"><a href="#">{{campamento.nombre}}</a></h3>
-				  <p>{{campamento.descripcion}}</p>
+				  <p>{{campamento.descripcion}}</p>					
 				  <div class="d-flex align-items-center mt-4 meta">				
 					  <p class="mb-0">
 						<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >más información 
@@ -181,16 +196,17 @@
 				<a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
 					<span class="icon-expand"></span> </a>
 			  </div>
-			</div>
+			</div>	
 			{% endfor %}
-		  </div>
+		  </div> 
 		</div>
 	</section>
+
 
   <!-- ----------------------- FIN DE CAMPEMENTO--------------------------->
 
 
-<!-- OPINIONES -->
+<!-- OPINIONES-------------------------------------------------------------------------- -->
 
 <section id="opiniones" class="ftco-section testimony-section">
 	<img src="{% static 'images/blob-shape-2.svg' %}"
@@ -228,7 +244,7 @@
 	</div>
   </section>
   
-<!-- GALERIA -->
+<!-- GALERIA ---------------------------------------------------------------->
 	
 <section id ="galeria" class="ftco-section gallery-section">
     <div class="container">
