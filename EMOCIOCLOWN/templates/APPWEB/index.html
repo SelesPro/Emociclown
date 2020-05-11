@@ -50,7 +50,8 @@
 						<div class="text">
 							<h1 class="mb-4 mt-3">Mónica Villacreses</span></h1>
 							<span class="subheading pl-5">Su historia</span>
-							<p>{{monica.descripcion}}</p> 
+							<p>{{monica.descripcion}}</p> <!--DANIEL DESCRIPCION 1 MONICA -->
+							<!-- <p><a href="#talleres" class="btn btn-primary px-5 py-3 mt-3">Nuestros Talleres <span class="ion-ios-arrow-forward"></span></a></p> BOTON -->
 						</div>
 					</div>
 				</div>
@@ -59,41 +60,38 @@
 	</div>
 </section>
 
-<!-- ----------------------  TALLERES -->
-
 <section class="ftco-section" id="talleres">
 	<div class="container">
-		<div class="row">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<h2 class="mb-4">TALLERES</h2>
-					<p>El objetivo de la educación emocional es el desarrollo de competencias emocionales: conciencia
-						emocional,
-						regulación emocional, autogestión, inteligencia interpersonal, habilidades de vida y bienestar.
-					</p>
-				</div>
+		<div class="row justify-content-center pb-5">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+				<!-- <span class="subheading">Best Destination</span> -->
+				<h2 class="mb-4">TALLERES</h2>
+				<p>El objetivo de la educación emocional es el desarrollo de competencias emocionales: conciencia emocional,
+					regulación emocional, autogestión, inteligencia interpersonal, habilidades de vida y bienestar.</p>
 			</div>
-			<div>
-			<div class="row d-flex">
-				{% for taller in talleres %}
-				<div class="col-md-6 col-lg d-flex ftco-animate">
-					<div class="project">
-						<div class="img d-flex">
-							<a href=""><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
-						</div>
-						<div class="text">
-							<h3><a href=""> {{taller.titulo}}</a></h3>
-							<p>{{taller.descripcion|truncatechars:70}}</p>
-							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p>
-						</div>
-						<a href="{% static taller.imagen.url %}"
-							class="icon image-popup d-flex justify-content-center align-items-center">
-							<span class="icon-expand"></span>
-						</a>
+		</div>
+		<div class="row d-flex">
+			{% for taller in talleres %}
+			<div class="col-md-6 col-lg d-flex ftco-animate">
+				<div class="project">
+					<!--  style="border:1px solid blue"-->
+					<div class="img d-flex">
+						<!-- <div class="vr"><span>Sale</span></div> -->
+						<a href="#"><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
 					</div>
-				</div>
-				{% endfor %}
+					<div class="text">
+						<!-- <h4 class="price"><span class="old-price mr-2">MADRID</span></h4> -->
+						<!-- <span>FECHA DE EVENTO</span> -->
+						<h3><a href="#"> {{taller.titulo}}</a></h3>
+						<p>{{taller.descripcion}}</p>
+						<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
+					</div>
+					<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+						<span class="icon-expand"></span>
+					</a>
+				</div> 
 			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>
@@ -105,8 +103,8 @@
 	<div class="container">
 		<div class="row justify-content-center pb-5">
 			<div class="col-md-12 heading-section text-center ftco-animate">
-				<span class="subheading">EVENTOS &</span>
-				<h2 class="mb-4">ACTIVIDADES</h2>
+				<!-- <span class="subheading">EVENTOS &</span> -->
+				<h2 class="mb-4">EVENTOS Y ACTIVIDADES</h2>
 			</div>
 		</div>
 	  <div class="row d-flex">
@@ -120,8 +118,9 @@
 							<p>{{evento.descripcion}}</p>		
 								<div class="d-flex align-items-center mt-4 meta">				
 									<p class="mb-0">
-										<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">más información 
-										<span class="ion-ios-arrow-round-forward"></span></a>					
+										<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
+										<!-- <span class="ion-ios-arrow-round-forward"></span> -->
+									</a>					
 									</p>		
 			  					</div>				  		
 						</div>	
@@ -132,36 +131,8 @@
 		{% endfor %}
 	  </div>
 	</div>	
-	<!---------paginación ---------------- -->
-<!-- 	{% for evento in eventos %}		
-		<nav aria-label="Page navigation example" >
-			<ul class="pagination pg-blue justify-content-center" id="miPag">				
-			  <li class="page-item disabled"><a class="page-link" tabindex="-1">Previous</a></li>
-			  <li class="page-item"><a href="{% url 'appweb:evento' evento.id %}" class="page-link">1</a></li>			  
-			  <li class="page-item"><a href="#" class="page-link">2</a></li>
-			  <li class="page-item"><a class="page-link">Next</a></li>
-			</ul>
-		  </nav>   
-		  {% endfor %}   -->  
-<!--fin paginación -------------- -->
 	</div> 
 </section>
-
-<!-- <section>
-	<div class="row mt-5">		
-			<div class="col text-center">
-				<div class="block-27">					
-					<ul>
-						<li class="active"><span>1</span></li>
-						<li><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">&gt;</a></li>
-					</ul>					
-				</div>
-			</div>			
-		</div> 
-</section> -->
 
  
 
@@ -187,8 +158,9 @@
 				  <p>{{campamento.descripcion}}</p>					
 				  <div class="d-flex align-items-center mt-4 meta">				
 					  <p class="mb-0">
-						<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >más información 
-						  <span class="ion-ios-arrow-round-forward"></span>	</a>					
+						<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >Más información 
+						  <!-- <span class="ion-ios-arrow-round-forward"></span>	 -->
+						</a>					
 					</p>		 
 				  </div>
 				  <a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
@@ -248,38 +220,38 @@
   
 <!-- GALERIA ---------------------------------------------------------------->
 	
-<section id="galeria" class="ftco-section gallery-section">
-	<div class="container">
-		<div class="row justify-content-center pb-3">
-			<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-				<h2 class="mb-4">GALERIA</h2>
-			</div>
-		</div>
-		<div class="row ftco-animate justify-content-center">
-			<div class="col-md-12">
-				<div id="slide" class="carousel slide" data-ride="carousel">
-					<div class="carousel-inner">
-						{% for imagenes in galerias %}
-						<div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-							<img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
-							<div class="carousel-caption">
-								<h3>{{imagenes.titulo}}</h3>
-								<p>{{imagenes.descripcion}}</p>
-							</div>
-						</div>
-						{% endfor %}
-					</div>
-					<a class="carousel-control-prev" href="#slide" data-slide="prev">
-						<span class="carousel-control-prev-icon"></span>
-					</a>
-					<a class="carousel-control-next" href="#slide" data-slide="next">
-						<span class="carousel-control-next-icon"></span>
-					</a>
+<section id ="galeria" class="ftco-section gallery-section">
+    <div class="container">
+      <div class="row justify-content-center pb-3">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <h2 class="mb-4">GALERIA</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate justify-content-center">
+        <div class="col-md-12">
+          <div id="slide" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+				{% for imagenes in galerias %}
+                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+                  <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
+                  <div class="carousel-caption">
+                    <h3>{{imagenes.titulo}}</h3>
+                    <p>{{imagenes.descripcion}}</p>
+                  </div>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
+                {% endfor %}
+              </div>
+              <a class="carousel-control-prev" href="#slide" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#slide" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <!-- BLOG -->
 
