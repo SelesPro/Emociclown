@@ -1,4 +1,5 @@
-"""EMOCIOCLOWN URL Configuration
+"""
+EMOCIOCLOWN URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -25,8 +26,8 @@ urlpatterns = [
     path ('', include(('APPWEB.urls','appweb'))),
 
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT) 
-# RUTA VALIDA DENTRO DE APLICACION
 
+# RUTA VALIDA DENTRO DE APLICACION
 
 #PERSONALIZACION COLOR DJANGO-ADMIN-MATERIAL
 
