@@ -56,15 +56,13 @@
 		</div>
 	</div>
 </section>
+
 <!---------------------------------------------talleres---------------------------------------------->
-<section class="ftco-section" id="talleres">
+<section class="ftco-section talleres-section" id="talleres">
 	<div class="container">
 		<div class="row justify-content-center pb-5">
 			<div class="col-md-12 heading-section text-center ftco-animate">
-				<!-- <span class="subheading">Best Destination</span> -->
 				<h2 class="mb-4">TALLERES</h2>
-				<p>El objetivo de la educación emocional es el desarrollo de competencias emocionales: conciencia emocional,
-					regulación emocional, autogestión, inteligencia interpersonal, habilidades de vida y bienestar.</p>
 			</div>
 		</div>
 		<div class="row d-flex">
@@ -88,11 +86,9 @@
 		</div>
 	</div>
 </section>
-	
 
 <!---------------------------------------------EVENTOS Y ACTIVIDADES---- Hanna---------------------------------------------->
-
-<section class="ftco-section" id="actividad">
+<section class="ftco-section activity-section" id="actividad">
 	<div class="container">
 		<div class="row justify-content-center pb-5">
 			<div class="col-md-12 heading-section text-center ftco-animate">
@@ -126,14 +122,10 @@
 	</div>	
 	</div> 
 </section>
-
- 
-
 <!-- ------------------------FIN EVENTOS ACTIVIDADES-------------------------------------------------------------------------->
 
 <!-----------------------CAMPAMENTO-------------------------------------------------------------------------------------->
-
-    <section class="ftco-section bg-light" id="campamento">
+    <section class="ftco-section bg-light camp-section" id="campamento">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">			
@@ -168,13 +160,9 @@
 		  </div> 
 		</div>
 	</section>
-
-
-  <!-- ----------------------- FIN DE CAMPEMENTO--------------------------->
-
+<!-- ----------------------- FIN DE CAMPEMENTO--------------------------->
 
 <!-- OPINIONES-------------------------------------------------------------------------- -->
-
 <section id="opiniones" class="ftco-section testimony-section">
 	<img src="{% static 'images/blob-shape-2.svg' %}"
 	  class="svg-blob"
@@ -186,7 +174,8 @@
 	  <div class="row justify-content-center pb-3">
 		<div
 		  class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-		  <h2 class="mb-4">OPINIONES</h2>
+		  <h2 class="mb-4"><i class="icon-quote-left"></i>OPINIONES<S/h2>
+		  
 		</div>
 	  </div>
 	  <div class="row ftco-animate justify-content-center">
@@ -195,10 +184,9 @@
 			{% for opi in opiniones %}
 			<div class="item">
 				<div class="testimony-wrap text-center py-4 pb-5">
-					<i class="icon-quote-left"></i>
 					<div class="text px-4 pb-5">
 					<p class="mb-4">
-						{{opi.descripcion}}
+						❝ {{opi.descripcion}} ❞
 					</p>
 					<p class="name">{{opi.nombre}}</p>
 					</div>
@@ -276,7 +264,7 @@
 				{{blog.titulo}}
 			</h3>
 			<p>
-				{{blog.descripcion|truncatechars:100}}
+				{{blog.descripcion|truncatechars:80}}
 			</p>
 			<div class="d-flex align-items-center mt-4 meta">
 				<p class="mb-0">
@@ -347,7 +335,7 @@
               </div>
               <div>
                 <h3 class="mb-3">Móvil</h3>
-                <p><a href="{{datos.linkWha}}">{{datos.telefono}}</a></p>
+                <p>{{datos.telefono}}</p>
               </div>
             </div>
 		  </div>		 
@@ -358,8 +346,8 @@
 					<i class="flaticon-email-new-envelope-closed-back-hand-drawn-outline"></i></span>
               </div>
               <div>
-					<h3 class="mb-3">Correo Electrónico</h3>
-					<p>{{datos.email}}</p>
+				<h3 class="mb-3">Correo Electrónico</h3>
+				<p>{{datos.email}}</p>
               </div>
             </div>
 		  </div>
