@@ -74,7 +74,7 @@
 					<!--  style="border:1px solid blue"-->
 					<div class="img d-flex">
 						<!-- <div class="vr"><span>Sale</span></div> -->
-						<a href="#"><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
+						<img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template">
 					</div>
 					<div class="text">
 						<!-- <h4 class="price"><span class="old-price mr-2">MADRID</span></h4> -->
@@ -137,17 +137,17 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">			
-				  <h2 class="mb-4">CAMPAMENTO</h2>		  
+				  <h2 class="">CAMPAMENTO</h2>
+				  <hr>		  
 				</div>
 			</div>
 		  <div class="row d-flex">
 			{% for campamento in campamentos %}
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="project">
-					<a href="#"><img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template"></a>
-				<div class="text float-right d-block">
-					
-				  <h3 class="heading"><a href="#">{{campamento.nombre}}</a></h3>
+					<img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template">
+				<div class="text float-right d-block">	
+				  <h3 class="heading">{{campamento.nombre}}</h3>
 				  <p>{{campamento.descripcion}}</p>					
 				  <div class="d-flex align-items-center mt-4 meta">				
 					  <p class="mb-0">

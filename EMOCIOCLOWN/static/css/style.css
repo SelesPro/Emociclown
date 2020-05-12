@@ -65,8 +65,9 @@ body {
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  height: 0;
-  overflow: visible; }
+  height: 1px;
+  background-color: #34A3D7;
+  overflow: visible;}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -342,8 +343,8 @@ h6, .h6 {
   line-height: 1.2; }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
@@ -8687,7 +8688,9 @@ textarea.form-control {
 
 .heading-section h2 {
   font-size: 40px;
-  font-weight: 600; }
+  font-weight: 600;
+  /*text-decoration: underline;*/
+  letter-spacing: 1.5pt; }
   .heading-section h2 span.number {
     color: #e2c0bb; }
   @media (max-width: 767.98px) {
@@ -8982,7 +8985,8 @@ textarea.form-control {
     .blog-entry .text .heading {
       font-size: 24px;
       margin-bottom: 16px;
-      font-weight: 500; }
+      font-weight: 500;
+      color: #00cccd; }
       .blog-entry .text .heading a {
         color: #000000; }
         .blog-entry .text .heading a:hover, .blog-entry .text .heading a:focus, .blog-entry .text .heading a:active {
