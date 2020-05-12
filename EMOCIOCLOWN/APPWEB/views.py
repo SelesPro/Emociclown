@@ -20,7 +20,7 @@ class Index(FormView):
         context=super(Index, self).get_context_data(**kwargs)
         context['monica'] = Info.objects.get(pk=1)
         context['emocioclown'] = Info.objects.get(pk=2)
-        context['talleres'] = Taller.objects.all()[:4]
+        context['talleres'] = Taller.objects.all()[:3]
         context['eventos'] = Evento.objects.all()
         context['campamentos'] = Campamento.objects.all()
         context['opiniones'] = Opiniones.objects.all()

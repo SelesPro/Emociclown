@@ -18,7 +18,7 @@ class Info(models.Model):
 class Taller(models.Model):
     titulo = models.CharField(max_length = 20, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
-    wasap = models.URLField(null=True, blank=True, verbose_name="Grupo de whatsapp")
+    wasap = models.URLField(null=True, blank=True, verbose_name="Grupo de whatsapp")  #linkar grupo wasap
     imagen = models.ImageField(upload_to='taller')  #especificar el peso de la imágen
     
     
