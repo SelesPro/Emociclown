@@ -20,11 +20,9 @@
 					</div>
 					<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 						<div class="text">
-							<!-- <span class="subheading pl-5">Discover Greece</span> TEXTO ORIGINAL-->
-							<!-- <h1 class="mb-4 mt-3">EMOCIoCLOWN</h1> TEXTO ORIGINAL-->
 							<img src="static/img/logo.svg" alt="logo emocioclown" id="logo">
 							<span class="subheading pl-5">Nuestra Historia</span>
-							<p>{{emocioclown.descripcion}}</p> <!--DANIEL DESCRIPCION 2 MONICA -->
+							<p>{{emocioclown.descripcion}}</p>
 								{% if emocioclown.link %}
 									<p><a href="{{emocioclown.link}}" target="_blank" class="btn btn-primary px-5 py-3 mt-3">Más información<span class="ion-ios-arrow-forward"></span></a></p>	
 								{% endif %} 
@@ -50,8 +48,7 @@
 						<div class="text">
 							<h1 class="mb-4 mt-3">Mónica Villacreses</span></h1>
 							<span class="subheading pl-5">Su historia</span>
-							<p>{{monica.descripcion}}</p> <!--DANIEL DESCRIPCION 1 MONICA -->
-							<!-- <p><a href="#talleres" class="btn btn-primary px-5 py-3 mt-3">Nuestros Talleres <span class="ion-ios-arrow-forward"></span></a></p> BOTON -->
+							<p>{{monica.descripcion}}</p> 
 						</div>
 					</div>
 				</div>
@@ -59,7 +56,7 @@
 		</div>
 	</div>
 </section>
-
+<!---------------------------------------------talleres---------------------------------------------->
 <section class="ftco-section" id="talleres">
 	<div class="container">
 		<div class="row justify-content-center pb-5">
@@ -74,19 +71,15 @@
 			{% for taller in talleres %}
 			<div class="col-md-6 col-lg d-flex ftco-animate">
 				<div class="project">
-					<!--  style="border:1px solid blue"-->
 					<div class="img d-flex">
-						<!-- <div class="vr"><span>Sale</span></div> -->
 						<a href="#"><img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template"></a>
 					</div>
 					<div class="text">
-						<!-- <h4 class="price"><span class="old-price mr-2">MADRID</span></h4> -->
-						<!-- <span>FECHA DE EVENTO</span> -->
 						<h3><a href="#"> {{taller.titulo}}</a></h3>
-						<p>{{taller.descripcion}}</p>
+						<p>{{taller.descripcion|truncatechars:50}}</p>
 						<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
 					</div>
-					<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+					<a href="{% static taller.imagen.url %}" class="icon image-popup d-flex justify-content-center align-items-center">
 						<span class="icon-expand"></span>
 					</a>
 				</div> 
