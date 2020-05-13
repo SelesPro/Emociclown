@@ -20,6 +20,7 @@ class Taller(models.Model):
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
     wasap = models.URLField(null=True, blank=True, verbose_name="Grupo de whatsapp")  #linkar grupo wasap
     imagen = models.ImageField(upload_to='taller')  #especificar el peso de la imágen
+    modalidad = models.CharField(default=10, max_length = 20, null = False)
     
     
     def __str__(self):
@@ -38,6 +39,7 @@ class Evento(models.Model):
     fecha_fin = models.DateField(null=True, blank=True)
     edad = models.IntegerField(default=10, null= True)
     precio = models.FloatField(default = 10, null= True) 
+    modalidad = models.CharField(default=10, max_length = 20, null = False)
 
     def __str__(self):
         return self.titulo
@@ -48,6 +50,7 @@ class Campamento(models.Model):
     fecha_inicio = models.DateField(null=True, blank=True)
     fecha_fin = models.DateField(null=True, blank=True) 
     imagen = models.ImageField(upload_to='campamento')
+    modalidad = models.CharField(default=10, max_length = 20, null = False)
   
     def __str__(self):
         return self.nombre
