@@ -69,6 +69,11 @@ hr {
   background-color: #34A3D7;
   overflow: visible;}
 
+.hr-op{
+  background-color: #ffffff;
+  
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
@@ -346,7 +351,7 @@ hr {
   margin-top: 0;
   margin-bottom: 0;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  height: 3px;}
 
 small,
 .small {
@@ -8843,7 +8848,7 @@ textarea.form-control {
   font-size: 25px; }
 
   .testimony-wrap .text {
-    padding-top: 6em;
+    padding-top: 4em;
     margin-top: -65px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
