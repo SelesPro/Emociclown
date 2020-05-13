@@ -107,10 +107,11 @@
 		</div>
 	  <div class="row d-flex">
 		{% for evento in eventos %}
-
 		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="project">
-					<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
+					<div class="img d-flex">
+						<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
+					</div>
 						<div class="text float-right d-block">	
 							<h3 class="heading">{{evento.titulo}}</h3>
 							<p>{{evento.descripcion}}</p>		
@@ -147,7 +148,9 @@
 			{% for campamento in campamentos %}
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 				<div class="project">
-					<img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template">
+					<div class="img d-flex">
+						<img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template">
+					</div>
 				<div class="text float-right d-block">	
 				  <h3 class="heading">{{campamento.nombre}}</h3>
 				  <p>{{campamento.descripcion}}</p>					
@@ -190,7 +193,7 @@
 		  <hr class="hr-op">		  
 		</div>
 	  </div>
-	  <div class="row ftco-animate justify-content-center">
+	  <div class="row ftco-animate justify-content-center mt-5">
 		<div class="col-md-12">
 		  <div class="carousel-testimony owl-carousel ftco-owl">
 			{% for opi in opiniones %}
@@ -215,23 +218,19 @@
 	
 <section id ="galeria" class="ftco-section gallery-section">
     <div class="container">
-      <div class="row justify-content-center pb-3">
+      <div class="row justify-content-center mb-5 ">
         <div class="col-md-7 text-center heading-section ftco-animate">
 		  <h2>GALERIA</h2>
 		  <hr>		  
         </div>
       </div>
       <div class="row ftco-animate justify-content-center">
-        <div class="col-md-12">
-          <div id="slide" class="carousel slide" data-ride="carousel">
+        <div class="col-md-11">
+          <div id="slide" class="carousel slide s-bd mt-5" data-ride="carousel">
               <div class="carousel-inner">
 				{% for imagenes in galerias %}
                 <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-                  <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="1100" height="500">
-                  <div class="carousel-caption">
-                    <h3>{{imagenes.titulo}}</h3>
-                    <p>{{imagenes.descripcion}}</p>
-                  </div>
+                  <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="900" height="200">
 				</div>
                 {% endfor %}
               </div>
@@ -304,8 +303,10 @@
       </div>
 	</div>
 	
-<!-- LADO DERECHO -->
+
     <div class="row block-9">
+
+<!-- LADO DERECHO -->
       <div class="col-md-7 order-md-last d-flex">
         <form method="POST" class="bg-light p-4 p-md-5 contact-form">
 			{% csrf_token %}  
@@ -350,7 +351,7 @@
               </div>
               <div>
                 <h3 class="mb-3">Móvil</h3>
-                <p><a href="{{datos.linkWha}}">{{datos.telefono}}</a></p>
+                <p>{{datos.telefono}}</p>
               </div>
             </div>
 		  </div>		 
