@@ -97,7 +97,6 @@
 		</div>
 	</div>
 </section>
-	
 
 <!-- EVENTOS Y ACTIVIDADES -->
 
@@ -109,32 +108,65 @@
 				<hr>		  
 			</div>
 		</div>
-	  <div class="row d-flex">
-		{% for evento in eventos %}
-		<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-				<div class="project">
-					<div class="img d-flex">
-						<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
-					</div>
-						<div class="text float-right d-block">	
-							<h3 class="heading">{{evento.titulo}}</h3>
-							<p>{{evento.descripcion}}</p>		
-								<div class="d-flex align-items-center mt-4 meta">				
-									<p class="mb-0">
-										<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
-										<!-- <span class="ion-ios-arrow-round-forward"></span> -->
-									</a>					
-									</p>		
-			  					</div>				  		
+
+	  <!--Carousel Wrapper-->
+	<div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
+		<!--Slides-->
+		<div class="carousel-inner" role="listbox">
+			{% for evento in eventos %}
+			{% cycle 'start' '' '' as slidestart silent %}
+			{% cycle '' '' 'end' as slidend silent %}
+			{% if slidestart %}
+		<!--First slide-->
+		<div class="carousel-item {% if forloop.first %} active {% endif %}">
+			<div class="row d-flex">
+			{% endif %}
+				<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+						<div class="project">
+							<div class="img d-flex">
+								<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
+							</div>
+								<div class="text float-right d-block">	
+									<h3 class="heading">{{evento.titulo}}</h3>
+									<p>{{evento.descripcion}}</p>		
+									<div class="d-flex align-items-center mt-4 meta">				
+										<p class="mb-0">
+											<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
+											<!-- <span class="ion-ios-arrow-round-forward"></span> -->
+										</a>					
+										</p>		
+									</div>				  		
+								</div>	
+								<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+									<span class="icon-expand"></span> 
+								</a>	
 						</div>	
-							<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-								<span class="icon-expand"></span> </a>	
-		  		</div>	
-		</div> 
+				</div> 
+			{% if forloop.last or slidend %}
+			</div> 
+		</div>
+		{% endif %} 
 		{% endfor %}
-	  </div>
+		<!--/.First slide--> 
+		</div>
+		<!--/.Slides-->
+		
+		<div class="row mt-5">
+            <div class="col text-center">
+              <div class="mt-5">
+				<ul class="carousel-indicators">
+					{% for s in numSlidesArray %}
+						<li data-target="#multi-item" data-slide-to="{{s}}" class="{% if forloop.first %} active {% endif %}"><span>{{ forloop.counter }}</span></li>
+					{% endfor %}
+				</ul>
+              </div>
+            </div>
+        </div>
+		<!--Indicators-->
+		
+		<!--/.Indicators-->
+	<!--/.Carousel Wrapper-->
 	</div>	
-	</div> 
 </section>
 
 <!-- CAMPAMENTO -->
@@ -226,11 +258,11 @@
         </div>
       </div>
       <div class="row ftco-animate justify-content-center">
-        <div class="col-md-11">
+        <div class="col-md-10">
           <div id="slide" class="carousel slide s-bd mt-5" data-ride="carousel">
               <div class="carousel-inner">
 				{% for imagenes in galerias %}
-                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %} gal-img">
                   <img src="{{MEDIA_URL}}{{imagenes.imagen}}" alt="{{imagenes.titulo}}" width="900" height="200">
 				</div>
                 {% endfor %}

@@ -5,6 +5,7 @@ from .forms import *
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
 from django.db.models import Q
+import math
 
 
 
@@ -21,7 +22,11 @@ class Index(FormView):
         context['monica'] = Info.objects.get(pk=1)
         context['emocioclown'] = Info.objects.get(pk=2)
         context['talleres'] = Taller.objects.all()[:3]
+
         context['eventos'] = Evento.objects.all()
+        numSlides = math.ceil(len(context['eventos'])/3)
+        context['numSlidesArray'] = list(range(0, numSlides))
+
         context['campamentos'] = Campamento.objects.all()
         context['opiniones'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
