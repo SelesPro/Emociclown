@@ -122,25 +122,25 @@
 			<div class="row d-flex">
 			{% endif %}
 				<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-						<div class="project">
-							<div class="img d-flex">
-								<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
-							</div>
-								<div class="text float-right d-block">	
-									<h3 class="heading">{{evento.titulo}}</h3>
-									<p>{{evento.descripcion}}</p>		
-									<div class="d-flex align-items-center mt-4 meta">				
-										<p class="mb-0">
-											<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
-											<!-- <span class="ion-ios-arrow-round-forward"></span> -->
-										</a>					
-										</p>		
-									</div>				  		
-								</div>	
-								<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-									<span class="icon-expand"></span> 
-								</a>	
-						</div>	
+					<div class="project">
+						<div class="img d-flex">
+							<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
+						</div>
+							<div class="text float-right d-block">	
+								<h3 class="heading">{{evento.titulo}}</h3>
+								<p>{{evento.descripcion}}</p>		
+								<div class="d-flex align-items-center mt-4 meta">				
+									<p class="mb-0">
+										<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
+										<!-- <span class="ion-ios-arrow-round-forward"></span> -->
+									</a>					
+									</p>		
+								</div>				  		
+							</div>	
+							<a href="{% static evento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+								<span class="icon-expand"></span> 
+							</a>	
+					</div>	
 				</div> 
 			{% if forloop.last or slidend %}
 			</div> 
@@ -212,7 +212,7 @@
 <!-- OPINIONES -->
 
 <section id="opiniones" class="ftco-section testimony-section">
-	<img src="{% static 'images/blob-shape-2.svg' %}"
+	<img src="{% static 'img/blob-shape-2a.svg' %}"
 	  class="svg-blob"
 	  alt="Colorlib Free Template"/>
 	<img src="{% static 'images/blob-shape-2.svg' %}"
@@ -259,7 +259,7 @@
       </div>
       <div class="row ftco-animate justify-content-center">
         <div class="col-md-10">
-          <div id="slide" class="carousel slide s-bd mt-5" data-ride="carousel">
+          <div id="slide" class="carousel slide mt-5" data-ride="carousel">
               <div class="carousel-inner">
 				{% for imagenes in galerias %}
                 <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %} gal-img">
@@ -275,7 +275,7 @@
               </a>
             </div>
         </div>
-      </div>
+	  </div>
     </div>
   </section>
 
@@ -312,7 +312,7 @@
 			<p>
 				{{blog.descripcion|truncatechars:100}}
 			</p>
-			<div class="d-flex align-items-center mt-4 meta">
+			<div class="d-flex align-content-end mt-4 meta">
 				<p class="mb-0">
 				<a href="{% url 'appweb:singleBlog' blog.id %}" class="btn btn-primary">Leer más </a>
 				</p>
@@ -320,8 +320,12 @@
 			</div>
 		</div>
 		</div>
-		{% endfor %}
-    </div>
+		{% endfor %}		
+	</div>
+	<div class="d-flex float-right mb-4 pb-5 meta">
+		<p class="mb-0"><a href="{% url 'appweb:blogs' %}" class="btn btn-primary">Todas las publicaciones </a></p>
+	</div>
+	
   </div>
 </section>
 
