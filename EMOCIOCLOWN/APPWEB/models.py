@@ -43,6 +43,11 @@ class Evento(models.Model):
     def __str__(self):
         return self.titulo
 
+    class Meta:
+        ordering = ['-fecha_inicio']
+        verbose_name = 'Evento'
+        verbose_name_plural = 'Eventos'
+
 class Campamento(models.Model):
     nombre = models.CharField(max_length = 50, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
@@ -53,6 +58,11 @@ class Campamento(models.Model):
   
     def __str__(self):
         return self.nombre
+
+    class Meta:
+        ordering = ['-fecha_inicio']
+        verbose_name = 'Campamento'
+        verbose_name_plural = 'Campamentos'
 
 class Opiniones(models.Model):
     nombre = models.CharField(max_length = 50, null = False)

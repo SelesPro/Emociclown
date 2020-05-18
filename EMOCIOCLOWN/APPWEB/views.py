@@ -27,7 +27,10 @@ class Index(FormView):
         numSlides = math.ceil(len(context['eventos'])/3)
         context['numSlidesArray'] = list(range(0, numSlides))
 
-        context['campamentos'] = Campamento.objects.all()
+        context['campamentos'] = Campamento.objects.all()      
+        numFotos = math.ceil(len(context['campamentos'])/3)
+        context['numArray'] = list(range(0, numFotos))
+
         context['opiniones'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()

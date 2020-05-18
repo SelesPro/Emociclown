@@ -109,22 +109,22 @@
 				</div>
 			</div>
 
-		<!--Carousel Wrapper-->
+		
 		<div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
-			<!--Slides-->
+		
 			<div class="carousel-inner" role="listbox">
 				{% for evento in eventos %}
 				{% cycle 'start' '' '' as slidestart silent %}
 				{% cycle '' '' 'end' as slidend silent %}
 				{% if slidestart %}
-			<!--First slide-->
+			
 			<div class="carousel-item {% if forloop.first %} active {% endif %}">
 				<div class="row d-flex">
 				{% endif %}
 					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 							<div class="project">
 								<div class="img d-flex">
-									<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid taller" alt="Colorlib Template">
+									<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid " alt="Colorlib Template">
 								</div>
 									<div class="text float-right d-block">	
 										<h3 class="heading">{{evento.titulo}}</h3>
@@ -132,7 +132,7 @@
 										<div class="d-flex align-items-center mt-4 meta">				
 											<p class="mb-0">
 												<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
-												<!-- <span class="ion-ios-arrow-round-forward"></span> -->
+											
 											</a>					
 											</p>		
 										</div>				  		
@@ -147,9 +147,8 @@
 			</div>
 			{% endif %} 
 			{% endfor %}
-			<!--/.First slide--> 
 			</div>
-			<!--/.Slides-->
+		
 			
 			<div class="row mt-5">
 				<div class="col text-center">
@@ -162,52 +161,76 @@
 				</div>
 				</div>
 			</div>
-			<!--Indicators-->
-			
-			<!--/.Indicators-->
-		<!--/.Carousel Wrapper-->
+
 		</div>	
 	</section>
 
 <!-- CAMPAMENTO -->
 
-	<section class="ftco-section bg-light" id="campamento">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-5">
-					<div class="col-md-7 heading-section text-center ftco-animate">			
+	<section class="ftco-section activity-section" id="actividad">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h2>CAMPAMENTO</h2>
 					<hr>		  
-					</div>
 				</div>
-			<div class="row d-flex">
-				{% for campamento in campamentos %}
-				<div class="col-md-6 col-lg-4 d-flex ftco-animate">
-					<div class="project">
-						<div class="img d-flex">
-							<img src="{{MEDIA_URL}}{{campamento.imagen}}" class="img-fluid " alt="Colorlib Template">
-						</div>
-					<div class="text float-right d-block">	
-					<h3 class="heading">{{campamento.nombre}}</h3>
-					<p>{{campamento.descripcion}}</p>					
-					<div class="d-flex align-items-center mt-4 meta">				
-						<p class="mb-0">
-							<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >Más información 
-							<!-- <span class="ion-ios-arrow-round-forward"></span>	 -->
-							</a>					
-						</p>		 
-					</div>
-					<a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span> 
-					</a>				  
-					</div>
-					<a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
-						<span class="icon-expand"></span> </a>
-				</div>
-				</div>	
-				{% endfor %}
-			</div> 
 			</div>
+		<div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
+			
+			<div class="carousel-inner" role="listbox">
+				{% for campamento in campamentos %}
+				{% cycle 'start' '' '' as slidestart silent %}
+				{% cycle '' '' 'end' as slidend silent %}
+				{% if slidestart %}
+		
+			<div class="carousel-item {% if forloop.first %} active {% endif %}">
+				<div class="row d-flex">
+				{% endif %}
+					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
+							<div class="project">
+								<div class="img d-flex">
+									<img src="{{MEDIA_URL}}{{campamento.imagen}}"  class="img-fluid" alt="Colorlib Template">
+								</div>
+									<div class="text float-right d-block">	
+										<h3 class="heading">{{campamento.nombre}}</h3>
+										<p>{{campamento.descripcion}}</p>		
+										<div class="d-flex align-items-center mt-4 meta">				
+											<p class="mb-0">
+												<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >Más información				
+											</a>					
+											</p>		
+										</div>				  		
+									</div>	
+									<a href="{% static campamento.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
+										<span class="icon-expand"></span> 
+									</a>	
+							</div>	
+					</div> 
+				{% if forloop.last or slidend %}
+				</div> 
+			</div>
+			{% endif %} 
+			{% endfor %}			
+			</div>
+		
+			
+			<div class="row mt-5">
+				<div class="col text-center">
+				<div class="mt-5">
+					<ul class="carousel-indicators">
+						{% for a in numArray %}
+							<li data-target="#multi-item" data-slide-to="{{a}}" class="{% if forloop.first %} active {% endif %}"><span>{{ forloop.counter }}</span></li>
+						{% endfor %}
+					</ul>
+				</div>
+				</div>
+			</div>
+		</div>	
 	</section>
+
+
+
+ 
 
 <!-- OPINIONES -->
 
