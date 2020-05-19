@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView, ListView, FormView
 from .models import *
@@ -80,17 +81,20 @@ class InfoEvent(ListView):
 class InfoBlog(ListView):
     model = Blog
     template_name = 'APPWEB/blog.html'
-    context_object_name = 'blogs'
     paginate_by = 3
-    post = Blog.objects.all()
 
-    def busqueda(self):
-        q = request.GET.get('buscar')
-        print(q)
-        posts = Blog.objects.filter(Q(titulo__icontains=q))
-        return render(request, 'APPWEB/blog.html', {'blogs': blogs})
-            
-
+    def get_queryset(self):
+        try:
+            name = self.kwargs.get('buscar', '')
+            print(name)
+        except:
+            name = ''
+        if (name != ''):
+            object_list = Blog.objects.filter(titulo__icontains = name)
+        else:
+            object_list = Blog.objects.all()
+        return object_list
+    
 
 class SingleBlog(ListView):
     model = Blog
@@ -100,6 +104,8 @@ class SingleBlog(ListView):
         context = super(SingleBlog, self).get_context_data(**kwargs)
         parametro = self.kwargs.get('pk', None)
         context['singleBlog'] = Blog.objects.filter(id=parametro)
+        context['lastPosts'] = Blog.objects.all
+
         return context
 
              
