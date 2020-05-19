@@ -175,7 +175,7 @@
 					<hr>		  
 				</div>
 			</div>
-		<div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
+		<div id="multi-item2" class="carousel slide carousel-multi-item" data-ride="carousel">
 			
 			<div class="carousel-inner" role="listbox">
 				{% for campamento in campamentos %}
@@ -217,7 +217,7 @@
 				<div class="mt-5">
 					<ul class="carousel-indicators">
 						{% for a in numArray %}
-							<li data-target="#multi-item" data-slide-to="{{a}}" class="{% if forloop.first %} active {% endif %}"><span>{{ forloop.counter }}</span></li>
+							<li data-target="#multi-item2" data-slide-to="{{a}}" class="{% if forloop.first %} active {% endif %}"><span>{{ forloop.counter }}</span></li>
 						{% endfor %}
 					</ul>
 				</div>
@@ -226,9 +226,6 @@
 		</div>	
 	</section>
 
-
-
- 
 
 <!-- OPINIONES -->
 
