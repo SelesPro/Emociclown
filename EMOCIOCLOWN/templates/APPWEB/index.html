@@ -105,13 +105,13 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>EVENTS & ACTIVIDADES</h2>
+					<h2>EVENTOS & ACTIVIDADES</h2>
 					<hr>		  
 				</div>
 			</div>
 
 		
-		<div id="multi-item" class="carousel slide carousel-multi-item" data-ride="carousel">
+		 <div id="multi-item" class="carousel slide carousel-multi-item" >  <!-- data-ride="carousel" (este hace que el slider pase solo)-->
 		
 			<div class="carousel-inner" role="listbox">
 				{% for evento in eventos %}
@@ -172,11 +172,11 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>CAMPAMENTO</h2>
+					<h2>CAMPAMENTOS</h2>
 					<hr>		  
 				</div>
 			</div>
-		<div id="multi-item2" class="carousel slide carousel-multi-item" data-ride="carousel">
+		<div id="multi-item2" class="carousel slide carousel-multi-item">
 			
 			<div class="carousel-inner" role="listbox">
 				{% for campamento in campamentos %}
