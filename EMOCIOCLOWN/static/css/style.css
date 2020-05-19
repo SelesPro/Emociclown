@@ -9161,9 +9161,10 @@ textarea.form-control {
     font-size: 18px;
     font-weight: 300; }
     .block-21 .text .heading a {
-      color: #000000; }
+      color: #00cccd;
+      text-align: left; }
       .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
-        color: #e2c0bb; }
+        color: #34a3d7; }
   .block-21 .text .meta > div {
     display: inline-block;
     margin-right: 5px; }
@@ -9171,18 +9172,18 @@ textarea.form-control {
       color: #b3b3b3; }
 
 /* Blog*/
-.post-info {
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  letter-spacing: .1em; }
-  .post-info > div {
-    display: inline-block; }
-    .post-info > div .seperator {
-      display: inline-block;
-      margin: 0 10px;
-      opacity: .5; }
+
+  .post-info span{
+    font-size: 0.9rem;
+  }
+  .post-info h3{
+    font-size: 3rem;
+  }
+  .post-info p{
+    font-size: 16px;
+    text-align: justify;
+  }
+
 
 .tagcloud a {
   text-transform: uppercase;
@@ -9268,11 +9269,13 @@ textarea.form-control {
   font-size: 15px;
   width: 100%; }
   .sidebar-box h3 {
-    font-size: 18px;
+    font-size: 25px;
+    line-height: 100%;
     margin-bottom: 15px; }
   .sidebar-box .heading-sidebar {
     font-weight: 500;
-    margin-bottom: 20px; }
+    margin-bottom: 40px;
+    text-align: center; }
 
 .categories, .sidelink {
   padding: 0;
@@ -9448,7 +9451,6 @@ textarea.form-control {
   font-size: 35px;
   color: white;
   background: #6B27FF;    /* color original de la barra menu nav  #3e4e62--------  Hanna ------/*
- 
   /* CAMBIO PENDIENTE DE IMPLEMENTAR -----------
    
     background: rgba(29, 91, 3, 0);
@@ -9461,6 +9463,10 @@ textarea.form-control {
   /* background: #fa5252 (color original);-------------AQUI fucsia HANNA */
   background: #FF00FF;
 }
+.nav__link--active {
+  background: transparent;
+  background: none;
+  color: #e2c0bb; }
 
 @media (max-width: 640px) {
   .nav {
