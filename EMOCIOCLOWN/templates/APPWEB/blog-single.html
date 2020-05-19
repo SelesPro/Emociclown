@@ -17,37 +17,30 @@
       <div class="container">
         <div class="row">
           {% for post in singleBlog %}
-          <div class="col-lg-8 ftco-animate">
-            <h3 class="mb-3">{{post.titulo}}</h3>
-              <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid">
-            </p>
-            <p>{{post.descripcion}}</p>
-
+          <div class="col-lg-8 ftco-animate post-info pr-5">
+            <div class="text">
+              <h3 class="mb-3">{{post.titulo}}</h3>
+              <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid mb-4">
+              <span><i class="icon-calendar"></i> {{post.fecha}}</span>  
+              <p class="mt-4">{{post.descripcion}}</p>
+            </div>
           </div> <!-- .col-md-8 -->
           {% endfor %}
-          <div class="col-lg-4 sidebar ftco-animate">
-            <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon icon-search"></span>
-                  <input type="text" class="form-control" placeholder="Buscar">
-                </div>
-              </form>
-              <div class="d-flex mt-4 meta">
-                <p class="mb-0"><a href="{% url 'appweb:blogs' %}" class="btn btn-primary">Todas las publicaciones </a></p>
-              </div>
-            </div>
+          <div class="col-lg-4 sidebar bg-light ftco-animate">
             <div class="sidebar-box ftco-animate">
               <h3 class="heading-sidebar">Publicaciones Recientes</h3>
+              {% for p in lastPosts %}
               <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
+                <a class="blog-img mr-4" style="background-image: url(/static/{{MEDIA_URL}}{{p.imagen}});"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                  <h3 class="heading"><a href="#">{{p.titulo}}</a></h3>
+                  <p>{{p.descripcion|truncatechars:50}}</p>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> April 04, 2019</a></div>
+                    <div><span class="icon-calendar"></span>  {{p.fecha}}</div>
                   </div>
                 </div>
               </div>
+              {% endfor %}
             </div>
           </div>
 
