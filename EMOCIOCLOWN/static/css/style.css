@@ -62,13 +62,12 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important; }
 
-/*   ------- LINEA DEBAJO TEXTOS---
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 1px;
-  background-color: #34A3D7;
-  overflow: visible;} */
+  background-color: #6b27ff;
+  overflow: visible;}
 
 .hr-op{
   background-color: #ffffff;
@@ -6232,7 +6231,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 1rem !important; }    /* 3rem medida original -----------------DANIEL PADDING INFERIOR TITULOS */
+  padding-bottom: 3rem !important; }
 
 .pl-5,
 .px-5 {
@@ -7621,9 +7620,9 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: #34a3d7;   /*  #34a3d7 AZUL  #6B27FF MORADO  DANIEL COLOR DE TITULOS------*/
+  color: #6b27ff;
   font-weight: 400;
-    /* -----------------------DANIEL CAMBIO DE TIPOGRAFIA EN H4 Y TODO.. VERIFICAR FUENTE
+    /* -----------------------DANIEL CAMBIO DE TIPOGRAFIA EN H4 
     font-family: "Cormorant Garamond", Georgia, serif; }*/
     font-family: "Poppins", Arial, sans-serif; }
   
@@ -7726,6 +7725,7 @@ h1, h2, h3, h4, h5,
         background: #b3b3b3; }
   .owl-carousel.home-slider {
     position: relative;
+    /* ------------------------DANIEL AQUI CAMBIO ALTO PAGINA INICIO, ORIGINAL 900px */
     height: 900px;
     z-index: 0; }
     .owl-carousel.home-slider .slider-item {
@@ -7939,7 +7939,7 @@ h1, h2, h3, h4, h5,
 .hero-wrap {
   width: 100%;
   height: 700px;
-  position: inherit;
+  position: inherit;  /* DANIEL PRUEBA IMAGEN CABECERA CADA TALLER original -->inherit*/
   background-size: cover;
   background-repeat: no-repeat; }
   .hero-wrap .slider-text {
@@ -8538,7 +8538,7 @@ textarea.form-control {
 
 .ftco-section {
   /* ----------------------------DANIEL AQUI MARGEN SUPERIOR DE TITULOS ORIGINAL 7em */
-  padding: 3em 0; /* CAMBIO en original 7em 0*/
+  padding: 4em 0; /* CAMBIO en original 7em 0*/
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
@@ -8698,10 +8698,10 @@ textarea.form-control {
   letter-spacing: 2px; }
 
 .heading-section h2 {
-  font-size: 50px; /*----------- DANIEL TAMAÑO DE TITULOS estaba 40px */
-  font-weight: 0; /*----------- DANIEL GROSOR TEXTOS TITULOS estaba 600 */
+  font-size: 40px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0pt; }
+  letter-spacing: 1.5pt; }
   .heading-section h2 span.number {
     color: #e2c0bb; }
   @media (max-width: 767.98px) {
@@ -8731,12 +8731,22 @@ textarea.form-control {
   background: #f8f9fa;
   overflow: hidden; 
 }
-.s-bd{
-  border: 15px solid #34a3d7;
-  border-radius:15px;
-}
-.carousel-inner img {
 
+.gallery-section .svg-blob-2 {
+  position: absolute;
+  bottom: -10em;
+  right: 0;
+  top: 10em;
+  margin-right: -10em; 
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: translate(15em, -15em);
+  -ms-transform: translate(15em, -15em);
+  transform: translate(15em, -15em);
+  background-position: center center;
+}
+
+.gal-img img {
   width: 100%;
   height: 500px;
   object-fit: cover;}
@@ -9564,17 +9574,16 @@ textarea.form-control {
   color: rgb(0, 0, 0);  /* --------DANIEL CAMBIO DE COLOR TEXT  EN FORMA DE CONTACTAR..... TALLER */
   padding-top:0px;
   font-size: 18px;}
-
   .block-23 ul li .icon{
   width: 40px;
   font-size: 22px;
   color: rgb(255, 10, 137); } /* --------DANIEL CAMBIO DE COLOR ICONOS  EN FORMA DE CONTACTAR..... TALLER */
 
-  .block-23 ul li, .taller-A { /* --------DANIEL TEXTOS TALLER INDIVIDUALES..... TALLER */
+  .block-23 ul li, .taller { /* --------DANIEL TEXTOS TALLER INDIVIDUALES..... TALLER */
     display: table;
     line-height: 1.5;
-    padding-left: 30px;
-    margin-bottom: 5px; }
+    padding-left: 10px;
+    margin-bottom: 1px; }
 
 .talleres-section{
   background-color: #f8f9fa;
@@ -9582,30 +9591,12 @@ textarea.form-control {
     
 .activity-section{
   background-color: #F4F6F6;
+<<<<<<< HEAD
 }
-h2{
-font-family: "Pacifico";
-text-transform: capitalize !important; /* DANIEL PALABRA PRIMERA LETRA EN MAYUSCULAS.. TITULOS*/
-display: inline-block;
-position: relative;
-} 
-h2::after, h2::before{
-content:'';
-position: absolute;
-width: 50px;
-height: 1px;
-background-color: currentColor;
-top: 0.8em;
-}
-h2::before{
-left: -70px;
-}
-h2::after{
-right: -70px;
-  }
 
-.text .monica{
-font-family: "Pacifico";
-color: #6B27FF !important;
-text-transform: capitalize !important;
+.blog-section{
+  background-color: #F4F6F6;
 }
+=======
+}
+>>>>>>> master

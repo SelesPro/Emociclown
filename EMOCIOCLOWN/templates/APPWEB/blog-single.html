@@ -17,6 +17,7 @@
       <div class="container">
         <div class="row">
           {% for post in singleBlog %}
+<<<<<<< HEAD
           <div class="col-lg-8 ftco-animate post-info pr-5">
             <div class="text">
               <h3 class="mb-3">{{post.titulo}}</h3>
@@ -24,6 +25,14 @@
               <span><i class="icon-calendar"></i> {{post.fecha}}</span>  
               <p class="mt-4">{{post.descripcion}}</p>
             </div>
+=======
+          <div class="col-lg-8 ftco-animate">
+            <h2 class="mb-3">{{post.titulo}}</h2>
+              <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid">
+            </p>
+            <p>{{post.descripcion}}</p>
+
+>>>>>>> parent of cb75ee3... Prueba daniel
           </div> <!-- .col-md-8 -->
           {% endfor %}
           <div class="col-lg-4 sidebar bg-light ftco-animate">
