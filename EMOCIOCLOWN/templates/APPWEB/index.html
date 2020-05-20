@@ -14,7 +14,7 @@
 				<div class="container-fluid p-0">
 					<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
 						<div class="one-third order-md-last">
-							<div class="img" style="background-image:url({{MEDIA_URL}}{{emocioclown.imagen}});"> <!--url(static/img/tizas.jpg) DANIEL IMAGEN NOSOTROS-->
+							<div class="img" style="background-image:url({{MEDIA_URL}}{{emocioclown.imagen}});"> 
 								<div class="overlay"></div>
 							</div>
 							<div class="bg-primary">
@@ -23,11 +23,9 @@
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<!-- <span class="subheading pl-5">Discover Greece</span> TEXTO ORIGINAL-->
-								<!-- <h1 class="mb-4 mt-3">EMOCIoCLOWN</h1> TEXTO ORIGINAL-->
 								<img src="static/img/logo.svg" alt="logo emocioclown" id="logo">
 								<span class="subheading pl-5">Nuestra Historia</span>
-								<p>{{emocioclown.descripcion}}</p> <!--DANIEL DESCRIPCION 2 MONICA -->
+								<p>{{emocioclown.descripcion}}</p>
 									{% if emocioclown.link %}
 										<p><a href="{{emocioclown.link}}" target="_blank" class="btn btn-primary px-5 py-3 mt-3">Más información<span class="ion-ios-arrow-forward"></span></a></p>	
 									{% endif %} 
@@ -42,7 +40,7 @@
 				<div class="container-fluid p-0">
 					<div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
 						<div class="one-third order-md-last">
-							<div class="img" style="background-image: url({{MEDIA_URL}}{{monica.imagen}})"> <!--url(static/img/trebol.jpg); DANIEL IMAGEN MONICA -->
+							<div class="img" style="background-image: url({{MEDIA_URL}}{{monica.imagen}})">
 								<div class="overlay"></div>
 							</div>
 							<div class="bg-primary">
@@ -53,8 +51,7 @@
 							<div class="text">
 								<h1 class="mb-4 mt-3">Mónica Villacreses</span></h1>
 								<span class="subheading pl-5">Su historia</span>
-								<p>{{monica.descripcion}}</p> <!--DANIEL DESCRIPCION 1 MONICA -->
-								<!-- <p><a href="#talleres" class="btn btn-primary px-5 py-3 mt-3">Nuestros Talleres <span class="ion-ios-arrow-forward"></span></a></p> BOTON -->
+								<p>{{monica.descripcion}}</p> 
 							</div>
 						</div>
 					</div>
@@ -69,7 +66,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>TALLERES</h2>
+					<h2>Talleres</h2>
 					<hr>		  
 				</div>
 			</div>
@@ -77,16 +74,12 @@
 				{% for taller in talleres %}
 				<div class="col-md-6 col-lg d-flex ftco-animate">
 					<div class="project">
-						<!--  style="border:1px solid blue"-->
 						<div class="img d-flex">
-							<!-- <div class="vr"><span>Sale</span></div> -->
-							<img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid taller" alt="Colorlib Template">
+							<img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid" alt="Colorlib Template">
 						</div>
 						<div class="text">
-							<!-- <h4 class="price"><span class="old-price mr-2">MADRID</span></h4> -->
-							<!-- <span>FECHA DE EVENTO</span> -->
 							<h3>{{taller.titulo}}</h3>
-							<p>{{taller.descripcion}}</p>
+							<p>{{taller.descripcion|truncatechars:100}}</p>
 							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
 						</div>
 						<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
@@ -105,7 +98,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>EVENTOS & ACTIVIDADES</h2>
+					<h2>Eventos & Actividades</h2>
 					<hr>		  
 				</div>
 			</div>
@@ -172,7 +165,7 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>CAMPAMENTOS</h2>
+					<h2>Campamentos</h2>
 					<hr>		  
 				</div>
 			</div>
@@ -238,7 +231,7 @@
 	  <div class="row justify-content-center mb-5">
 		<div
 		  class="col-md-7 text-center heading-section heading-section-white ftco-animate">
-		  <h2>OPINIONES</h2>
+		  <h2>Opiniones</h2>
 		  <hr class="hr-op">		  
 		</div>
 	  </div>
@@ -272,7 +265,7 @@
 		<div class="container">
 		<div class="row justify-content-center mb-5 ">
 			<div class="col-md-7 text-center heading-section ftco-animate">
-			<h2>GALERIA</h2>
+			<h2>Galería</h2>
 			<hr>		  
 			</div>
 		</div>
@@ -304,7 +297,7 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-5">
 		<div class="col-md-7 heading-section text-center ftco-animate">
-			<h2>BLOG</h2>
+			<h2>Blog</h2>
 			<hr>		  
 		</div>
 		</div>
@@ -353,7 +346,7 @@
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-3">
 		<div class="col-md-7 heading-section text-center ftco-animate">
-			<h2>CONTÁCTAME</h2>
+			<h2>Contáctame</h2>
 			<hr>		  
 		</div>
 		</div>
