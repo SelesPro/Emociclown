@@ -1460,3 +1460,8 @@
 	return new Lightbox();
   }));
   
+	jQuery(window).load(function() {
+	
+		/*Stop carousel*/
+		$('#multi-item').carousel('pause');
+	});
