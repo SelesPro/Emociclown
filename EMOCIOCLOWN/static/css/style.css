@@ -8788,18 +8788,31 @@ textarea.form-control {
     }
       
   /*BOLAS HTML*/
-    .testimony-section .svg-blob-2 {
-      position: absolute;
-      bottom: -10em;
-      right: 0;
-      margin-right: -10em; 
-     -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-transform: translate(15em, -15em);
-      -ms-transform: translate(15em, -15em);
-      transform: translate(15em, -15em);
-      background-position: center center;
-    }
+
+  .testimony-section .svg-blob-2 {
+    position: absolute;
+    bottom: 0;
+    right: 10em;
+    margin-right: -10em; 
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translate(15em, -15em);
+    -ms-transform: translate(15em, -15em);
+    transform: translate(15em, -15em);
+    background-position: center center;
+  }
+  .testimony-section .svg-blob-3 {
+    position: absolute;
+    bottom: -28em;
+    right: 80em;
+    margin-right: -10em; 
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transform: translate(15em, -15em);
+    -ms-transform: translate(15em, -15em);
+    transform: translate(15em, -15em);
+    background-position: center center;
+  }
     .testimony-section .overlay {
       position: absolute;
       top: 0;
