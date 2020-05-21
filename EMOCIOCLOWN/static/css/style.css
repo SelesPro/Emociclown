@@ -61,14 +61,14 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
-
+/*   ------- LINEA DEBAJO TEXTOS---
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 1px;
   background-color: #6b27ff;
   overflow: visible;}
-
+*/
 .hr-op{
   background-color: #ffffff;
   
@@ -8243,7 +8243,7 @@ h1, h2, h3, h4, h5,
       position: absolute;
       top: -25px;
       /* -------------------DANIEL AQUI MARGEN DE CIUDAD EN TALLER (MADRID) 10px original 40*/
-      left: 10px;
+      left: 40px;
       padding: .4em .7em;
       /* --------------------DANIEL aqui cambio de color FONDO de ciudad EN TALLER (MADRID)
       background: #d39f97; */ /* CAMBIO */
@@ -8698,8 +8698,8 @@ textarea.form-control {
   letter-spacing: 2px; }
 
 .heading-section h2 {
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 43px;/*----------- DANIEL TAMAÑO DE TITULOS estaba 40px */
+  fFont-weight: 600;/*----------- DANIEL GROSOR TEXTOS TITULOS estaba 600 */
   text-transform: uppercase;
   letter-spacing: 1.5pt; }
   .heading-section h2 span.number {
@@ -9577,7 +9577,7 @@ textarea.form-control {
 }
 /* ------------------------- DANIEL PRUEBA POSICION IMAGEN TALLER INDIVIDUAL- no sirve */
 
-.hero-wrap.hero-wrap-2.talleres{ /*este es para la parte de abajo*/
+.hero-wrap.hero-wrap-2{ /*este es para la parte de abajo*/
   height: 400px;
   position: relative;
   background-position: top center;
@@ -9587,6 +9587,7 @@ textarea.form-control {
   color: rgb(0, 0, 0);  /* --------DANIEL CAMBIO DE COLOR TEXT  EN FORMA DE CONTACTAR..... TALLER */
   padding-top:0px;
   font-size: 18px;}
+
   .block-23 ul li .icon{
   width: 40px;
   font-size: 22px;
@@ -9604,12 +9605,44 @@ textarea.form-control {
     
 .activity-section{
   background-color: #F4F6F6;
-<<<<<<< HEAD
 }
 
 .blog-section{
   background-color: #F4F6F6;
 }
-=======
+
+h2{
+  font-family: "Modak"; /*Short Stack   Kavoon    Bellota    Pacifico */
+  text-transform: capitalize !important; /* DANIEL PALABRA PRIMERA LETRA EN MAYUSCULAS.. TITULOS*/
+  display: inline-block;
+  position: relative;
+  }
+
+h2::after, h2::before{
+content:'';
+position: absolute;
+width: 50px;
+height: 1px;
+background-color: currentColor;
+top: 0.8em;
 }
->>>>>>> master
+h2::before{
+left: -70px;
+}
+h2::after{
+right: -70px;
+}
+h2::after, h2::before{
+  content:'';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: currentColor;
+  top: 0.8em;
+  }
+  h2::before{
+  left: -70px;
+  }
+  h2::after{
+  right: -70px;
+  }

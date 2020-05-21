@@ -21,10 +21,11 @@ class Taller(models.Model):
     wasap = models.URLField(null=True, blank=True, verbose_name="Grupo de whatsapp")  #linkar grupo wasap
     imagen = models.ImageField(upload_to='taller')  #especificar el peso de la imágen
     modalidad = models.CharField(default=10, max_length = 30, null = False)
-    
+    fecha = models.DateField(auto_now=True)
     def __str__(self):
         return self.titulo
     class Meta:
+        ordering = ['-fecha']
         verbose_name = 'Taller'
         verbose_name_plural = 'Talleres'
         
