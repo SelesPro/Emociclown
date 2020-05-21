@@ -65,6 +65,7 @@ class InfoCamp(ListView):
 
     def get_context_data(self,**kwargs):
         context=super(InfoCamp, self).get_context_data(**kwargs) 
+        context['contactoInfo']= Datos_contacto.objects.all()[0]
         context['campamento'] = Campamento.objects.get(pk=self.kwargs.get('pk', None))
         return context  
 
@@ -74,27 +75,16 @@ class InfoEvent(ListView):
 
     def get_context_data(self,**kwargs):
         context=super(InfoEvent, self).get_context_data(**kwargs) 
+        context['contactoInfo']= Datos_contacto.objects.all()[0]
         context['evento'] = Evento.objects.get(pk=self.kwargs.get('pk', None))
         return context 
-
 
 class InfoBlog(ListView):
     model = Blog
     template_name = 'APPWEB/blog.html'
+    context_object_name = 'blogs'
+    queryset = Blog.objects.all()
     paginate_by = 3
-
-    def get_queryset(self):
-        try:
-            name = self.kwargs.get('buscar', '')
-            print(name)
-        except:
-            name = ''
-        if (name != ''):
-            object_list = Blog.objects.filter(titulo__icontains = name)
-        else:
-            object_list = Blog.objects.all()
-        return object_list
-    
 
 class SingleBlog(ListView):
     model = Blog

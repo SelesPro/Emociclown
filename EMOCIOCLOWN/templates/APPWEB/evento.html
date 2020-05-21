@@ -8,8 +8,7 @@
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-end justify-content-start">
 			<div class="col-md-9 ftco-animate pb-4">
-				<h1 class="mb-3 bread">{{evento.titulo}}</h1>					
-
+				<h1 class="mb-3 bread"></h1>					
 			</div>
 		</div>
 	</div>
@@ -25,27 +24,26 @@
 							style="background-image:url('{% static evento.imagen.url  %}');">
 						</div>
 					</div>
-					<div class="col-md-5 ftco-animate">
-						<div class="text py-5">							
-							<h5>Descripcion:</h5> <p justifyALIGN="justify;"> {{evento.descripcion}}</p>
-							<h5>Aforo:</h5> <p> {{evento.aforo}}</p>
-							<h5>Edad:</h5> <p> {{evento.edad}}</p>
-							<h5>precio:</h5> <p> {{evento.precio}} €</p>	
-							<h5>Fecha inicio:</h5> <p> {{evento.fecha_inicio}} </p>
-							<h5>Fecha fin:</h5>    <p > {{evento.fecha_fin}} </p>
-							<h5>Modalidad:</h5>    <p > {{evento.modalidad}} </p>
-						</div>
-
-							<div class="block-23 mb-3 taller-A">
+					<div class="col-md-5 ftco-animate bg-light">
+						<div class="event text py-5 px-4">							
+							<h3>{{evento.titulo}}</h3> 
+							<p> {{evento.descripcion}}</p>
+							<div class="px-5">
+								<h5 class="mb-0">Aforo</h5><p> {{evento.aforo}}</p>
+								<h5 class="mb-0">Edad</h5><p>{{evento.edad}}</p>
+								<h5 class="mb-0">Precio</h5><p> {{evento.precio}} €</p>	
+								<h5 class="mb-0">Fecha inicio</h5><p> {{evento.fecha_inicio}} </p>
+								<h5 class="mb-0">Fecha fin</h5><p> {{evento.fecha_fin}} </p>
+								<h5 class="mb-0">Modalidad</h5><p> {{evento.modalidad}} </p>
+							</div>
+							<div class="block-23">
 								<ul>
-									<li><a class="texto">Para más información:</a></li>
+									<li><h3>Más información</h3></li>
 									<li><a href="{{taller.wasap}}"  target="_blank" ><span class="icon icon-whatsapp"></span><span class="text taller">Escribir al WhatsApp</span></a></li> 
-									<li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}} Contactar</span></a></li>
-								  </ul>
-							  </div>
-							<!-- <p><a href="#" class="btn btn-secondary">Details</a>
-								<a href="#" class="btn btn-primary">Book now</a>
-							</p> -->						
+									<li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}}</span></a></li>
+								</ul>
+							</div>
+						</div>		
 					</div>
 				</div>
 			</div>

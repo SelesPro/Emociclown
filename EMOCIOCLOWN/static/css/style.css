@@ -9138,7 +9138,7 @@ textarea.form-control {
   background-position: top center; }
 
 .contact-section .contact-info p a {
-  color: #e2c0bb; }
+  color: #999999; }
 
 .contact-section .contact-form {
   width: 100%; }
@@ -9576,14 +9576,14 @@ textarea.form-control {
   
 }
 .block-23 .taller{
-  color: rgb(0, 0, 0);  /* --------DANIEL CAMBIO DE COLOR TEXT  EN FORMA DE CONTACTAR..... TALLER */
+  color: #999999;  /* --------DANIEL CAMBIO DE COLOR TEXT  EN FORMA DE CONTACTAR..... TALLER */
   padding-top:0px;
   font-size: 18px;}
 
   .block-23 ul li .icon{
   width: 40px;
   font-size: 22px;
-  color: rgb(255, 10, 137); } /* --------DANIEL CAMBIO DE COLOR ICONOS  EN FORMA DE CONTACTAR..... TALLER */
+  color: #00cccd } /* --------DANIEL CAMBIO DE COLOR ICONOS  EN FORMA DE CONTACTAR..... TALLER */
 
   .block-23 ul li, .taller { /* --------DANIEL TEXTOS TALLER INDIVIDUALES..... TALLER */
     display: table;
@@ -9594,13 +9594,39 @@ textarea.form-control {
 .talleres-section{
   background-color: #f8f9fa;
 }
+.tall h3{
+  text-align: center;
+}
+.tall h5{
+  color: #00cccd;
+}
+.tall p{
+  text-align: justify;
+}
     
 .activity-section{
   background-color: #F4F6F6;
 }
-
+.event h3{
+  text-align: center;
+}
+.event h5{
+  color: #00cccd;
+}
+.event p{
+  text-align: justify;
+}
 .camp-section{
   background-color: #ffffff;
+}
+.camp h3{
+  text-align: center;
+}
+.camp h5{
+  color: #00cccd;
+}
+.camp p{
+  text-align: justify;
 }
 
 .blog-section{

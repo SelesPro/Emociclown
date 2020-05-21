@@ -8,7 +8,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-end justify-content-start">
             <div class="col-md-9 ftco-animate pb-4">
-              <h1 class="mb-3 bread">{{campamento.nombre}}</h1>
+              <h1 class="mb-3 bread"></h1>
             </div>
           </div>
         </div>
@@ -22,20 +22,22 @@
               <div class="col-md d-flex ftco-animate">
                 <div class="img align-self-stretch" style="background-image:url('{% static campamento.imagen.url  %}');">   </div>
               </div>
-              <div class="col-md-5 ftco-animate">
-                <div class="text py-5">
-                  <h5>Descripcion:</h5> <p> {{campamento.descripcion}}</p>
-                  <h5>Fecha inicio: </h5> <p> {{campamento.fecha_inicio}} </p>
-                  <h5>Fecha fin: </h5><p justifyALIGN="justify;"> {{campamento.fecha_fin}} </p>
-                  <h5>Modalidad: </h5><p> {{campamento.modalidad}} </p>
-                </div>
-
-                <div class="block-23 mb-3 taller-A">
-                  <ul>
-                    <li><a class="texto">Para más información:</a></li>
-                    <li><a href="{{taller.wasap}}"  target="_blank" ><span class="icon icon-whatsapp"></span><span class="text taller">Escribir al WhatsApp</span></a></li>
-                    <li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}} Contactar </span></a></li>
-                  </ul>
+              <div class="col-md-5 ftco-animate bg-light">
+                <div class="camp text py-5 px-4">
+                  <h3>{{campamento.nombre}}</h3> 
+                  <p> {{campamento.descripcion}}</p>
+                  <div class="px-5">
+                    <h5 class="mb-0">Fecha inicio</h5> <p> {{campamento.fecha_inicio}} </p>
+                    <h5 class="mb-0">Fecha fin</h5><p> {{campamento.fecha_fin}} </p>
+                    <h5 class="mb-0">Modalidad</h5><p> {{campamento.modalidad}} </p>
+                  </div>
+                  <div class="block-23">
+                    <ul>
+                      <li><h3>Más información</h3></li>
+                      <li><a href="{{taller.wasap}}"  target="_blank" ><span class="icon icon-whatsapp"></span><span class="text taller">Escribir al WhatsApp</span></a></li>
+                      <li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}}</span></a></li>
+                    </ul>
+                  </div> 
                 </div>                  
               </div>
             </div>

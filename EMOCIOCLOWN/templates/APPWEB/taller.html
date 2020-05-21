@@ -8,7 +8,7 @@
 <div class="container">
 	<div class="row no-gutters slider-text align-items-end justify-content-start">
 		<div class="col-md-9 ftco-animate pb-4">
-			<h1 class="mb-3 bread">{{taller.titulo}}</h1>
+			<h1 class="mb-3 bread"></h1>
 		</div>
 	</div>
 </div>
@@ -21,16 +21,18 @@
 				<div class="col-md-7 d-flex ftco-animate">
 					<div class="img align-self-stretch" style="background-image:url('{% static taller.imagen.url  %}');"></div>
 				</div>
-				<div class="col-md-5 ftco-animate">
-					<div class="text py-5">
-						<h3><a href="#">Descripción:</a></h3>
+				<div class="col-md-5 ftco-animate bg-light">
+					<div class="tall text py-5 px-4">
+						<h3>{{taller.titulo}}</h3>
 						<p>{{taller.descripcion}}</p>
-						<p>Modalidad: {{taller.modalidad}} </p>
-						<div class="block-23 mb-3 taller-A">
+						<div class="px-5">
+							<h5 class="mb-0">Modalidad</h5><p>{{taller.modalidad}}</p>
+						</div>
+						<div class="block-23">
 							<ul>
-							  <li><a class="texto">Para más información:</a></li>
+							  <li><h3>Más información</h3></li>
 							  <li><a href="{{taller.wasap}}"  target="_blank" ><span class="icon icon-whatsapp"></span><span class="text taller">Unirse al grupo de WhatsApp</span></a></li> <!-- {{contactoInfo.telefono}}-->
-							  <li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}} </span></a></li>
+							  <li><a href="mailto: {{contactoInfo.email}} "><span class="icon icon-envelope"></span><span class="text taller"> {{contactoInfo.email}}</span></a></li>
 							</ul>
 						  </div>
 					</div>
