@@ -8698,9 +8698,8 @@ textarea.form-control {
   letter-spacing: 2px; }
 
 .heading-section h2 {
-  font-size: 43px;/*----------- DANIEL TAMAÑO DE TITULOS estaba 40px */
-  fFont-weight: 600;/*----------- DANIEL GROSOR TEXTOS TITULOS estaba 600 */
-  text-transform: uppercase;
+  font-size: 58px;/*----------- DANIEL TAMAÑO DE TITULOS estaba 40px */
+  font-weight: bolder;/*----------- DANIEL GROSOR TEXTOS TITULOS estaba 600 */
   letter-spacing: 1.5pt; }
   .heading-section h2 span.number {
     color: #e2c0bb; }
@@ -9185,13 +9184,6 @@ textarea.form-control {
       color: #b3b3b3; }
 
 /* Blog*/
-
-  .post-info span{
-    font-size: 0.9rem;
-  }
-  .post-info h3{
-    font-size: 3rem;
-  }
   .post-info p{
     font-size: 16px;
     text-align: justify;
@@ -9474,7 +9466,7 @@ textarea.form-control {
 }
 .nav__link:hover {
   /* background: #fa5252 (color original);-------------AQUI fucsia HANNA */
-  background: #FF00FF;
+  background: #00cccd;
 }
 .nav__link--active {
   background: transparent;
@@ -9607,12 +9599,16 @@ textarea.form-control {
   background-color: #F4F6F6;
 }
 
+.camp-section{
+  background-color: #ffffff;
+}
+
 .blog-section{
   background-color: #F4F6F6;
 }
 
 h2{
-  font-family: "Modak"; /*Short Stack   Kavoon    Bellota    Pacifico */
+  font-family: "Bellota"; /*Short Stack   Kavoon    Bellota    Pacifico */
   text-transform: capitalize !important; /* DANIEL PALABRA PRIMERA LETRA EN MAYUSCULAS.. TITULOS*/
   display: inline-block;
   position: relative;

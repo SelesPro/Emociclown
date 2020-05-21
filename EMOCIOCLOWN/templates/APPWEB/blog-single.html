@@ -17,9 +17,9 @@
       <div class="container">
         <div class="row">
           {% for post in singleBlog %}
-          <div class="col-lg-8 ftco-animate post-info pr-5">
+          <div class="col-lg-8 ftco-animate post-info pl-4">
             <div class="text">
-              <h3 class="mb-3">{{post.titulo}}</h3>
+              <h1 class="mb-3">{{post.titulo}}</h1>
               <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid mb-4">
               <span><i class="icon-calendar"></i> {{post.fecha}}</span>  
               <p class="mt-4">{{post.descripcion}}</p>
@@ -27,13 +27,13 @@
           </div> <!-- .col-md-8 -->
           {% endfor %}
           <div class="col-lg-4 sidebar bg-light ftco-animate">
-            <div class="sidebar-box ftco-animate">
+            <div class="sidebar-box ftco-animate mt-4">
               <h3 class="heading-sidebar">Publicaciones Recientes</h3>
               {% for p in lastPosts %}
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(/static/{{MEDIA_URL}}{{p.imagen}});"></a>
                 <div class="text">
-                  <h3 class="heading"><a href="#">{{p.titulo}}</a></h3>
+                  <h3 class="heading"><a href="{% url 'appweb:singleBlog' p.id %}">{{p.titulo}}</a></h3>
                   <p>{{p.descripcion|truncatechars:50}}</p>
                   <div class="meta">
                     <div><span class="icon-calendar"></span>  {{p.fecha}}</div>
@@ -41,6 +41,9 @@
                 </div>
               </div>
               {% endfor %}
+            </div>
+            <div class="sidebar-box ftco-animate mb-0 pt-0">
+              <p class="mb-4 mt-3 float-right"><a href="{% url 'appweb:blogs' %}" class="btn btn-primary">Todas las publicaciones </a></p>
             </div>
           </div>
 
