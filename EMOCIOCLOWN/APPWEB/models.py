@@ -3,7 +3,7 @@ from django.db import models
 
 
 class Info(models.Model):
-    titulo = models.CharField(max_length = 20, null = False)
+    titulo = models.CharField(max_length = 50, null = False)
     descripcion = models.TextField(blank = True, max_length = 300,null = False)
     imagen = models.ImageField(upload_to='personal')  #especificar el peso de la imágen
     link = models.URLField(null=True, blank=True, verbose_name="Dirección Web")
@@ -16,8 +16,8 @@ class Info(models.Model):
         verbose_name_plural = 'Datos inicio'
 
 class Taller(models.Model):
-    titulo = models.CharField(max_length = 20, null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    titulo = models.CharField(max_length = 100, null = False)
+    descripcion = models.TextField(blank = True, null = False)
     wasap = models.URLField(null=True, blank=True, verbose_name="Grupo de whatsapp")  #linkar grupo wasap
     imagen = models.ImageField(upload_to='taller')  #especificar el peso de la imágen
     modalidad = models.CharField(default=10, max_length = 30, null = False)
@@ -31,8 +31,8 @@ class Taller(models.Model):
         
 
 class Evento(models.Model):
-    titulo = models.CharField(max_length = 20, null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    titulo = models.CharField(max_length = 100, null = False)
+    descripcion = models.TextField(blank = True, null = False)
     imagen = models.ImageField(upload_to='evento')
     aforo = models.IntegerField(default = 3, null= True)
     fecha_inicio = models.DateField(null=True, blank=True) 
@@ -51,8 +51,8 @@ class Evento(models.Model):
         verbose_name_plural = 'Eventos'
 
 class Campamento(models.Model):
-    nombre = models.CharField(max_length = 50, null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    nombre = models.CharField(max_length = 100, null = False)
+    descripcion = models.TextField(blank = True, null = False)
     fecha_inicio = models.DateField(null=True, blank=True)
     fecha_fin = models.DateField(null=True, blank=True) 
     imagen = models.ImageField(upload_to='campamento')
@@ -69,7 +69,7 @@ class Campamento(models.Model):
 
 class Opiniones(models.Model):
     nombre = models.CharField(max_length = 50, null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
+    descripcion = models.TextField(blank = True, null = False)
 
     def __str__(self):
         return self.nombre
@@ -79,12 +79,10 @@ class Opiniones(models.Model):
         verbose_name_plural = 'Opiniones'
 
 class Galeria(models.Model):
-    titulo = models.CharField(max_length = 50, null = False)
-    descripcion = models.TextField(blank = True, max_length = 300,null = False)
     imagen = models.ImageField(upload_to='galeria')
 
     def __str__(self):
-        return self.titulo
+        return self.imagen
     
     class Meta:
         verbose_name = 'Galeria'
@@ -92,7 +90,7 @@ class Galeria(models.Model):
 
 
 class Blog(models.Model):
-    titulo = models.CharField(max_length = 50, null = False)
+    titulo = models.CharField(max_length = 100, null = False)
     descripcion = models.TextField(blank = True,null = False)
     fecha = models.DateField(null=True, blank=True)
     imagen = models.ImageField(upload_to='blog')       
