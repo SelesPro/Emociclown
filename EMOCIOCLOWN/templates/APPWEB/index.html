@@ -6,7 +6,7 @@
 <!-- INICIO -->	
 
 	<section id="home-section" class="hero">
-		<img src="{% static 'img/blob-shape-3.svg' %}" class="svg-blob" alt="Colorlib Free Template">
+		<img src="{% static 'img/blob-shape-3.svg' %}" class="svg-blob" alt="Burbuja">
 		<div class="home-slider owl-carousel">
 			<div class="slider-item">
 				<div class="overlay"></div>
@@ -69,11 +69,11 @@
 				</div>
 			</div>
 			<div class="row d-flex">
-				{% for taller in talleres %}
+				{% for taller in talleres|slice:":3" %}
 				<div class="col-md-6 col-lg d-flex ftco-animate">
 					<div class="project">
 						<div class="img d-flex">
-							<img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid" alt="Colorlib Template">
+							<img src="{{MEDIA_URL}}{{taller.imagen}}" class="img-fluid" alt="imagen explicativa">
 						</div>
 						<div class="text">
 							<h3>{{taller.titulo}}</h3>
@@ -111,11 +111,11 @@
 					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 							<div class="project">
 								<div class="img d-flex">
-									<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid " alt="Colorlib Template">
+									<img src="{{MEDIA_URL}}{{evento.imagen}}"  class="img-fluid " alt="Imagen Explicativa">
 								</div>
 									<div class="text float-right d-block">	
 										<h3 class="heading">{{evento.titulo}}</h3>
-										<p>{{evento.descripcion}}</p>		
+										<p>{{evento.descripcion|truncatechars:100}}</p>		
 										<div class="d-flex align-items-center mt-4 meta">				
 											<p class="mb-0">
 												<a href="{% url 'appweb:evento' evento.id %}" class="btn btn-primary">Más información 
@@ -173,11 +173,11 @@
 					<div class="col-md-6 col-lg-4 d-flex ftco-animate">
 							<div class="project">
 								<div class="img d-flex">
-									<img src="{{MEDIA_URL}}{{campamento.imagen}}"  class="img-fluid" alt="Colorlib Template">
+									<img src="{{MEDIA_URL}}{{campamento.imagen}}"  class="img-fluid" alt="Imagen Explicativa">
 								</div>
 									<div class="text float-right d-block">	
 										<h3 class="heading">{{campamento.nombre}}</h3>
-										<p>{{campamento.descripcion}}</p>		
+										<p>{{campamento.descripcion|truncatechars:100}}</p>		
 										<div class="d-flex align-items-center mt-4 meta">				
 											<p class="mb-0">
 												<a href="{% url 'appweb:campamento' campamento.id %}" class="btn btn-primary" >Más información				
@@ -213,9 +213,7 @@
 <!-- GALERIA -->
 	
 	<section id ="galeria" class="ftco-section gallery-section">
-		<img src="{% static 'img/blob-shape-3a.png' %}"
-		class="svg-blob-2"
-		alt="Colorlib Free Template"/>
+		<img src="{% static 'img/blob-shape-3a.png' %}" class="svg-blob-2" alt="Burbuja"/>
 		<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center heading-section ftco-animate">
@@ -293,13 +291,9 @@
 <!-- OPINIONES -->
 
 <section id="opiniones" class="ftco-section testimony-section">
-	<img src="{% static 'img/blob-shape-2d.svg' %}"
-	class="svg-blob-2"
-	alt="Burbuja Morada"/>
+	<img src="{% static 'img/blob-shape-2d.svg' %}" class="svg-blob-2" alt="Burbuja Morada"/>
 
-	<img src="{% static 'img/blob-shape-2e.svg' %}"
-	class="svg-blob-3"
-	alt="Burbuja Verde"/>
+	<img src="{% static 'img/blob-shape-2e.svg' %}" class="svg-blob-3" alt="Burbuja Verde"/>
 
 <div class="container">
   <div class="row justify-content-center">
