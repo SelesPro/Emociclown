@@ -23,10 +23,10 @@
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
 								<img src="static/img/logo.svg" alt="logo emocioclown" id="logo">
-								<span class="subheading pl-5">Nuestra Historia</span>
+								<span class="subheading pl-5">Acerca de Nosotros</span>
 								<p>{{emocioclown.descripcion}}</p>
 									{% if emocioclown.link %}
-										<p><a href="{{emocioclown.link}}" target="_blank" class="btn btn-primary px-5 py-3 mt-3">Más información<span class="ion-ios-arrow-forward"></span></a></p>	
+										<p><a href="{{emocioclown.link}}" target="_blank" class="btn btn-primary px-5 py-3 mt-3">Más información</a></p>	
 									{% endif %} 
 							</div>
 						</div>
@@ -48,8 +48,8 @@
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<h1 class="mb-4 mt-3">Mónica Villacreses</span></h1>
-								<span class="subheading pl-5">Su historia</span>
+								<h1 class="mb-0 mt-3">MÓNICA VILLACRECES</span></h1>
+								<span class="subheading pl-5">Acerca de mi</span>
 								<p>{{monica.descripcion}}</p> 
 							</div>
 						</div>
@@ -63,10 +63,9 @@
 
 	<section class="ftco-section talleres-section" id="talleres">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
+			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>Talleres</h2>
-					<hr>		  
+					<h2>TALLERES</h2>
 				</div>
 			</div>
 			<div class="row d-flex">
@@ -95,22 +94,17 @@
 
 	<section class="ftco-section activity-section" id="actividad">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
+			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>Eventos & Actividades</h2>
-					<hr>		  
+					<h2>EVENTOS & ACTIVIDADES</h2>
 				</div>
 			</div>
-
-		
 		 <div id="multi-item" class="carousel slide carousel-multi-item" >  <!-- data-ride="carousel" (este hace que el slider pase solo)-->
-		
 			<div class="carousel-inner" role="listbox">
 				{% for evento in eventos %}
 				{% cycle 'start' '' '' as slidestart silent %}
 				{% cycle '' '' 'end' as slidend silent %}
-				{% if slidestart %}
-			
+				{% if slidestart %}			
 			<div class="carousel-item {% if forloop.first %} active {% endif %}">
 				<div class="row d-flex">
 				{% endif %}
@@ -162,20 +156,17 @@
 
 	<section class="ftco-section camp-section" id="campamento">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
+			<div class="row justify-content-center pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h2>Campamentos</h2>
-					<hr>		  
+					<h2>CAMPAMENTOS</h2>
 				</div>
 			</div>
-		<div id="multi-item2" class="carousel slide carousel-multi-item">
-			
+		<div id="multi-item2" class="carousel slide carousel-multi-item">			
 			<div class="carousel-inner" role="listbox">
 				{% for campamento in campamentos %}
 				{% cycle 'start' '' '' as slidestart silent %}
 				{% cycle '' '' 'end' as slidend silent %}
-				{% if slidestart %}
-		
+				{% if slidestart %}		
 			<div class="carousel-item {% if forloop.first %} active {% endif %}">
 				<div class="row d-flex">
 				{% endif %}
@@ -222,14 +213,13 @@
 <!-- GALERIA -->
 	
 	<section id ="galeria" class="ftco-section gallery-section">
-		<img src="{% static 'img/blob-shape-3.svg' %}"
+		<img src="{% static 'img/blob-shape-3a.svg' %}"
 		class="svg-blob-2"
 		alt="Colorlib Free Template"/>
 		<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center heading-section ftco-animate">
-			<h2>Galería</h2>
-			<hr>		  
+			<h2>GALERIA</h2>
 			</div>
 		</div>
 		<div class="row ftco-animate justify-content-center">
@@ -258,13 +248,11 @@
 
 	<section class="ftco-section blog-section" id="blog-section">
 	<div class="container">
-		<div class="row justify-content-center mb-5 pb-5">
+		<div class="row justify-content-center pb-5">
 		<div class="col-md-7 heading-section text-center ftco-animate">
-			<h2>Blog</h2>
-			<hr>		  
+			<h2>BLOG</h2>		  
 		</div>
-		</div>
-		
+		</div>	
 		<div class="row d-flex">
 			{% for blog in blog|slice:":3" %}
 			<div class="col-md-6 col-lg-4 d-flex ftco-animate">
@@ -297,7 +285,7 @@
 			</div>
 			{% endfor %}
 		</div>
-		<div class="d-flex justify-content-end mb-4 pb-5 meta">
+		<div class="d-flex justify-content-end meta">
 			<p class="mb-0"><a href="{% url 'appweb:blogs' %}" class="btn btn-primary">Todas las publicaciones </a></p>
 		</div>
 	</div>
@@ -305,18 +293,17 @@
 <!-- OPINIONES -->
 
 <section id="opiniones" class="ftco-section testimony-section">
-	<img src="{% static 'img/blob-shape-2e.svg' %}"
+	<img src="{% static 'img/blob-shape-2d.svg' %}"
 	class="svg-blob-2"
-	alt="Colorlib Free Template"/>
+	alt="Burbuja Morada"/>
 
-	<img src="{% static 'img/blob-shape-2f.svg' %}"
+	<img src="{% static 'img/blob-shape-2e.svg' %}"
 	class="svg-blob-3"
-	alt="Colorlib Free Template"/>
+	alt="Burbuja Verde"/>
 
 <div class="container">
-  <div class="row justify-content-center mb-5">
-	<div
-	  class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+  <div class="row justify-content-center">
+	<div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
 	  <h2>OPINIONES</h2>
 	</div>
   </div>
@@ -342,19 +329,18 @@
   </section>
 <!-- CONTACTO -->
 
-	<section id="contacto" class="ftco-section contact-section ftco-no-pb" id="contact-section">
+<section id="contacto" class="ftco-section contact-section ftco-no-pb" id="contact-section">
 	<div class="container">
-		<div class="row justify-content-center mb-5 pb-3">
+		<div class="row justify-content-center pb-5">
 		<div class="col-md-7 heading-section text-center ftco-animate">
-			<h2>Contáctame</h2>
-			<hr>		  
+			<h2>CONTÁCTAME</h2>
 		</div>
 		</div>
 		<div class="row block-9">
 
 	<!-- LADO DERECHO -->
 		<div class="col-md-7 order-md-last d-flex">
-			<form method="POST" class="bg-light p-4 p-md-5 contact-form">
+			<form method="POST" class="bg-light p-4 p-md-5 contact-form ftco-animate">
 				{% csrf_token %}  
 				<div class="form-group">
 					{{form.nombre}}
