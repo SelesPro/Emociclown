@@ -32,17 +32,5 @@ admin.site.main_bg_color = '#34a3d7'
 admin.site.main_hover_color = '#6b27ff'
 admin.site.profile_picture = settings.STATIC_URL+'img/background/bg-admin-lg.png'
 admin.site.profile_bg = settings.STATIC_URL+'img/background/bg-admin.png' 
-
-"""
-admin.site.login_logo = staticfiles('avatar1.png')
-admin.site.logout_bg = staticfiles('avatar1.png')
-
-site.site_header = _ ('Demo')
-site.site_title = _ ('Demo')
-site.favicon = staticfiles ('demo.png')
-site.main_bg_color = 'green'
-site.main_hover_color = 'yellow'
-site.profile_picture = staticfiles ('profile-background.jpeg')
-site.profile_bg = staticfiles ('profile-background.jpeg' )
-site.login_logo = staticfiles ('profile-background.jpeg')
-site.logout_bg = staticfiles ('profile-background.jpeg')"""
+admin.site.login_logo = settings.STATIC_URL+'img/background/bg-admin-lg-login.png'
+admin.site.logout_bg = settings.STATIC_URL+'img/background/bg-admin-login.png'
