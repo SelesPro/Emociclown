@@ -30,7 +30,8 @@ admin.site.site_header = 'Emocioclown'
 admin.site.site_title = 'Administración Emociclown'
 admin.site.main_bg_color = '#34a3d7'
 admin.site.main_hover_color = '#6b27ff'
-admin.site.profile_picture = settings.STATIC_URL+'img/avatar1.png'
+admin.site.profile_picture = settings.STATIC_URL+'img/background/bg-admin-lg.png'
+admin.site.profile_bg = settings.STATIC_URL+'img/background/bg-admin.png' 
 
 """
 admin.site.login_logo = staticfiles('avatar1.png')
