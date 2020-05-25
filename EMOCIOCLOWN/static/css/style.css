@@ -5868,7 +5868,9 @@ button.bg-dark:focus {
   .float-md-left {
     float: left !important; }
   .float-md-right {
-    float: right !important; }
+    float: right !important; 
+    text-align: center;
+  }
   .float-md-none {
     float: none !important; } }
 
