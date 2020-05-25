@@ -78,7 +78,7 @@
 						<div class="text">
 							<h3>{{taller.titulo}}</h3>
 							<p>{{taller.descripcion|truncatechars:100}}</p>
-							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p><!-- href="{{taller.html}}"   DUDAS enlace bbdd -->
+							<p class="mb-0"><a href="{% url 'appweb:taller' taller.id %}" class="btn btn-primary">Más información</a></p>
 						</div>
 						<a href="{% static taller.imagen.url  %}" class="icon image-popup d-flex justify-content-center align-items-center">
 							<span class="icon-expand"></span>
@@ -99,7 +99,7 @@
 					<h2>EVENTOS & ACTIVIDADES</h2>
 				</div>
 			</div>
-		 <div id="multi-item" class="carousel slide carousel-multi-item" >  <!-- data-ride="carousel" (este hace que el slider pase solo)-->
+		 <div id="multi-item" class="carousel slide carousel-multi-item" >
 			<div class="carousel-inner" role="listbox">
 				{% for evento in eventos %}
 				{% cycle 'start' '' '' as slidestart silent %}
