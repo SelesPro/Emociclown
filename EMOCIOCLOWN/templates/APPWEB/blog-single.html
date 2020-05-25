@@ -19,9 +19,9 @@
         <div class="row">
           {% for post in singleBlog %}
           <div class="col-lg-8 ftco-animate post-info pl-4">
+            <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid mb-4">
             <div class="text">
               <h1 class="mb-3">{{post.titulo}}</h1>
-              <img src="{% static post.imagen.url %}" alt="{{post.titulo}}" class="img-fluid mb-4">
               <span><i class="icon-calendar"></i> {{post.fecha}}</span>  
               <p class="mt-4">{{post.descripcion}}</p>
             </div>
