@@ -84,7 +84,7 @@ class InfoBlog(ListView):
     template_name = 'APPWEB/blog.html'
     context_object_name = 'blogs'
     queryset = Blog.objects.all()
-    paginate_by = 3
+    paginate_by = 6
 
 class SingleBlog(ListView):
     model = Blog

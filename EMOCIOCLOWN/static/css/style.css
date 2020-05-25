@@ -9199,6 +9199,10 @@ textarea.form-control {
     font-size: 16px;
     text-align: justify;
   }
+  .post-info img{
+    max-width: 100%;
+    height: auto;
+  }
 
 
 .tagcloud a {
