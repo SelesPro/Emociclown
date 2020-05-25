@@ -394,11 +394,7 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: 15em;}
-  @media (max-width: 766px){
-    .img-fluid {
-      height: auto;}
-  }
+  height: auto; }
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -9199,10 +9195,6 @@ textarea.form-control {
     font-size: 16px;
     text-align: justify;
   }
-  .post-info img{
-    max-width: 100%;
-    height: auto;
-  }
 
 
 .tagcloud a {
@@ -9656,24 +9648,24 @@ height: 1px;
 background-color: currentColor;
 top: 0.8em;
 }
+
 h2::before{
-left: -70px;
-}
-h2::after{
-right: -70px;
-}
-h2::after, h2::before{
-  content:'';
-  position: absolute;
-  width: 50px;
-  height: 4px;
-  border-radius: 3px;
-  background-color: currentColor;
-  top: 0.8em;
-  }
-  h2::before{
   left: -70px;
   }
+  
   h2::after{
   right: -70px;
   }
+  
+@media (max-width: 640px) { /* verificar no se si funciona */
+  h2::after, h2::before{
+    width: 10px;
+  }
+  h2::before{
+  left: -15px;
+    }
+  h2::after{
+  right: -15px;
+      }
+}
+
