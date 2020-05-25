@@ -30,7 +30,7 @@
           <div class="col-lg-4 sidebar bg-light ftco-animate">
             <div class="sidebar-box ftco-animate mt-4">
               <h3 class="heading-sidebar">Publicaciones Recientes</h3>
-              {% for p in lastPosts %}
+              {% for p in lastPosts|slice:":5" %}
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(/static/{{MEDIA_URL}}{{p.imagen}});"></a>
                 <div class="text">

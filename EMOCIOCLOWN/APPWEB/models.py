@@ -80,9 +80,6 @@ class Opiniones(models.Model):
 
 class Galeria(models.Model):
     imagen = models.ImageField(upload_to='galeria')
-
-    def __str__(self):
-        return self.imagen
     
     class Meta:
         verbose_name = 'Galeria'
