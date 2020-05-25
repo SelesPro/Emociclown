@@ -79,7 +79,11 @@ class Opiniones(models.Model):
         verbose_name_plural = 'Opiniones'
 
 class Galeria(models.Model):
+    nombre = models.CharField(default='imagen', max_length = 50, null = False)
     imagen = models.ImageField(upload_to='galeria')
+
+    def __str__(self):
+        return self.nombre
     
     class Meta:
         verbose_name = 'Galeria'
