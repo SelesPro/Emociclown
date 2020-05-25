@@ -6,7 +6,7 @@
 <!-- INICIO -->	
 
 	<section id="home-section" class="hero">
-		<img src="{% static 'img/blob-shape-3.svg' %}" class="svg-blob" alt="Burbuja">
+		<img src="{% static 'img/background/blob-shape-3.svg' %}" class="svg-blob" alt="Burbuja">
 		<div class="home-slider owl-carousel">
 			<div class="slider-item">
 				<div class="overlay"></div>
@@ -17,12 +17,12 @@
 								<div class="overlay"></div>
 							</div>
 							<div class="bg-primary">
-								<div class="vr"><span class="pl-3 py-4" style="background-image: url(static/img/balloons4.jpg);">nosotros</span></div>
+								<div class="vr"><span class="pl-3 py-4" style="background-image: url(static/img/personal/tizas_s.jpg);">nosotros</span></div>
 							</div>
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<img src="static/img/logo.svg" alt="logo emocioclown" id="logo">
+								<img src="static/img/personal/logo.svg" alt="logo emocioclown" id="logo">
 								<span class="subheading pl-5">Acerca de Nosotros</span>
 								<p>{{emocioclown.descripcion}}</p>
 									{% if emocioclown.link %}
@@ -43,12 +43,12 @@
 								<div class="overlay"></div>
 							</div>
 							<div class="bg-primary">
-								<div class="vr"><span class="pl-3 py-4" style="background-image: url(static/img/tizas.jpg);">mónica</span></div>
+								<div class="vr"><span class="pl-3 py-4" style="background-image: url(static/img/personal/tizas_s.jpg);">mónica</span></div>
 							</div>
 						</div>
 						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
 							<div class="text">
-								<h1 class="mb-0 mt-3">MÓNICA VILLACRECES</span></h1>
+								<h1 class="mb-0 mt-3">MÓNICA VILLACRESES</span></h1>
 								<span class="subheading pl-5">Acerca de mi</span>
 								<p>{{monica.descripcion}}</p> 
 							</div>
@@ -213,7 +213,7 @@
 <!-- GALERIA -->
 	
 	<section id ="galeria" class="ftco-section gallery-section">
-		<img src="{% static 'img/blob-shape-3.svg' %}" class="svg-blob-2" alt="Burbuja"/>
+		<img src="{% static 'img/background/blob-shape-3.svg' %}" class="svg-blob-2" alt="Burbuja"/>
 		<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-7 text-center heading-section ftco-animate">
@@ -230,10 +230,10 @@
 					</div>
 					{% endfor %}
 				</div>
-				<a class="carousel-control-prev" href="#slide" data-slide="prev">
+				<a class="carousel-control-prev" data-target="#slide" data-slide="prev">
 					<span class="carousel-control-prev-icon"></span>
 				</a>
-				<a class="carousel-control-next" href="#slide" data-slide="next">
+				<a class="carousel-control-next" data-target="#slide" data-slide="next">
 					<span class="carousel-control-next-icon"></span>
 				</a>
 				</div>
@@ -291,9 +291,9 @@
 <!-- OPINIONES -->
 
 <section id="opiniones" class="ftco-section testimony-section">
-	<img src="{% static 'img/blob-shape-2d.svg' %}" class="svg-blob-2" alt="Burbuja Morada"/>
+	<img src="{% static 'img/background/blob-shape-2d.svg' %}" class="svg-blob-2" alt="Burbuja Morada"/>
 
-	<img src="{% static 'img/blob-shape-2e.svg' %}" class="svg-blob-3" alt="Burbuja Verde"/>
+	<img src="{% static 'img/background/blob-shape-2e.svg' %}" class="svg-blob-3" alt="Burbuja Verde"/>
 
 <div class="container">
   <div class="row justify-content-center">
