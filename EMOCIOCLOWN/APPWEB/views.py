@@ -35,7 +35,7 @@ class Index(FormView):
         context['opiniones'] = Opiniones.objects.all()
         context['galerias'] = Galeria.objects.all()
         context['blog'] = Blog.objects.all()
-        context['contacto'] = Datos_contacto.objects.all()
+        context['contacto'] = Datos_contacto.objects.all()[0]
 
         return context 
 

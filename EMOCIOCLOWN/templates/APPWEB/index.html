@@ -380,7 +380,6 @@
 				<!-- LADO IZQUIERDO -->
 				<div class="col-md-5 d-flex">
 					<div class="row d-flex contact-info mb-5">
-						{% for datos in contacto %}
 						<div class="col-md-12 ftco-animate">
 							<div class="box p-2 px-3 bg-light d-flex">
 								<div class="icon mr-3">
@@ -389,7 +388,7 @@
 								</div>
 								<div>
 									<h3 class="mb-3">Dirección</h3>
-									<p>{{datos.direccion}}</p>
+									<p>{{contacto.direccion}}</p>
 								</div>
 							</div>
 						</div>
@@ -401,7 +400,7 @@
 								</div>
 								<div>
 									<h3 class="mb-3">Móvil</h3>
-									<p>{{datos.telefono}}</p>
+									<p>{{contacto.telefono}}</p>
 								</div>
 							</div>
 						</div>
@@ -414,11 +413,10 @@
 								</div>
 								<div>
 									<h3 class="mb-3">Correo Electrónico</h3>
-									<p><a href="mailto: {{contactoInfo.email}} ">{{datos.email}}</a></p>
+									<p><a href="mailto: {{contacto.email}} ">{{contacto.email}}</a></p>
 								</div>
 							</div>
 						</div>
-						{% endfor %}
 					</div>
 				</div>
 			</div>
